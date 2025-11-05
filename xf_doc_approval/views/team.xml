@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="xf_doc_approval_team_form" model="ir.ui.view">
+            <field name="name">xf_doc_approval_team_form</field>
+            <field name="model">xf.doc.approval.team</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="project_num"/>
+                                <field name="active"/>
+                                <field name="start_date"/>
+                                <field name="stop_date"/>
+                                <field name="tgt_start_date"/>
+                                <field name="tgt_stop_date"/>
+                            </group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                            </group>
+                        </group>
+                        <group name="approvers" string="Approvers">
+                            <field name="approver_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="step"/>
+                                    <field name="user_id"/>
+                                    <field name="role"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <!--<record id="view_tree_example" model="ir.ui.view">-->
+                        <!--    <field name="name">example.tree.view</field>-->
+                        <!--    <field name="model">your.model.name</field>-->
+                        <!--    <field name="arch" type="xml">-->
+                        <!--        <tree string="Example Tree View" multi_selection="1">-->
+                        <!--            &lt;!&ndash; Add your tree columns here &ndash;&gt;-->
+                        <!--            <field name="field_name_1"/>-->
+                        <!--            <field name="field_name_2"/>-->
+                        <!--            &lt;!&ndash; Add more fields as needed &ndash;&gt;-->
+                        <!--        </tree>-->
+                        <!--    </field>-->
+                        <!--</record>-->
+                        <group name="iatf_forms" string="Forms">
+                            <field name="doc_approval_team_line_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="risk_assessment_id"/>
+                                    <field name="is_risk_assessment"/>
+                                    <field name="things_right_wrong_id"/>
+                                    <field name="is_things_right_wrong"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="xf_doc_approval_team_tree" model="ir.ui.view">
+            <field name="name">xf_doc_approval_team_tree</field>
+            <field name="model">xf.doc.approval.team</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="active" invisible="True"/>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_xf_doc_approval_team" model="ir.actions.act_window">
+            <field name="name">Approval Teams</field>
+            <field name="res_model">xf.doc.approval.team</field>
+        </record>
+
+        <menuitem
+                id="menu_xf_doc_approval_team"
+                action="action_xf_doc_approval_team"
+                parent="menu_xf_doc_approval_configuration"
+                sequence="10"
+        />
+
+    </data>
+</odoo>

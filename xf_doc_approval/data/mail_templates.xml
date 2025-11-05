@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <template id="request_to_approve">
+            <p>
+                Dear colleagues,
+            </p>
+            <p>
+                Please be informed that the document package
+                "<t t-esc="object.name"/>"
+                needs approval from:
+                <t t-esc="', '.join(object.get_current_approvers().mapped('display_name'))"/>.
+            </p>
+            <p>
+                <a t-att-href="'/mail/view?model=%s&amp;res_id=%s' % (object._name, object.id)">
+                    View
+                    <t t-esc="object._description"/>
+                </a>
+            </p>
+        </template>
+    </data>
+</odoo>

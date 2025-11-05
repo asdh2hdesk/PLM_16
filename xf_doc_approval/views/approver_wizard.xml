@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_approve_wizard" model="ir.ui.view">
+            <field name="name">action_approve_wizard</field>
+            <field name="model">xf.doc.approval.document.approver</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="method" invisible="True"/>
+                        <group name="notes">
+                            <field name="notes" readonly="False" placeholder="Some comments"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_approve" string="Approve" type="object" class="btn-primary"
+                                default_focus="1"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_reject_wizard" model="ir.ui.view">
+            <field name="name">action_reject_wizard</field>
+            <field name="model">xf.doc.approval.document.approver</field>
+            <field name="priority">20</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="method" invisible="True"/>
+                        <group name="notes">
+                            <field name="notes" required="True" readonly="False" placeholder="Reject reason or comments"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_reject" string="Reject" type="object" class="btn-primary"
+                                default_focus="1"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

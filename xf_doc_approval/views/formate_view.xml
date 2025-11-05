@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree Start -->
+        <record id="formate_view" model="ir.ui.view">
+            <field name="name">document.formate.tree</field>
+            <field name="model">document.formate</field>
+            <field name="arch" type="xml">
+                <tree editable='bottom'>
+                    <field name="serial_no" required='0'/>
+                    <field name="sr_no" required='0'/>
+                    <field name="name" required='1'/>
+                    <field name="control_emp_ids" readonly='0' widget='many2many_tags'/>
+                    <field name="control_department_ids" readonly='1' widget='many2many_tags'/>
+                    <field name="table" required='1'/>
+                    <field name="department_ids" required='0' widget='many2many_tags'/>
+                    <field name="used_in_project_type_ids" required='0' widget='many2many_tags'/>
+                </tree>
+            </field>
+        </record>
+        <!-- Tree End -->
+
+        <!-- Action Start -->
+        <record model="ir.actions.act_window" id="action_formate">
+            <field name="name">Format</field>
+            <field name="res_model">document.formate</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="formate_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click on Create to add a new format.
+                </p>
+            </field>
+        </record>
+        <!-- Action End -->
+
+        <menuitem
+                id="menu_formate"
+                name="Format"
+                parent="xf_doc_approval.menu_xf_doc_approval_configuration"
+                action="action_formate"
+                sequence="12"
+        />
+
+    </data>
+</odoo>

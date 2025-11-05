@@ -1,0 +1,1223 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* xf_doc_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 09:51+0000\n"
+"PO-Revision-Date: 2025-06-03 09:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid ""
+"\"\n"
+"                needs approval from:"
+msgstr ""
+"\"\n"
+"                needs approval from: (\"\n"
+"कडून मान्यता आवश्यक आहे: )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__01
+msgid "01"
+msgstr "01"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__02
+msgid "02"
+msgstr "02"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__03
+msgid "03"
+msgstr "03"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__04
+msgid "04"
+msgstr "04"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__05
+msgid "05"
+msgstr "05"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__06
+msgid "06"
+msgstr "06"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__07
+msgid "07"
+msgstr "07"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__08
+msgid "08"
+msgstr "08"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__09
+msgid "09"
+msgstr "09"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__10
+msgid "10"
+msgstr "10"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__11
+msgid "11"
+msgstr "11"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__12
+msgid "12"
+msgstr "12"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__13
+msgid "13"
+msgstr "13"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__14
+msgid "14"
+msgstr "14"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__15
+msgid "15"
+msgstr "15"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__16
+msgid "16"
+msgstr "16"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__17
+msgid "17"
+msgstr "17"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__18
+msgid "18"
+msgstr "18"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__19
+msgid "19"
+msgstr "19"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__20
+msgid "20"
+msgstr "20"
+
+#. module: xf_doc_approval
+#: model:ir.model.constraint,message:xf_doc_approval.constraint_xf_doc_approval_document_package_xf_document_project_name_unique
+msgid "A project with this name already exists."
+msgstr ""
+"A project with this name already exists. (या नावाचा एक प्रकल्प आधीपासून "
+"अस्तित्त्वात आहे. )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_approver_abstract
+msgid "Abstract Approver"
+msgstr "Abstract Approver (अमूर्त मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction
+msgid "Action Needed"
+msgstr "Action Needed (कृती आवश्यक आहे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__active
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__active
+msgid "Active"
+msgstr "Active (सक्रिय )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__all_users
+msgid "All Users"
+msgstr "All Users (सर्व वापरकर्ते )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__is_risk_assessment
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__is_things_right_wrong
+msgid "Allowed"
+msgstr "Allowed (परवानगी )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Approval"
+msgstr "Approval (मान्यता )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__approval_inprogress
+msgid "Approval Inprogress"
+msgstr "Approval Inprogress (मंजूरी इनप्रोग्रेस )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__method
+msgid "Approval Method"
+msgstr "Approval Method (मान्यता पद्धत )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_state
+msgid "Approval Status"
+msgstr "Approval Status (मान्यता स्थिती )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_step
+msgid "Approval Step"
+msgstr "Approval Step (मान्यता चरण )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_team_id
+msgid "Approval Team"
+msgstr "Approval Team (मंजुरी टीम )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team_approver
+msgid "Approval Team Member"
+msgstr "Approval Team Member (मंजुरी टीम सदस्य )"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_xf_doc_approval_team
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_team
+msgid "Approval Teams"
+msgstr "Approval Teams (मंजुरी पथक )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+msgid "Approve"
+msgstr "Approve (मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__approved
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Approved"
+msgstr "Approved (मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__manager_ids
+msgid "Approved By"
+msgstr "Approved By (द्वारे मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__user_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__user_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__user_id
+msgid "Approver"
+msgstr "Approver (मान्यता )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approver_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__approver_ids
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__approvers
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_team_form
+msgid "Approvers"
+msgstr "Approvers (मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_attachment_count
+msgid "Attachment Count"
+msgstr "Attachment Count (संलग्नक गणना )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__method__button
+msgid "Button"
+msgstr "Button (बटण )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Calendar"
+msgstr "Calendar (कॅलेंडर )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Cancel"
+msgstr "Cancel (रद्द करा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelled (रद्द )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__check_create_emp
+msgid "Check Create Emp"
+msgstr "Check Create Emp (ईएमपी तयार करा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__check_sequence
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__check_sequence
+msgid "Check Sequence"
+msgstr "Check Sequence (अनुक्रम तपासा )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.actions.act_window,help:xf_doc_approval.action_formate
+msgid "Click on Create to add a new format."
+msgstr ""
+"Click on Create to add a new format. (नवीन स्वरूप जोडण्यासाठी क्रिएट वर "
+"क्लिक करा. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__company_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__company_id
+msgid "Company"
+msgstr "Company (कंपनी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__complete
+msgid "Completed"
+msgstr "Completed (पूर्ण )"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_configuration
+msgid "Configuration"
+msgstr "Configuration (कॉन्फिगरेशन )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__control_department_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__control_department_ids
+msgid "Control Departments"
+msgstr "Control Departments (नियंत्रण विभाग )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__control_emp_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__control_emp_ids
+msgid "Control Employee"
+msgstr "Control Employee (नियंत्रण कर्मचारी )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Create"
+msgstr "Create (तयार करा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__create_uid
+msgid "Created by"
+msgstr "Created by (द्वारे तयार केले )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__create_date
+msgid "Created on"
+msgstr "Created on (चालू )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__partner_id
+msgid "Customer Name"
+msgstr "Customer Name (ग्राहकांचे नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_name
+msgid "Customer Part Name"
+msgstr "Customer Part Name (ग्राहक भाग नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_no
+msgid "Customer Part No."
+msgstr "Customer Part No. (ग्राहक भाग क्रमांक क्रमांक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_creation_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_creation_id
+msgid "Customer part id"
+msgstr "Customer part id (ग्राहक भाग आयडी )"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_board_dashboard_documentation
+msgid "DashBoard"
+msgstr "DashBoard (डॅशबोर्ड )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Dashboard"
+msgstr "Dashboard (डॅशबोर्ड )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid "Dear colleagues,"
+msgstr "Dear colleagues, (प्रिय सहकारी, )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_hr_department
+msgid "Department"
+msgstr "Department (विभाग )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_department__department_type
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__name
+msgid "Department Type"
+msgstr "Department Type (विभाग प्रकार )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__department_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__department_ids
+msgid "Departments"
+msgstr "Departments (विभाग )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__description
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Description"
+msgstr "Description (वर्णन )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__display_name
+msgid "Display Name"
+msgstr "Display Name (प्रदर्शन नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.module.category,name:xf_doc_approval.module_category_xf_doc_approval
+msgid "Doc Approval"
+msgstr "Doc Approval (डॉकची मंजुरी )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__doc_approval_team_id
+msgid "Doc Approval Team"
+msgstr "Doc Approval Team (डॉक मंजुरी टीम )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team_lines
+msgid "Doc Approval Team Lines"
+msgstr "Doc Approval Team Lines (डॉक मंजूरी टीम लाईन्स )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document_approver
+msgid "Doc Approver"
+msgstr "Doc Approver (डॉक मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__team_approver_id
+msgid "Doc Team Approver"
+msgstr "Doc Team Approver (डॉक टीम मंजूर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__doc_type
+msgid "Doc Type"
+msgstr "Doc Type (डॉक प्रकार )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_document_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document
+msgid "Document"
+msgstr "Document (दस्तऐवज )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Document Creation"
+msgstr "Document Creation (दस्तऐवज निर्मिती )"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_root
+msgid "Document Management"
+msgstr "Document Management (दस्तऐवज व्यवस्थापन )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document_package
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__document_package_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__document_package_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__document_package_id
+msgid "Document Package"
+msgstr "Document Package (दस्तऐवज पॅकेज )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_approved
+msgid "Document Package Approved"
+msgstr "Document Package Approved (दस्तऐवज पॅकेज मंजूर )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_cancelled
+msgid "Document Package Cancelled"
+msgstr "Document Package Cancelled (दस्तऐवज पॅकेज रद्द केले )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_rejected
+msgid "Document Package Rejected"
+msgstr "Document Package Rejected (दस्तऐवज पॅकेज नाकारले )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_approval
+msgid "Document Package Sent for Approval"
+msgstr ""
+"Document Package Sent for Approval (दस्तऐवज पॅकेज मंजुरीसाठी पाठविले )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_approval
+msgid "Document Package sent for approval"
+msgstr ""
+"Document Package sent for approval (दस्तऐवज पॅकेज मंजुरीसाठी पाठविले )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_approved
+msgid "Document Package was approved by all approvers"
+msgstr ""
+"Document Package was approved by all approvers (दस्तऐवज पॅकेज सर्व "
+"मंजूरद्वारे मंजूर केले गेले )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_cancelled
+msgid "Document Package was cancelled."
+msgstr "Document Package was cancelled. (दस्तऐवज पॅकेज रद्द केले गेले. )"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_rejected
+msgid "Document Package was rejected. Please see notes in the approvers tab."
+msgstr ""
+"Document Package was rejected. Please see notes in the approvers tab. "
+"(दस्तऐवज पॅकेज नाकारले गेले.कृपया मंजूर टॅबमध्ये नोट्स पहा. )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Document Packages"
+msgstr "Document Packages (दस्तऐवज पॅकेजेस )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Document Title"
+msgstr "Document Title (दस्तऐवज शीर्षक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__document_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__doc_approval_team_line_ids
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_document_package
+msgid "Documents"
+msgstr "Documents (कागदपत्रे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__document_approval_ids
+msgid "Documents Approval"
+msgstr "Documents Approval (कागदपत्रांची मंजुरी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__draft
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Draft"
+msgstr "Draft (मसुदा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_no
+msgid "Drawing No."
+msgstr "Drawing No. (रेखांकन क्रमांक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_no
+msgid "Drawing Number."
+msgstr "Drawing Number. (रेखांकन क्रमांक. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_rev_date
+msgid "Drawing Rev. Date"
+msgstr "Drawing Rev. Date (रेखांकन रेव्ह. तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_revision_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_revision_date
+msgid "Drawing Revision Date"
+msgstr "Drawing Revision Date (रेखांकन पुनरावृत्ती तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_revision_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_revision_no
+msgid "Drawing Revision No."
+msgstr "Drawing Revision No. (रेखांकन पुनरावृत्ती क्रमांक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_rev_no
+msgid "Drawing. Rev. No."
+msgstr "Drawing. Rev. No. (रेखांकन.रेव्ह. क्र. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__end_diff
+msgid "End Date Diff."
+msgstr "End Date Diff. (शेवटची तारीख भिन्न. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__file
+msgid "File"
+msgstr "File (फाईल )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__file_name
+msgid "File Name"
+msgstr "File Name (फाईल नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_follower_ids
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__followers
+msgid "Followers"
+msgstr "Followers (अनुयायी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Followers (Partners) (अनुयायी (भागीदार) )"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_formate
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__formate
+#: model:ir.ui.menu,name:xf_doc_approval.menu_formate
+msgid "Format"
+msgstr "Format (स्वरूप )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__formate_id
+msgid "Format Id"
+msgstr "Format Id (स्वरूप आयडी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__line_status
+msgid "Format Status"
+msgstr "Format Status (स्वरूप स्थिती )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Formats"
+msgstr "Formats (स्वरूप )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_team_form
+msgid "Forms"
+msgstr "Forms (फॉर्म )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__has_message
+msgid "Has Message"
+msgstr "Has Message (संदेश आहे )"
+
+#. module: xf_doc_approval
+#: model:ir.module.category,description:xf_doc_approval.module_category_xf_doc_approval
+msgid "Helps you approve single documents and document packages."
+msgstr ""
+"Helps you approve single documents and document packages. (आपल्याला एकल "
+"दस्तऐवज आणि दस्तऐवज पॅकेजेस मंजूर करण्यात मदत करते. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__id
+msgid "ID"
+msgstr "ID (आयडी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"If checked, new messages require your attention. (तपासल्यास, नवीन संदेशांना "
+"आपले लक्ष आवश्यक आहे. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"If checked, some messages have a delivery error. (तपासल्यास, काही "
+"संदेशांमध्ये वितरण त्रुटी असते. )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "In progress"
+msgstr "In progress (प्रगतीपथावर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__initiator_user_id
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_initiator
+msgid "Initiator"
+msgstr "Initiator (आरंभकर्ता )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__inprogress
+msgid "Inprogress"
+msgstr "Inprogress (इनप्रोग्रेस )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_approver
+msgid "Is Approver"
+msgstr "Is Approver (मान्यता आहे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_is_follower
+msgid "Is Follower"
+msgstr "Is Follower (अनुयायी आहे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_initiator
+msgid "Is Initiator"
+msgstr "Is Initiator (आरंभकर्ता आहे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_select_all
+msgid "Is Select All"
+msgstr "Is Select All (सर्व निवडा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__language_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__language_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__language_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__language_id
+msgid "Language"
+msgstr "Language (भाषा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on (शेवटचे सुधारित )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by (अंतिम अद्यतनित )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on (अखेरचे अद्यतनित केले )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Main Attachment (मुख्य संलग्नक )"
+
+#. module: xf_doc_approval
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_manager
+msgid "Manager"
+msgstr "Manager (व्यवस्थापक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error
+msgid "Message Delivery error"
+msgstr "Message Delivery error (संदेश वितरण त्रुटी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_ids
+msgid "Messages"
+msgstr "Messages (संदेश )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__method
+msgid "Method"
+msgstr "Method (पद्धत )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__name
+msgid "Name"
+msgstr "Name (नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_xf_doc_approval_document_package
+msgid "New Part Development Projects"
+msgstr "New Part Development Projects (नवीन भाग विकास प्रकल्प )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__notes
+msgid "Notes"
+msgstr "Notes (नोट्स )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Number of Actions (क्रियांची संख्या )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error_counter
+msgid "Number of errors"
+msgstr "Number of errors (त्रुटींची संख्या )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+"Number of messages requiring action (कृती आवश्यक असलेल्या संदेशांची संख्या )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+"Number of messages with delivery error (वितरण त्रुटीसह संदेशांची संख्या )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Open Format"
+msgstr "Open Format (मुक्त स्वरूप )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__name
+msgid "Package Name"
+msgstr "Package Name (पॅकेज नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_id
+msgid "Part"
+msgstr "Part (भाग )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_name
+msgid "Part Name"
+msgstr "Part Name (भाग नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_number
+msgid "Part Number"
+msgstr "Part Number (भाग क्रमांक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__pending
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__pending
+msgid "Pending"
+msgstr "Pending (प्रलंबित )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Pie"
+msgstr "Pie (पाई )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Pivot Table"
+msgstr "Pivot Table (मुख्य सारणी )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid ""
+"Please be informed that the document package\n"
+"                \""
+msgstr ""
+"Please be informed that the document package\n"
+"                \" (कृपया दस्तऐवज पॅकेजची माहिती द्या\n"
+"\" )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__prelaunch
+msgid "PreLaunch"
+msgstr "PreLaunch (प्रीलेंच )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_product_template
+msgid "Product"
+msgstr "Product (उत्पादन )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__production
+msgid "Production"
+msgstr "Production (उत्पादन )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_pivot
+msgid "Project Analysis"
+msgstr "Project Analysis (प्रकल्प विश्लेषण )"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_project_type_dashboard
+msgid "Project Dashboard"
+msgstr "Project Dashboard (प्रोजेक्ट डॅशबोर्ड )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__project_end_date
+msgid "Project End Date"
+msgstr "Project End Date (प्रकल्प समाप्ती तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__name
+msgid "Project Name"
+msgstr "Project Name (प्रकल्प नाव )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__project_num
+msgid "Project Num."
+msgstr "Project Num. (प्रकल्प क्रमांक. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__project_start_date
+msgid "Project Start Date"
+msgstr "Project Start Date (प्रकल्प प्रारंभ तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_project_type_status_graph
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_type_status_graph
+msgid "Project Status Distribution"
+msgstr "Project Status Distribution (प्रकल्प स्थिती वितरण )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__name
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_tree
+msgid "Project Type"
+msgstr "Project Type (प्रकल्प प्रकार )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_type_count_graph
+msgid "Project Type Distribution"
+msgstr "Project Type Distribution (प्रकल्प प्रकार वितरण )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Project Types"
+msgstr "Project Types (प्रकल्प प्रकार )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__used_in_project_type_id
+msgid "Project type"
+msgstr "Project type (प्रकल्प प्रकार )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__prototype
+msgid "Prototype"
+msgstr "Prototype (प्रोटोटाइप )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Reject"
+msgstr "Reject (नाकारणे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__reject_reason
+msgid "Reject Reason"
+msgstr "Reject Reason (कारण नाकारा )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Reject reason or comments"
+msgstr "Reject reason or comments (कारण किंवा टिप्पण्या नाकारा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__rejected
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Rejected"
+msgstr "Rejected (नाकारले )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__revision
+msgid "Revision Required"
+msgstr "Revision Required (पुनरावृत्ती आवश्यक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__risk_assessment_id
+msgid "Risk Assessment"
+msgstr "Risk Assessment (जोखीम मूल्यांकन )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__role
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__role
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__role
+msgid "Role/Position"
+msgstr "Role/Position (भूमिका/स्थिती )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__running
+msgid "Running"
+msgstr "Running (धावणे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Delivery error (एसएमएस वितरण त्रुटी )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__safelaunch
+msgid "Safe Launch"
+msgstr "Safe Launch (सेफ लॉन्च )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Select All Formats"
+msgstr "Select All Formats (सर्व स्वरूप निवडा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_doc_project_type__language_id
+#: model:ir.model.fields,help:xf_doc_approval.field_document_formate__language_id
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_approver__language_id
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_team__language_id
+msgid "Select the language used to translate field values."
+msgstr ""
+"Select the language used to translate field values. (फील्ड मूल्यांचे भाषांतर"
+" करण्यासाठी वापरलेली भाषा निवडा. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__sr_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__sr_no
+msgid "Sequence No."
+msgstr "Sequence No. (क्रम क्रमांक क्रमांक )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__serial_no
+msgid "Serial NO."
+msgstr "Serial NO. (अनुक्रमांक क्र. )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__serial_no
+msgid "Serial No."
+msgstr "Serial No. (अनुक्रमांक क्रमांक )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+msgid "Some comments"
+msgstr "Some comments (काही टिप्पण्या )"
+
+#. module: xf_doc_approval
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__start_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__start_dat
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__status
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__state
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__state
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__status
+msgid "Status"
+msgstr "Status (स्थिती )"
+
+#. module: xf_doc_approval
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__step
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__step
+#: model:ir.model.fields,field_des
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__table
+msgid "Table"
+msgstr "Table (टेबल )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__target_date
+msgid "Target Date"
+msgstr "Target Date (लक्ष्य तारीख )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_calendar
+msgid "Target Dates"
+msgstr "Target Dates (लक्ष्य तारखा )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__tgt_start_date
+msgid "Target Start Date"
+msgstr "Target Start Date (लक्ष्य प्रारंभ तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__tgt_stop_date
+msgid "Target Stop Date"
+msgstr "Target Stop Date (लक्ष्य स्टॉप तारीख )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__team_id
+msgid "Team"
+msgstr "Team (संघ )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__user_id
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_team_leader
+msgid "Team Leader"
+msgstr "Team Leader (टीम लीडर )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__things_right_wrong_id
+msgid "Things Right Wrong"
+msgstr "Things Right Wrong (गोष्टी चुकीच्या आहेत )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__to_approve
+msgid "To Approve"
+msgstr "To Approve (मंजूर करणे )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__used_in_project_type_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__used_in_project_type_ids
+msgid "Used in Project type"
+msgstr "Used in Project type (प्रकल्प प्रकारात वापरले )"
+
+#. module: xf_doc_approval
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_user
+msgid "User"
+msgstr "User (वापरकर्ता )"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid "View"
+msgstr "View (दृश्य )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__visibility
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Visibility"
+msgstr "Visibility (दृश्यमानता )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__website_message_ids
+msgid "Website Messages"
+msgstr "Website Messages (वेबसाइट संदेश )"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__website_message_ids
+msgid "Website communication history"
+msgstr "Website communication history (वेबसाइट संप्रेषण इतिहास )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_doc_project_type
+msgid "doc.project.type"
+msgstr "doc.project.type (डॉक.प्रोजेक्ट.टाइप )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_document_formate
+msgid "document.formate"
+msgstr "document.formate (दस्तऐवज.फॉर्मेट )"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_hr_dept_type
+msgid "hr.dept.type"
+msgstr "hr.dept.type (hr.dept.type )"

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="xf_doc_approval_document_package_form" model="ir.ui.view">
+            <field name="name">xf_doc_approval_document_package_form</field>
+            <field name="model">xf.doc.approval.document.package</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="is_initiator" invisible="True"/>
+                    <field name="is_approver" invisible="True"/>
+                    <header>
+                        <!-- <button string="Send for Approval" name="action_send_for_approval" type="object" states="draft"
+                                class="oe_highlight"
+                                attrs="{'invisible':['|', ('is_initiator', '!=', True)]}"
+                                confirm="Please confirm that you want to send documents for approval"/>
+                        <button string="Approve" name="action_approve_wizard" type="object" states="approval"
+                                class="oe_highlight"
+                                attrs="{'invisible':['|', ('is_approver', '!=', True)]}"/>
+                        <button string="Reject" name="action_reject_wizard" type="object" states="approval"
+                                attrs="{'invisible':['|', ('is_approver', '!=', True)]}"/>
+                        <button string="Set to Draft" name="action_draft" type="object" states="rejected,cancelled"
+                                attrs="{'invisible':['|', ('is_initiator', '!=', True)]}"/>
+                        <button string="Cancel" name="action_cancel" type="object" states="approval"
+                                attrs="{'invisible':['|', ('is_initiator', '!=', True)]}"
+                                confirm="Please confirm that you want to cancel approval process"/>
+                        <button string="Force Cancel" name="action_cancel" type="object" states="approved"
+                                groups="base.group_system"/> -->
+<!--                        <button name="open_copy_wizard" string="Copy Form" type="object" class="oe_highlight"/>-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,inprogress,approved,rejected"/>
+                    </header>
+                    <sheet>
+                        <!--Ribbon section-->
+                        <widget name="web_ribbon" title="Draft" bg_color="bg-info"
+                                attrs="{'invisible':[('state', '!=', 'draft')]}"/>
+                        <widget name="web_ribbon" title="In progress" bg_color="bg-warning"
+                                attrs="{'invisible':[('state', '!=', 'inprogress')]}"/>
+                        <widget name="web_ribbon" title="Approved" bg_color="bg-success"
+                                attrs="{'invisible':[('state', '!=', 'approved')]}"/>
+                        <widget name="web_ribbon" title="Rejected" bg_color="bg-danger"
+                                attrs="{'invisible':[('state', '!=', 'rejected')]}"/>
+
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" placeholder="Document Title" nolabel="1"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <group>
+                                <field name="doc_type" widget="radio" options="{'horizontal': false}"/>
+                                <field name='part_id'/>
+                                <field name='part_name'/>
+                                <field name='part_number'/>
+                                <!--                                <field name='part_description'/>-->
+                                <field name='drawing_no'/>
+                                <field name='drawing_rev_no'/>
+                                <field name='drawing_rev_date'/>
+                            </group>
+                            <group>
+                                <field name='partner_id'/>
+                                <field name='start_date' readonly='1'/>
+                                <field name="used_in_project_type_id" required='1' placeholder="Project Type"/>
+                                <field name='target_date'/>
+                                <field name='project_start_date' readonly='1'/>
+                                <field name='project_end_date' readonly='1'/>
+                                <field name="check_sequence" readonly='0' invisible='1'/>
+
+                            </group>
+                        </group>
+                        <group name="description" string="Description"
+                               attrs="{'invisible':[('state', '!=', 'draft'), ('description', '=', False)]}">
+                            <field name="description" nolabel="1" colspan="2"/>
+                        </group>
+
+                        <notebook>
+                            <page string='Formats'>
+                                <field name='is_select_all' invisible='1'/>
+                                <field name='create_date' invisible='1'/>
+                                <button string="Select All Formats" name="select_all_formate" type="object"
+                                        class="oe_highlight"
+                                        attrs="{'invisible' : ['|',('create_date', '=', False),('is_select_all', '=', True)]}"/>
+                                <field name="document_approval_ids">
+                                    <!-- <tree editable="bottom" delete='false' create='false'> -->
+                                    <tree editable="bottom" default_order="serial_no asc">
+                                        <field name="serial_no" required='0' optional="show"/>
+                                        <field name="sr_no" required='0' width="250px" style="text-align: center;"  optional="hide"/>
+                                        <field name="plan_start_date" optional="show"/>
+                                        <field name="plan_end_date" optional="show"/>
+                                        <field name="actual_start_date" optional="show"/>
+                                        <field name="actual_end_date" optional="show"/>
+                                        <field name="used_in_project_type_ids" widget='many2many_tags' readonly='1'
+                                               optional="hide"/>
+                                        <field name="formate" required='1'/>
+                                        <field name="control_emp_ids" readonly='0' widget='many2many_tags'
+                                               optional="hide"/>
+                                        <field name="control_department_ids" readonly='1' widget='many2many_tags'
+                                               optional="hide"/>
+                                        <field name="department_ids" readonly='1' widget='many2many_tags'/>
+                                        <field name="manager_ids" readonly='0' widget='many2many_tags'/>
+                                        <field name="formate_id" readonly='0' invisible='0'/>
+                                        <field name="check_sequence" readonly='0' invisible='1'/>
+
+                                        <field name="status" readonly='0' widget="badge"
+                                               decoration-warning="status == 'pending'"
+                                               decoration-danger="status == 'rejected'"
+                                               decoration-info="status == 'Draft'"
+                                               decoration-success="status == 'approved'"/>
+                                        <button string="Create" name="create_formate" type="object"
+                                                attrs="{'invisible' : ['|','|',('check_sequence', '=', False),('check_create_emp', '=', False),('formate_id', '!=', False)]}"/>
+                                        <button string="Open Format" name="open_formate" type="object"
+                                                attrs="{'invisible' : [('formate_id', '=', False)]}"/>
+                                        <field name="include_vals" optional="show" help="Check to create with approvers and linked values. Uncheck to create an independent document."/>
+
+                                        <field name='check_create_emp' optional='hide' invisible='1'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                        <!-- <group name="documents" string="Documents">
+                            <field name="document_ids" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="file" filename="file_name"/>
+                                    <field name="file_name" invisible="True"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="file" filename="file_name"/>
+                                        <field name="file_name" invisible="True"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group> -->
+                        <group attrs="{'invisible':[('is_initiator', '!=', True)]}">
+                            <group name="visibility" string="Visibility">
+                                <field name="company_id"/>
+                                <field name="visibility"/>
+                            </group>
+                            <group name="approval" string="Approval">
+                                <field name="approval_team_id"/>
+                                <field name="method"/>
+                                <field name="approval_state"/>
+                                <field name="approval_step"/>
+                            </group>
+                        </group>
+                        <group string="Document Creation">
+                            <field name="create_uid"/>
+                            <field name="create_date"/>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="xf_doc_approval_document_package_tree" model="ir.ui.view">
+            <field name="name">xf_doc_approval_document_package_tree</field>
+            <field name="model">xf.doc.approval.document.package</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state=='draft'"
+                      decoration-warning="state=='inprogress'" decoration-success="state=='approved'"
+                      decoration-danger="state=='rejected'">
+                    <field name="name"/>
+                    <field name='partner_id'/>
+                    <!--                    <field name='part_id'/>-->
+                    <!--                    <field name='part_name'/>-->
+                    <!--                    <field name='part_number'/>-->
+                    <!--                    <field name='drawing_no'/>-->
+                    <!--                    <field name='drawing_rev_no'/>-->
+                    <!--                    <field name='drawing_rev_date'/>-->
+                    <!--                    <field name='part_description'/>-->
+                    <field name='start_date'/>
+                    <field name='target_date'/>
+                    <field name='project_start_date' invisible="1"/>
+                    <field name='project_end_date'/>
+                    <field name='start_diff' invisible="1"/>
+                    <field name='end_diff' invisible="1"/>
+                    <field name="used_in_project_type_id" placeholder="Project Type"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="line_status" widget='badge' decoration-success="line_status != False"/>
+                    <field name="state" widget='badge' decoration-info="state == 'draft'"
+                           decoration-warning="state == 'inprogress'" decoration-success="state == 'approved'"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--- Copy Form Wizard -->
+<!--        <record id="view_copy_form_wizard" model="ir.ui.view">-->
+<!--            <field name="name">copy.form.wizard</field>-->
+<!--            <field name="model">copy.form.wizard</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="Copy Project">-->
+<!--                    <group>-->
+<!--                        <field name="original_id"/>-->
+<!--                        <field name="new_name"/>-->
+<!--                    </group>-->
+<!--                    <footer>-->
+<!--                        <button string="Copy" type="object" name="copy_record" class="btn-primary"/>-->
+<!--                        <button string="Cancel" class="btn-secondary" special="cancel"/>-->
+<!--                    </footer>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+        <record id="action_xf_doc_approval_document_package" model="ir.actions.act_window">
+            <field name="name">Documents</field>
+            <field name="res_model">xf.doc.approval.document.package</field>
+            <field name="view_mode">tree,form,graph,pivot,calendar</field>
+
+        </record>
+
+        <menuitem
+                id="menu_xf_doc_approval_document_package"
+                action="action_xf_doc_approval_document_package"
+                parent="iatf.iatf_menu_doc_manage"
+                sequence="1"
+        />
+
+
+    </data>
+</odoo>

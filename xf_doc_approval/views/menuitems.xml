@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_xf_doc_approval_root" name="Document Management"
+                  web_icon="xf_doc_approval,static/description/icon.png"
+                  groups="xf_doc_approval.group_xf_doc_approval_user"/>
+
+        <menuitem id="menu_xf_doc_approval_configuration" name="Configuration"
+                  parent="iatf.iatf_menu_doc_manage"
+                  groups="xf_doc_approval.group_xf_doc_approval_user"
+                  sequence="100"/>
+    </data>
+</odoo>

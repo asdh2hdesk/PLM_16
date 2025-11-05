@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mt_document_package_approval" model="mail.message.subtype">
+            <field name="name">Document Package Sent for Approval</field>
+            <field name="res_model">xf.doc.approval.document.package</field>
+            <field name="default" eval="False"/>
+            <field name="description">Document Package sent for approval</field>
+        </record>
+
+        <record id="mt_document_package_approved" model="mail.message.subtype">
+            <field name="name">Document Package Approved</field>
+            <field name="res_model">xf.doc.approval.document.package</field>
+            <field name="default" eval="True"/>
+            <field name="description">Document Package was approved by all approvers</field>
+        </record>
+
+        <record id="mt_document_package_rejected" model="mail.message.subtype">
+            <field name="name">Document Package Rejected</field>
+            <field name="res_model">xf.doc.approval.document.package</field>
+            <field name="default" eval="True"/>
+            <field name="description">Document Package was rejected. Please see notes in the approvers tab.</field>
+        </record>
+
+        <record id="mt_document_package_cancelled" model="mail.message.subtype">
+            <field name="name">Document Package Cancelled</field>
+            <field name="res_model">xf.doc.approval.document.package</field>
+            <field name="default" eval="True"/>
+            <field name="description">Document Package was cancelled.</field>
+        </record>
+    </data>
+</odoo>

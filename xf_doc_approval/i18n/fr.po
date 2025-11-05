@@ -1,0 +1,1229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* xf_doc_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-03 07:22+0000\n"
+"PO-Revision-Date: 2025-06-03 07:22+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid ""
+"\"\n"
+"                needs approval from:"
+msgstr ""
+"\"\n"
+"                needs approval from: (\"\n"
+"Besoin de l'approbation de:)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__01
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__01
+msgid "01"
+msgstr "01"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__02
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__02
+msgid "02"
+msgstr "02"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__03
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__03
+msgid "03"
+msgstr "03"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__04
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__04
+msgid "04"
+msgstr "04"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__05
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__05
+msgid "05"
+msgstr "05"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__06
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__06
+msgid "06"
+msgstr "06"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__07
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__07
+msgid "07"
+msgstr "07"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__08
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__08
+msgid "08"
+msgstr "08"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__09
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__09
+msgid "09"
+msgstr "09"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__10
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__10
+msgid "10"
+msgstr "10"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__11
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__11
+msgid "11"
+msgstr "11"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__12
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__12
+msgid "12"
+msgstr "12"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__13
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__13
+msgid "13"
+msgstr "13"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__14
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__14
+msgid "14"
+msgstr "14"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__15
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__15
+msgid "15"
+msgstr "15"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__16
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__16
+msgid "16"
+msgstr "16"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__17
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__17
+msgid "17"
+msgstr "17"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__18
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__18
+msgid "18"
+msgstr "18"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__19
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__19
+msgid "19"
+msgstr "19"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_approver_abstract__step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_step__20
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team_approver__step__20
+msgid "20"
+msgstr "20"
+
+#. module: xf_doc_approval
+#: model:ir.model.constraint,message:xf_doc_approval.constraint_xf_doc_approval_document_package_xf_document_project_name_unique
+msgid "A project with this name already exists."
+msgstr ""
+"A project with this name already exists. (Un projet avec ce nom existe "
+"déjà.)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_approver_abstract
+msgid "Abstract Approver"
+msgstr "Abstract Approver (Approbateur abstrait)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction
+msgid "Action Needed"
+msgstr "Action Needed"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__active
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__active
+msgid "Active"
+msgstr "Active"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__all_users
+msgid "All Users"
+msgstr "All Users (Tous les utilisateurs)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__is_risk_assessment
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__is_things_right_wrong
+msgid "Allowed"
+msgstr "Allowed"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Approval"
+msgstr "Approval (Approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__approval_inprogress
+msgid "Approval Inprogress"
+msgstr "Approval Inprogress (Approbation en progresse)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__method
+msgid "Approval Method"
+msgstr "Approval Method (Méthode d'approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_state
+msgid "Approval Status"
+msgstr "Approval Status (Statut d'approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_step
+msgid "Approval Step"
+msgstr "Approval Step (Étape d'approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approval_team_id
+msgid "Approval Team"
+msgstr "Approval Team (Équipe d'approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team_approver
+msgid "Approval Team Member"
+msgstr "Approval Team Member (Membre de l'équipe d'approbation)"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_xf_doc_approval_team
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_team
+msgid "Approval Teams"
+msgstr "Approval Teams (Équipes d'approbation)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+msgid "Approve"
+msgstr "Approve (Approuver)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__approved
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__approved
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Approved"
+msgstr "Approved"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__manager_ids
+msgid "Approved By"
+msgstr "Approved By (Approuvé par)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__user_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__user_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__user_id
+msgid "Approver"
+msgstr "Approver"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__approver_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__approver_ids
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__approvers
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_team_form
+msgid "Approvers"
+msgstr "Approvers (Approvers)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_attachment_count
+msgid "Attachment Count"
+msgstr "Attachment Count (Nombre de pièces jointes)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__method__button
+msgid "Button"
+msgstr "Button (Bouton)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Calendar"
+msgstr "Calendar (Calendrier)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Cancel"
+msgstr "Cancel (Annuler)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__cancelled
+msgid "Cancelled"
+msgstr "Cancelled (Annulé)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__check_create_emp
+msgid "Check Create Emp"
+msgstr "Check Create Emp (Vérifiez Créer Emp)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__check_sequence
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__check_sequence
+msgid "Check Sequence"
+msgstr "Check Sequence (Vérifier la séquence)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.actions.act_window,help:xf_doc_approval.action_formate
+msgid "Click on Create to add a new format."
+msgstr ""
+"Click on Create to add a new format. (Cliquez sur Créer pour ajouter un "
+"nouveau format.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__company_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__company_id
+msgid "Company"
+msgstr "Company (Entreprise)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__complete
+msgid "Completed"
+msgstr "Completed (Complété)"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_configuration
+msgid "Configuration"
+msgstr "Configuration (Configuration)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__control_department_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__control_department_ids
+msgid "Control Departments"
+msgstr "Control Departments (Services de contrôle)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__control_emp_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__control_emp_ids
+msgid "Control Employee"
+msgstr "Control Employee (Contrôler un employé)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Create"
+msgstr "Create (Créer)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__create_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__create_uid
+msgid "Created by"
+msgstr "Created by (Créé par)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__create_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__create_date
+msgid "Created on"
+msgstr "Created on (Créé sur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__partner_id
+msgid "Customer Name"
+msgstr "Customer Name (Nom du client)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_name
+msgid "Customer Part Name"
+msgstr "Customer Part Name (Nom de partie client)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_no
+msgid "Customer Part No."
+msgstr "Customer Part No. (N ° de pièce du client)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__customer_part_creation_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__customer_part_creation_id
+msgid "Customer part id"
+msgstr "Customer part id (ID de partie client)"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_board_dashboard_documentation
+msgid "DashBoard"
+msgstr "DashBoard (Tableau de bord)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Dashboard"
+msgstr "Dashboard (Tableau de bord)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid "Dear colleagues,"
+msgstr "Dear colleagues, (Chers collègues,)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_hr_department
+msgid "Department"
+msgstr "Department (Département)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_department__department_type
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__name
+msgid "Department Type"
+msgstr "Department Type (Type de département)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__department_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__department_ids
+msgid "Departments"
+msgstr "Departments (Services)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__description
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Description"
+msgstr "Description (Description)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__display_name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__display_name
+msgid "Display Name"
+msgstr "Display Name (Nom d'affichage)"
+
+#. module: xf_doc_approval
+#: model:ir.module.category,name:xf_doc_approval.module_category_xf_doc_approval
+msgid "Doc Approval"
+msgstr "Doc Approval (Approbation du document)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__doc_approval_team_id
+msgid "Doc Approval Team"
+msgstr "Doc Approval Team (Équipe d'approbation du document)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_team_lines
+msgid "Doc Approval Team Lines"
+msgstr "Doc Approval Team Lines (Lignes d'équipe d'approbation du document)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document_approver
+msgid "Doc Approver"
+msgstr "Doc Approver (Approbateur de doc)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__team_approver_id
+msgid "Doc Team Approver"
+msgstr "Doc Team Approver (Approbateur de l'équipe Doc)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__doc_type
+msgid "Doc Type"
+msgstr "Doc Type (Type de doc)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_document_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document
+msgid "Document"
+msgstr "Document (Document)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Document Creation"
+msgstr "Document Creation (Création de documents)"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_root
+msgid "Document Management"
+msgstr "Document Management (Gestion des documents)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_xf_doc_approval_document_package
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__document_package_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__document_package_id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__document_package_id
+msgid "Document Package"
+msgstr "Document Package (Package de documents)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_approved
+msgid "Document Package Approved"
+msgstr "Document Package Approved (Package de documents approuvé)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_cancelled
+msgid "Document Package Cancelled"
+msgstr "Document Package Cancelled (Package de documents annulé)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_rejected
+msgid "Document Package Rejected"
+msgstr "Document Package Rejected (Package de documents rejeté)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,name:xf_doc_approval.mt_document_package_approval
+msgid "Document Package Sent for Approval"
+msgstr ""
+"Document Package Sent for Approval (Package de documents envoyé pour "
+"approbation)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_approval
+msgid "Document Package sent for approval"
+msgstr ""
+"Document Package sent for approval (Package de documents envoyé pour "
+"approbation)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_approved
+msgid "Document Package was approved by all approvers"
+msgstr ""
+"Document Package was approved by all approvers (Le package de documents a "
+"été approuvé par tous les approbateurs)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_cancelled
+msgid "Document Package was cancelled."
+msgstr ""
+"Document Package was cancelled. (Le package de documents a été annulé.)"
+
+#. module: xf_doc_approval
+#: model:mail.message.subtype,description:xf_doc_approval.mt_document_package_rejected
+msgid "Document Package was rejected. Please see notes in the approvers tab."
+msgstr ""
+"Document Package was rejected. Please see notes in the approvers tab. (Le "
+"package de documents a été rejeté.Veuillez consulter les notes dans l'onglet"
+" Approvers.)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Document Packages"
+msgstr "Document Packages (Packages de documents)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Document Title"
+msgstr "Document Title (Titre du document)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__document_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__doc_approval_team_line_ids
+#: model:ir.ui.menu,name:xf_doc_approval.menu_xf_doc_approval_document_package
+msgid "Documents"
+msgstr "Documents (Documents)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__document_approval_ids
+msgid "Documents Approval"
+msgstr "Documents Approval (Approbation des documents)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__draft
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__draft
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Draft"
+msgstr "Draft (Brouillon)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_no
+msgid "Drawing No."
+msgstr "Drawing No. (N ° de dessin)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_no
+msgid "Drawing Number"
+msgstr "Drawing Number (Numéro de dessin)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_rev_date
+msgid "Drawing Rev. Date"
+msgstr "Drawing Rev. Date (Dessin de la date)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_revision_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_revision_date
+msgid "Drawing Revision Date"
+msgstr "Drawing Revision Date (Date de révision du dessin)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_product__drg_revision_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_product_template__drg_revision_no
+msgid "Drawing Revision No."
+msgstr "Drawing Revision No. (N ° de révision de dessin)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__drawing_rev_no
+msgid "Drawing. Rev. No."
+msgstr "Drawing. Rev. No. (Dessin.Rév. No.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__end_diff
+msgid "End Date Diff."
+msgstr "End Date Diff. (Date de fin Diff.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__file
+msgid "File"
+msgstr "File (Déposer)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__file_name
+msgid "File Name"
+msgstr "File Name (Nom de fichier)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_follower_ids
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__visibility__followers
+msgid "Followers"
+msgstr "Followers"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Followers (Partners) (Abonnés (partenaires))"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_formate
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__formate
+#: model:ir.ui.menu,name:xf_doc_approval.menu_formate
+msgid "Format"
+msgstr "Format (Format)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__formate_id
+msgid "Format Id"
+msgstr "Format Id (ID de format)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__line_status
+msgid "Format Status"
+msgstr "Format Status (Statut de format)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Formats"
+msgstr "Formats (Formats)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_team_form
+msgid "Forms"
+msgstr "Forms (Formes)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__has_message
+msgid "Has Message"
+msgstr "Has Message (A un message)"
+
+#. module: xf_doc_approval
+#: model:ir.module.category,description:xf_doc_approval.module_category_xf_doc_approval
+msgid "Helps you approve single documents and document packages."
+msgstr ""
+"Helps you approve single documents and document packages. (Vous aide à "
+"approuver des documents uniques et des packages de documents.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__id
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__id
+msgid "ID"
+msgstr "ID (IDENTIFIANT)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"If checked, new messages require your attention. (S'il est vérifié, les "
+"nouveaux messages nécessitent votre attention.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"If checked, some messages have a delivery error. (S'il est vérifié, certains"
+" messages ont une erreur de livraison.)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "In progress"
+msgstr "In progress (En cours)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__initiator_user_id
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_initiator
+msgid "Initiator"
+msgstr "Initiator (Initiateur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__inprogress
+msgid "Inprogress"
+msgstr "Inprogress (En cours)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_approver
+msgid "Is Approver"
+msgstr "Is Approver (Est l'approbateur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_is_follower
+msgid "Is Follower"
+msgstr "Is Follower (Est un adepte)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_initiator
+msgid "Is Initiator"
+msgstr "Is Initiator (Est initiateur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__is_select_all
+msgid "Is Select All"
+msgstr "Is Select All (Est sélectionné tout)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver____last_update
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on (Dernier modification sur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__write_uid
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by (Dernière mise à jour par)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_hr_dept_type__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__write_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on (Dernière mise à jour sur)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Main Attachment (Attachement principal)"
+
+#. module: xf_doc_approval
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_manager
+msgid "Manager"
+msgstr "Manager"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error
+msgid "Message Delivery error"
+msgstr "Message Delivery error (Erreur de livraison de messages)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_ids
+msgid "Messages"
+msgstr "Messages (Messages)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__method
+msgid "Method"
+msgstr "Method (Méthode)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document__name
+msgid "Name"
+msgstr "Name (Nom)"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_xf_doc_approval_document_package
+msgid "New Part Development Projects"
+msgstr ""
+"New Part Development Projects (Projets de développement de nouvelles pièces)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__notes
+msgid "Notes"
+msgstr "Notes (Notes)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Number of Actions (Nombre d'actions)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error_counter
+msgid "Number of errors"
+msgstr "Number of errors (Nombre d'erreurs)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+"Number of messages requiring action (Nombre de messages nécessitant une "
+"action)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+"Number of messages with delivery error (Nombre de messages avec erreur de "
+"livraison)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Open Format"
+msgstr "Open Format (Format ouvert)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__name
+msgid "Package Name"
+msgstr "Package Name (Nom de package)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_id
+msgid "Part"
+msgstr "Part (Partie)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_name
+msgid "Part Name"
+msgstr "Part Name (Nom de pièce)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__part_number
+msgid "Part Number"
+msgstr "Part Number (Numéro de pièce)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__pending
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__pending
+msgid "Pending"
+msgstr "Pending (En attente)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Pie"
+msgstr "Pie (Tarte)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Pivot Table"
+msgstr "Pivot Table (Table de pivot)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid ""
+"Please be informed that the document package\n"
+"                \""
+msgstr ""
+"Please be informed that the document package\n"
+"                \" (Veuillez être informé que le package de documents\n"
+"\")"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__prelaunch
+msgid "PreLaunch"
+msgstr "PreLaunch (Prime)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_product_template
+msgid "Product"
+msgstr "Product (Produit)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__production
+msgid "Production"
+msgstr "Production (Production)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_pivot
+msgid "Project Analysis"
+msgstr "Project Analysis (Analyse du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.ui.menu,name:xf_doc_approval.menu_project_type_dashboard
+msgid "Project Dashboard"
+msgstr "Project Dashboard (Tableau de bord du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__project_end_date
+msgid "Project End Date"
+msgstr "Project End Date (Date de fin du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__name
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__name
+msgid "Project Name"
+msgstr "Project Name (Nom du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__project_num
+msgid "Project Num."
+msgstr "Project Num. (Projet Num.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__project_start_date
+msgid "Project Start Date"
+msgstr "Project Start Date (Date de début du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.actions.act_window,name:xf_doc_approval.action_project_type_status_graph
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_type_status_graph
+msgid "Project Status Distribution"
+msgstr "Project Status Distribution (Distribution de l'état du projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_doc_project_type__name
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_tree
+msgid "Project Type"
+msgstr "Project Type (Type de projet)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_type_count_graph
+msgid "Project Type Distribution"
+msgstr "Project Type Distribution (Distribution de type de projet)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.board_documentation
+msgid "Project Types"
+msgstr "Project Types (Types de projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__used_in_project_type_id
+msgid "Project type"
+msgstr "Project type (Type de projet)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__prototype
+msgid "Prototype"
+msgstr "Prototype (Prototype)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Reject"
+msgstr "Reject (Rejeter)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__reject_reason
+msgid "Reject Reason"
+msgstr "Reject Reason (Rejeter la raison)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_reject_wizard
+msgid "Reject reason or comments"
+msgstr "Reject reason or comments (Rejeter la raison ou les commentaires)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__approval_state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__state__rejected
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__rejected
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Rejected"
+msgstr "Rejected"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__document_approval__status__revision
+msgid "Revision Required"
+msgstr "Revision Required (Révision requise)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__risk_assessment_id
+msgid "Risk Assessment"
+msgstr "Risk Assessment (L'évaluation des risques)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__role
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__role
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__role
+msgid "Role/Position"
+msgstr "Role/Position (Rôle / position)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_team__status__running
+msgid "Running"
+msgstr "Running (En cours d'exécution)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Delivery error (Erreur de livraison SMS)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_package__doc_type__safelaunch
+msgid "Safe Launch"
+msgstr "Safe Launch (Lancement sûr)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Select All Formats"
+msgstr "Select All Formats (Sélectionnez tous les formats)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__sr_no
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__sr_no
+msgid "Sequence No."
+msgstr "Sequence No. (N ° de séquence)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__serial_no
+msgid "Serial NO."
+msgstr "Serial NO. (N ° de série.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__serial_no
+msgid "Serial No."
+msgstr "Serial No. (N ° de série)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.action_approve_wizard
+msgid "Some comments"
+msgstr "Some comments (Quelques commentaires)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__start_date
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__start_date
+msgid "Start Date"
+msgstr "Start Date (Date de début)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__start_diff
+msgid "Start Date Diff."
+msgstr "Start Date Diff. (Date de début Diff.)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__status
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__state
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__state
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__status
+msgid "Status"
+msgstr "Status (Statut)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_approver_abstract__step
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_approver__step
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__step
+msgid "Step"
+msgstr "Step (Étape)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__stop_date
+msgid "Stop Date"
+msgstr "Stop Date (Date d'arrêt)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__table
+msgid "Table"
+msgstr "Table (Tableau)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__target_date
+msgid "Target Date"
+msgstr "Target Date (Date cible)"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.view_project_calendar
+msgid "Target Dates"
+msgstr "Target Dates (Dates cibles)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__tgt_start_date
+msgid "Target Start Date"
+msgstr "Target Start Date (Date de début cible)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__tgt_stop_date
+msgid "Target Stop Date"
+msgstr "Target Stop Date (Date d'arrêt cible)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_approver__team_id
+msgid "Team"
+msgstr "Team (Équipe)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team__user_id
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_team_leader
+msgid "Team Leader"
+msgstr "Team Leader (Chef d'équipe)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_team_lines__things_right_wrong_id
+msgid "Things Right Wrong"
+msgstr "Things Right Wrong (Les choses mal mal)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields.selection,name:xf_doc_approval.selection__xf_doc_approval_document_approver__state__to_approve
+msgid "To Approve"
+msgstr "To Approve (Approuver)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_approval__used_in_project_type_ids
+#: model:ir.model.fields,field_description:xf_doc_approval.field_document_formate__used_in_project_type_ids
+msgid "Used in Project type"
+msgstr "Used in Project type (Utilisé dans le type de projet)"
+
+#. module: xf_doc_approval
+#: model:res.groups,name:xf_doc_approval.group_xf_doc_approval_user
+msgid "User"
+msgstr "User"
+
+#. module: xf_doc_approval
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.request_to_approve
+msgid "View"
+msgstr "View (Voir)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__visibility
+#: model_terms:ir.ui.view,arch_db:xf_doc_approval.xf_doc_approval_document_package_form
+msgid "Visibility"
+msgstr "Visibility (Visibilité)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,field_description:xf_doc_approval.field_xf_doc_approval_document_package__website_message_ids
+msgid "Website Messages"
+msgstr "Website Messages (Messages du site Web)"
+
+#. module: xf_doc_approval
+#: model:ir.model.fields,help:xf_doc_approval.field_xf_doc_approval_document_package__website_message_ids
+msgid "Website communication history"
+msgstr ""
+"Website communication history (Historique de communication du site Web)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_doc_project_type
+msgid "doc.project.type"
+msgstr "doc.project.type (doc.project.type)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_document_formate
+msgid "document.formate"
+msgstr "document.formate (document.format)"
+
+#. module: xf_doc_approval
+#: model:ir.model,name:xf_doc_approval.model_hr_dept_type
+msgid "hr.dept.type"
+msgstr "hr.dept.type (hr.dept.type)"

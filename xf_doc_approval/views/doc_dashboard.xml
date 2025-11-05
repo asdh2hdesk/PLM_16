@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Graph View for Project Type Distribution (Bar Chart) -->
+    <record id="view_project_type_count_graph" model="ir.ui.view">
+        <field name="name">project.type.count.graph</field>
+        <field name="model">xf.doc.approval.document.package</field>
+        <field name="arch" type="xml">
+            <graph string="Project Type Distribution" type="bar">
+                <field name="used_in_project_type_id"/>
+                <field name="id" type="measure" invisible="1"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Pie Chart View for Project Type Status -->
+    <record id="view_project_type_status_graph" model="ir.ui.view">
+        <field name="name">project.type.status.graph</field>
+        <field name="model">xf.doc.approval.document.package</field>
+        <field name="arch" type="xml">
+            <graph string="Project Status Distribution" type="pie">
+                <field name="used_in_project_type_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="id" type="measure" invisible="1"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Pivot View for Detailed Analysis -->
+    <record id="view_project_pivot" model="ir.ui.view">
+        <field name="name">xf.doc.approval.document.package.pivot</field>
+        <field name="model">xf.doc.approval.document.package</field>
+        <field name="arch" type="xml">
+            <pivot string="Project Analysis">
+                <field name="used_in_project_type_id" type="row"/>
+                <field name="partner_id" type="col"/>
+                <field name="id" type="measure" invisible="1"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Calendar View for Target Dates -->
+    <record id="view_project_calendar" model="ir.ui.view">
+        <field name="name">xf.doc.approval.document.package.calendar</field>
+        <field name="model">xf.doc.approval.document.package</field>
+        <field name="arch" type="xml">
+            <calendar string="Target Dates" date_start="target_date" color="state" mode="month" quick_add="0">
+                <field name="used_in_project_type_id"/>
+                <field name="state"/>
+                <field name="partner_id"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Action for Overall Document Packages -->
+    <record id="action_xf_doc_approval_document_package" model="ir.actions.act_window">
+        <field name="name">New Part Development Projects</field>
+        <field name="res_model">xf.doc.approval.document.package</field>
+        <field name="view_mode">tree,form,graph,pivot,calendar</field>
+        <field name="context">{'search_default_group_by_state': 1}</field>
+    </record>
+    <record id="action_project_type_status_graph" model="ir.actions.act_window">
+        <field name="name">Project Status Distribution</field>
+        <field name="res_model">xf.doc.approval.document.package</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_project_type_status_graph"/>
+        <field name="context">{'group_by': ['used_in_project_type_id', 'state']}</field>
+    </record>
+
+
+    <record id="board_documentation" model="ir.ui.view">
+        <field name="name">board.xf.doc.approval.document.package.form</field>
+        <field name="model">board.board</field>
+        <field name="arch" type="xml">
+            <form string="Dashboard">
+                <board style="2-1">
+                    <column>
+                        <!-- Risk AP Chart -->
+                        <action name="%(action_xf_doc_approval_document_package)d" string="Project Types" view_mode="graph"/>
+                        <!-- Optimization AP Chart -->
+                        <action name="%(action_xf_doc_approval_document_package)d" string="Document Packages" view_mode="list"/>
+                        <!-- Main Table -->
+                        <action name="%(action_xf_doc_approval_document_package)d" string="Calendar" view_mode="calendar" />
+                    </column>
+                    <column>
+                        <!-- Main Table -->
+                            <action name="%(action_project_type_status_graph)d" string="Pie" view_mode="graph" />
+                        <action name="%(action_xf_doc_approval_document_package)d" string="Pivot Table" view_mode="pivot" />
+
+                    </column>
+                </board>
+            </form>
+        </field>
+    </record>
+
+    <!-- Board Action -->
+    <record id="action_board_dashboard_documentation" model="ir.actions.act_window">
+        <field name="name">DashBoard</field>
+        <field name="res_model">board.board</field>
+        <field name="view_mode">tree,form</field>
+        <field name="usage">menu</field>
+        <field name="view_id" ref="board_documentation"/>
+    </record>
+
+
+
+    <!-- Menu Item -->
+    <menuitem
+        id="menu_project_type_dashboard"
+        name="Project Dashboard"
+        parent="iatf.iatf_menu_doc_manage"
+        action="action_board_dashboard_documentation"
+        sequence="30"/>
+</odoo>

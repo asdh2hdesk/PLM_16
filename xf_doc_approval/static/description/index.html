@@ -1,0 +1,145 @@
+<div class="container">
+    <!-- Title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="oe_slogan">
+                <h2 class="oe_slogan">Document Approval Workflow</h2>
+                <div>
+                    Improve your document management and approval process!<br/>
+                    Dynamic, Customizable and Flexible approval system for documents and document packages.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h4>Key Features:</h4>
+            <ul>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Multi Company features of Odoo System are supported
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Any user can initiate unlimited approval process for documents
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Pre-defined team of approvers or custom flow specified by the initiator
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Parallel or serial (step-by-step) approval route for documents
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Multi-level approval workflow for document packages
+                </li>
+                <!--                <li>-->
+                <!--                    <i class="fa fa-check-circle"></i>-->
+                <!--                    Documents approval by button or by <a href="https://apps.odoo.com/apps/modules/15.0/xf_doc_approval_sign/">"handwritten" signature-->
+                <!--                    (additional sub-module)</a>-->
+                <!--                </li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <h3>Approval Teams:</h3>
+            <p>
+                Users with role "Team Leader" can create unlimited approval teams for similar workflows:
+            </p>
+            <p><img class="oe_screenshot" src="approval_teams.png" alt="Approval Teams" width="100%"/></p>
+            <p>Using the "step" option you can configure parallel or serial approval flows.</p>
+            <p><img class="oe_screenshot" src="approval_team_form.png" alt="Approval Team Form" width="100%"/></p>
+            <hr>
+
+            <h3>Document Packages:</h3>
+            <p><img class="oe_screenshot" src="document_list.png" alt="Documents" width="100%"/></p>
+            <p>
+                Users with role "Initiator" can initiate document approval process. Each document package can contain
+                one or more documents to approve.<br/>
+                Initiator can build own approval route or use pre-defined approval team (with customization
+                option).<br/>
+                The "Visibility" option helps to display documents only for allowed users. Available options are: All
+                Users, Followers, Approvers<br/>
+                If you use multi-company feature you can select company. Documents are displayed according company
+                settings.<br/>
+            </p>
+            <p><img class="oe_screenshot" src="document_package_form.png" alt="Document Package Form" width="100%"/></p>
+            <p>
+                After click to "Send for Approval" the system sends notification for approvers and document package goes
+                to the "Approval" stage.
+            </p>
+            <p><img class="oe_screenshot" src="document_approval.png" alt="Document Approval" width="100%"/></p>
+
+            <hr>
+            <h3>Document Approval Process:</h3>
+            <p>
+                When document is waiting approval from particular user, the user sees the "Approve" and "Reject" buttons
+            </p>
+            <p><img class="oe_screenshot" src="approve_reject_buttons.png" alt="Document Approve/Reject Buttons"
+                    width="100%"/></p>
+            <p>
+                After click to the "Approve" or "Reject" buttons popup window appears. For rejection user's comments are
+                required:
+            </p>
+            <p><img class="oe_screenshot" src="approval_wizard.png" alt="Approval Wizard" width="100%"/></p>
+            <p><img class="oe_screenshot" src="reject_wizard.png" alt="Rejection Wizard" width="100%"/></p>
+            <p>If approver rejects document package, initiator receives notification and can reset document to draft to
+                make corrections.</p>
+            <p>If approver approves document package, the document goes to next approval stage or will wait for approval
+                from other approvers.</p>
+            <p><img class="oe_screenshot" src="next_approval_step.png" alt="Approved by User" width="100%"/></p>
+            <p>Current approvers have the "Pending" status if the "Approvers" tab.</p>
+            <p><img class="oe_screenshot" src="document_approved_by_user.png" alt="Approved by User" width="100%"/></p>
+            <p>When document package is fully approved the status becomes as "Approved" and all followers receive
+                notification about that.</p>
+            <p><img class="oe_screenshot" src="approved_document.png" alt="Fully Approved Documents" width="100%"/></p>
+
+            <!--            <h3>Handwritten Signature Functionality</h3>-->
+            <!--            <p>-->
+            <!--                If you want to integrate handwritten signature functionality please install this sub-module:-->
+            <!--            </p>-->
+            <!--            <p><a href="https://apps.odoo.com/apps/modules/15.0/xf_doc_approval_sign/">Document Approval [Draw Sign]</a></p>-->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 oe_spaced">
+            <p>
+                Please note that to send email notifications to approvers
+                an outgoing email server should be configured.
+            </p>
+            <p>
+                If your Mail Transfer Agent (MTA) supports SRS (Sender Rewriting Scheme), your users can send and
+                receive notification.
+                However, that is more complex and requires more technical knowledge.
+            </p>
+            <p>
+                Instead, you can install additional module to
+                <a href="https://apps.odoo.com/apps/modules/16.0/xf_replace_email_params/">
+                    Replace "Email From" and "Reply To" parameters
+                </a>
+                of outgoing emails.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contacts -->
+    <div class="row">
+        <div class="col-12 oe_spaced">
+            <div class="text-center">
+                <img src="https://erp.xfanis.dev/web/logo/xf_doc_approval/16" alt="Logo" width="200">
+            </div>
+            <div class="oe_slogan text-center">
+                Contact me for Support, Customization, Implementation:<br/>
+                <b>Email</b>: <a href="mailto:xfanis.dev@gmail.com">xfanis.dev@gmail.com</a><br/>
+                <b>Telegram</b>: https://t.me/xfanis<br/>
+                <b>Twitter</b>: https://twitter.com/XFanis_Dev<br/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="doc_project_type_1" model="doc.project.type">
+            <field name="name">New Part Development</field>
+        </record>
+        <record id="doc_project_type_2" model="doc.project.type">
+            <field name="name">TQM</field>
+        </record>
+        <record id="doc_project_type_3" model="doc.project.type">
+            <field name="name">CAPA</field>
+        </record>
+        <record id="doc_project_type_4" model="doc.project.type">
+            <field name="name">QMS</field>
+        </record>
+        <record id="doc_project_type_5" model="doc.project.type">
+            <field name="name">Safety</field>
+        </record>
+        <record id="doc_project_type_6" model="doc.project.type">
+            <field name="name">CAPA</field>
+        </record>
+
+        <record id="doc_project_type_7" model="doc.project.type">
+            <field name="name">Maintenance</field>
+        </record>
+        <record id="doc_project_type_8" model="doc.project.type">
+            <field name="name">Audit</field>
+        </record>
+        <record id="doc_project_type_9" model="doc.project.type">
+            <field name="name">Capex</field>
+        </record>
+        <record id="doc_project_type_10" model="doc.project.type">
+            <field name="name">Kaizen</field>
+        </record>
+        <record id="doc_project_type_11" model="doc.project.type">
+            <field name="name">Poke Yoke</field>
+        </record>
+    </data>
+    <data>
+        <record id="hr_dept_type_1" model="hr.dept.type">
+            <field name="name">HR</field>
+        </record>
+        <record id="hr_dept_type_2" model="hr.dept.type">
+            <field name="name">DESIGN</field>
+        </record>
+        <record id="hr_dept_type_3" model="hr.dept.type">
+            <field name="name">ENGINEERING</field>
+        </record>
+        <record id="hr_dept_type_4" model="hr.dept.type">
+            <field name="name">PRODUCTION</field>
+        </record>
+        <record id="hr_dept_type_5" model="hr.dept.type">
+            <field name="name">SALES</field>
+        </record>
+        <record id="hr_dept_type_6" model="hr.dept.type">
+            <field name="name">QUALITY</field>
+        </record>
+        <record id="hr_dept_type_7" model="hr.dept.type">
+            <field name="name">MAINTENANCE</field>
+        </record>
+        <record id="hr_dept_type_8" model="hr.dept.type">
+            <field name="name">MARKETING</field>
+        </record>
+        <record id="hr_dept_type_9" model="hr.dept.type">
+            <field name="name">PROGRAM-MANAGEMENT</field>
+        </record>
+        <record id="hr_dept_type_10" model="hr.dept.type">
+            <field name="name">TOP-MANAGEMENT</field>
+        </record>
+    </data>
+</odoo>

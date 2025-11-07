@@ -5,9 +5,11 @@
     'category': 'Document Management',
     'depends': ['base', 'mail'],
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'views/vendor_document_views.xml',
     ],
     'installable': True,
     'application': True,
+    'license': 'LGPL-3',
 }

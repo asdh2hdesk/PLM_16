@@ -52,28 +52,49 @@
 
         </field>
     </record>
+    <record id="product_product_form_hide_stock_moves_stat" model="ir.ui.view">
+        <field name="name">product.product.form.hide.stock.moves.stat</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>
+        <field name="arch" type="xml">
+            <button name="action_view_stock_move_lines" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+        </field>
+    </record>
 
-<!--    <record id="product_form_view_hide_inout_button" model="ir.ui.view">-->
-<!--        <field name="name">product.template.hide.inout.button</field>-->
-<!--        <field name="model">product.template</field>-->
-<!--        <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <xpath expr="//button[@name='action_view_stock_move_lines']" position="attributes">-->
-<!--                <field name="action_view_stock_move_lines" invisible="1"/>-->
-<!--            </xpath>-->
-<!--        </field>-->
-<!--    </record>-->
+    <record id="product_template_form_hide_stock_moves_stat" model="ir.ui.view">
+        <field name="name">product.template.form.hide.stock.moves.stat</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="stock.product_template_form_view_procurement_button"/>
+        <field name="arch" type="xml">
+            <button name="action_view_stock_move_lines" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+        </field>
+    </record>
 
-        <!-- Hide In/Out button for product.product -->
+    <!--    <record id="product_form_view_hide_inout_button" model="ir.ui.view">-->
+    <!--        <field name="name">product.template.hide.inout.button</field>-->
+    <!--        <field name="model">product.template</field>-->
+    <!--        <field name="inherit_id" ref="stock.product_form_view_procurement_button"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <xpath expr="//button[@name='action_view_stock_move_lines']" position="attributes">-->
+    <!--                <field name="action_view_stock_move_lines" invisible="1"/>-->
+    <!--            </xpath>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <!-- Hide In/Out button for product.product -->
 
 
-<!--        &lt;!&ndash; Hide In/Out button for product.template &ndash;&gt;-->
-<!--    <record id="product_template_form_view_hide_inout_button" model="ir.ui.view">-->
-<!--        <field name="name">product.template.hide.inout.button</field>-->
-<!--        <field name="model">product.template</field>-->
-<!--        <field name="inherit_id" ref="stock.product_template_form_view_procurement_button"/>-->
-<!--        <field name="arch" type="xml">-->
-<!--            <xpath expr="//div[@name='button_box']/button[@icon='fa-exchange']" position="replace"/>-->
-<!--        </field>-->
-<!--    </record>-->
+    <!--        &lt;!&ndash; Hide In/Out button for product.template &ndash;&gt;-->
+    <!--    <record id="product_template_form_view_hide_inout_button" model="ir.ui.view">-->
+    <!--        <field name="name">product.template.hide.inout.button</field>-->
+    <!--        <field name="model">product.template</field>-->
+    <!--        <field name="inherit_id" ref="stock.product_template_form_view_procurement_button"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <xpath expr="//div[@name='button_box']/button[@icon='fa-exchange']" position="replace"/>-->
+    <!--        </field>-->
+    <!--    </record>-->
 </odoo>

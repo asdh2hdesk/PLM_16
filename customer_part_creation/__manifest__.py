@@ -16,7 +16,7 @@
     'website': 'https://github.com/Akshat-10',
     'support': 'akshat.gupta10m@gmail.com',
     'maintainer': 'Akshat Gupta',
-    'depends': ['base', 'mail', 'product'],
+    'depends': ['base', 'mail', 'product','stock'],
 
     'data': [
         'security/document_security.xml',

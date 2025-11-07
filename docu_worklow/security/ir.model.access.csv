@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_vendor_document_user,access.vendor.document.user,model_vendor_document,base.group_user,1,1,1,0
+access_vendor_document_manager,access.vendor.document.manager,model_vendor_document,base.group_system,1,1,1,1
+access_vendor_document_line_user,access.vendor.document.line.user,model_vendor_document_line,base.group_user,1,1,1,1
+access_vendor_document_line_manager,access.vendor.document.line.manager,model_vendor_document_line,base.group_system,1,1,1,1

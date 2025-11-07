@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_document_control_root" name="Part Creation"
+         sequence="100"/>
+
+</odoo>

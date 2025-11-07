@@ -1,0 +1,67 @@
+# Customer Part Creation Module
+Version: 16.0.1.0 Author: Akshat Gupta
+website --> https://github.com/Akshat-10
+
+
+## Overview
+The Customer Part Creation module provides a comprehensive system for managing documents and drawings related to customer parts, with a strong focus on document control, revision tracking, and approval workflows. It is designed to help organizations maintain compliance with quality standards and streamline the lifecycle of technical documents.
+
+## Key Features
+- Document Control: Create, manage, and track documents and drawings for customer parts, including part numbers, descriptions, and customer-specific details.
+- Revision Management: Maintain a complete history of document revisions, including revision numbers, descriptions, modification dates, and responsible users.
+- Approval Workflow: Configure approval groups and manage multi-user approval processes before documents are released.
+- Notifications: Automated email notifications are sent to relevant users when documents or revisions are released.
+- Access Control: Fine-grained permissions for users, managers, approvers, and administrators to ensure secure document handling.
+
+## Initial Setup
+### 1. User Groups & Access
+The module introduces several user roles:
+
+- Document User: Can create and view their own documents and revisions.
+- Document Manager: Can manage all documents and categories.
+- Document Admin: Has full administrative rights, including undo and cancel actions.
+- Document Approver: Can be assigned as an approver in the approval workflow.
+
+Assign users to these groups as appropriate for your organization.
+
+### 2. Approval Configuration
+- Navigate to Approval Configuration from the main menu.
+- Add or edit approval configurations to specify which users are designated as document approvers.
+- These users will be required to approve documents before they can be released.
+
+### 3. Document Categories
+- Define categories for organizing documents (e.g., Drawing, Specification, Customer Drawing).
+- Categories help in filtering and managing documents efficiently.
+
+## Using the Module
+### 1. Creating a New Document
+- Go to Customer Part Creation Documents.
+- Click Create to add a new document.
+- Fill in details such as format number, part number, customer information, and attach relevant drawings.
+- Assign categories and specify users to be notified upon release.
+
+### 2. Approval Workflow
+- After entering document details, click Request Approval.
+- Approvers (as configured) will be notified and can approve the document.
+- Once all required approvals are obtained, the document status changes to Approved.
+
+### 3. Releasing a Document
+- After approval, click Release Document.
+- The document status updates to Released.
+- All users specified in the Release To field receive an email notification.
+
+### 4. Managing Revisions
+- For released documents, click Add Revision to create a new revision.
+- Enter revision details, attach revised drawings, and specify users to notify.
+- Release the revision to notify relevant users and update the document history.
+
+### 5. Undo and Cancel Actions
+- Document Admins can use Undo to revert the document to a previous state or Cancel to mark it as canceled.
+
+## Tips
+- Use the Revisions tab within each document to view and manage the complete revision history.
+- Only users with appropriate permissions can approve, release, or undo documents.
+- Automated notifications ensure all stakeholders are informed of important document events.
+
+## Support
+For further assistance or to report issues, please contact the module author or your system administrator.

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_document_revision_tree" model="ir.ui.view">
+        <field name="name">document.revision.tree</field>
+        <field name="model">document.revision</field>
+        <field name="arch" type="xml">
+            <tree default_order="revision_date desc" decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'" decoration-muted="state == 'draft'">
+                <field name="revision_number"/>
+                <field name="revision_date"/>
+                <field name="document_id" />
+                <field name="previous_revision_ids" widget="many2many_tags" options="{'no_create': True}" />
+                <field name="revision_description" />
+                <field name="modified_by"/>
+                <field name="approved_by"/>
+                <field name="release_to" widget="many2many_tags"/>
+                <field name="obsolete_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_document_revision_form" model="ir.ui.view">
+        <field name="name">document.revision.form</field>
+        <field name="model">document.revision</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_request_approval" string="Request Approval" type="object" class="btn-primary" states="draft" confirm="Are you sure you want to request approval for this revision?"/>
+                    <button name="action_approve" string="Approve" type="object" class="btn-success" states="pending_approval" groups="customer_part_creation.group_document_approver,customer_part_creation.group_document_manager" confirm="Are you sure you want to approve this revision?"/>
+                    <button name="action_release_revision" string="Release Revision" type="object" class="btn-info" states="approved" groups="customer_part_creation.group_document_user,customer_part_creation.group_document_manager,customer_part_creation.group_document_admin" confirm="Are you sure you want to release this revision? This action cannot be undone."/>
+                    <button name="action_undo" string="Undo" type="object" class="btn-secondary" groups="customer_part_creation.group_document_admin" attrs="{'invisible': [('state', '=', 'draft')]}" confirm="Are you sure you want to undo the current state?"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-danger" groups="customer_part_creation.group_document_admin" attrs="{'invisible': [('state', '=', 'cancled')]}" confirm="Are you sure you want to cancel this revision? This will set the state to 'Cancelled'."/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="revision_number" attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                            <field name="revision_date" attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                            <field name="document_id" invisible="0" readonly="1" />
+                            <field name="previous_revision_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('document_id', '=', document_id)]" readonly="1" />
+                            <field name="revision_description" placeholder="Describe changes in this revision..." attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                            <field name="previous_revision_drawings" placeholder="Enter previous revision drawings details..." attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                            <field name="release_to" widget="many2many_tags" attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                        </group>
+                        <group>
+                            <field name="obsolete_date" readonly="1"/>
+                            <field name="modified_by" attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                            <field name="approved_by" readonly="1" />
+                            <field name="date_approved" readonly="1" />
+                            <field name="to_be_approved_by_users" widget="many2many_tags" groups="customer_part_creation.group_document_approver,customer_part_creation.group_document_admin" attrs="{'invisible': [('state', 'in', ['released', 'cancled'])]}"/>
+                            <field name="approved_by_users" widget="many2many_tags" readonly="1" />
+                        </group>
+                    </group>
+                    <group string="Drawing Attachment">
+                        <field name="drawing_file" filename="drawing_file_filename" attrs="{'readonly': [('state', 'in', ['pending_approval', 'released'])]}"/>
+                        <field name="drawing_file_filename" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    
+    <record id="view_document_revision_search" model="ir.ui.view">
+        <field name="name">document.revision.search</field>
+        <field name="model">document.revision</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="revision_number"/>
+                <field name="revision_description"/>
+                <field name="document_id"/>
+                <field name="modified_by"/>
+                <field name="approved_by"/>
+                <filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                <filter string="Pending Approval" name="pending_approval" domain="[('state','=','pending_approval')]"/>
+                <filter string="Approved" name="approved" domain="[('state','=','approved')]"/>
+                <filter string="Released" name="released" domain="[('state','=','released')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Document" name="group_by_document" context="{'group_by':'document_id'}"/>
+                    <filter string="State" name="group_by_state" context="{'group_by':'state'}"/>
+                    <filter string="Modified By" name="group_by_modified_by" context="{'group_by':'modified_by'}"/>
+                    <filter string="Revision Date" name="group_by_revision_date" context="{'group_by':'revision_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_document_revision" model="ir.actions.act_window">
+        <field name="name">Document Revisions</field>
+        <field name="res_model">document.revision</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_document_revision_search"/>
+        <field name="context">{'search_default_group_by_document': 1}</field>
+    </record>
+    
+    <menuitem id="menu_document_revisions" name="Document Revisions History"
+    parent="menu_document_control_root"
+    action="action_document_revision"/>
+
+
+</odoo>

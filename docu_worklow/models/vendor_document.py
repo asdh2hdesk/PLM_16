@@ -8,8 +8,9 @@ class VendorDocument(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char(string='Document Name', tracking=True)
-    vendor_id = fields.Many2one('res.partner', string='Vendor', tracking=True)
+    vendor_id = fields.Many2one('res.partner', string='Vendor Name', domain="[('is_company', '=', True)]", tracking=True)
     vendor_code = fields.Char(string='Vendor Code', related='vendor_id.ref', store=True, tracking=True)
+    responsible_user_id = fields.Many2one('res.users', string='Responsible', default=lambda self: self.env.user, tracking=True)
     submission_date = fields.Date(string='Submission Date', default=fields.Date.today, tracking=True)
 
     state = fields.Selection([

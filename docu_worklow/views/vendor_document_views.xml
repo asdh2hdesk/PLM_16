@@ -41,6 +41,7 @@
                             </group>
                             <group>
                                 <field name="submission_date"/>
+                                <field name="responsible_user_id"/>
                             </group>
                         </group>
 

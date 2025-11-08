@@ -18,7 +18,7 @@
                     <group>
                         <group>
                             <field name="sequence" readonly="1"/>
-                            <field name="name" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="name" attrs="{'readonly': [('state', '=', 'released')]}" invisible="1"/>
                             <field name="part_number_id" attrs="{'readonly': [('state', '=', 'released')]}"/>
                             <field name="part_description"/>
                             <field name="customer_name" attrs="{'readonly': [('state', '=', 'released')]}"/>
@@ -83,7 +83,7 @@
             <tree decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'">
                 <field name="sr_no_1"/>
                 <field name="sequence"/>
-                <field name="name"/>
+                <field name="name" invisible="1"/>
                 <field name="part_number_id"/>
                 <field name="customer_name"/>
                 <field name="state" widget="badge" decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'"/>

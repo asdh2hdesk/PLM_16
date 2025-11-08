@@ -389,7 +389,6 @@ class PartVersionDiff(models.Model):
 
         # Compare key fields
         fields_to_compare = [
-            ('name', 'Format Number'),
             ('customer_part_number', 'Customer Part Number'),
             ('customer_part_description', 'Customer Part Description'),
             ('state', 'Status'),

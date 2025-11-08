@@ -28,8 +28,8 @@
             <div name="options" position="before">
                 <field name="is_engcode_editable" invisible="1"/>
                 <group>
-                    <field name="engineering_code" attrs="{'readonly':[('is_engcode_editable','=', False)]}"/>
-                    <field name="engineering_revision" attrs="{'readonly':[('is_engcode_editable','=', False)]}"/>
+                    <field name="engineering_code" attrs="{'readonly':[('is_engcode_editable','=', False)]}" invisible="1"/>
+                    <field name="engineering_revision" attrs="{'readonly':[('is_engcode_editable','=', False)]}" invisible="1"/>
                 </group>
             </div>
         </field>
@@ -41,7 +41,7 @@
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='options']" position="inside">
-				<field name="kit_bom"/>
+				<field name="kit_bom" invisible="1"/>
             	<label for="kit_bom"/>
             </xpath>
         </field>

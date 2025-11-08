@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_document_control_form" model="ir.ui.view">
+        <field name="name">document.control.form</field>
+        <field name="model">document.control</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_request_approval" string="Request Approval" type="object" class="btn-primary" states="draft" confirm="Are you sure you want to request approval for this document?"/>
+                    <button name="action_approve" string="Approve" type="object" class="btn-success" states="pending_approval" groups="customer_part_creation.group_document_approver,customer_part_creation.group_document_manager" confirm="Are you sure you want to approve this document?"/>
+                    <button name="action_release_document" string="Release Document" type="object" class="btn-info" states="approved" groups="customer_part_creation.group_document_user,customer_part_creation.group_document_manager,customer_part_creation.group_document_admin" confirm="Are you sure you want to release this document? This action cannot be undone."/>
+                    <button name="action_new_revision" string="Add Revision" type="object" class="btn-warning" states="released" confirm="Are you sure you want to create a new revision?"/>
+                    <button name="action_undo" string="Undo" type="object" class="btn-secondary" groups="customer_part_creation.group_document_admin" attrs="{'invisible': [('state', '=', 'draft')]}" confirm="Are you sure you want to undo the current state?"/>
+                    <button name="action_cancel" string="Cancel" type="object" class="btn-danger" groups="customer_part_creation.group_document_admin" attrs="{'invisible': [('state', '=', 'cancled')]}" confirm="Are you sure you want to cancel this document? This will set the state to 'Cancelled'."/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,pending_approval,approved,released"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="sequence" readonly="1"/>
+                            <field name="name" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="part_number_id" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="part_description" readonly="1"/>
+                            <field name="customer_name" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="category_ids" widget="many2many_tags" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="customer_part_number" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="customer_part_description" attrs="{'readonly': [('state', '=', 'released')]}"/>
+<!--                            <field name="customer_drawing" attrs="{'readonly': [('state', '=', 'released')]}" placeholder="Enter customer drawing details..."/>-->
+<!--                            <field name="customer_drawing_attachment" filename="customer_drawing_filename"/>-->
+                        </group>
+                        <group>
+                            <field name="current_drawing_revision" readonly="1"/>
+                            <field name="current_drawing_revision_details" readonly="1"/>
+                            <field name="drawing_internal" attrs="{'readonly': [('state', '=', 'released')]}" placeholder="Enter internal drawing details..."/>
+<!--                            <field name="drawing_internal_attachment" filename="drawing_internal_filename"/>-->
+                            <field name="drawing_internal_attachment_ids" filename="drawing_internal_filename" widget="many2many_binary"/>
+                            <field name="release_to" widget="many2many_tags" attrs="{'readonly': [('state', '=', 'released')]}"/>
+                            <field name="date_creation" readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="to_be_approved_by" widget="many2many_tags" groups="customer_part_creation.group_document_approver,customer_part_creation.group_document_admin" attrs="{'invisible': [('state', '=', 'released')]}"/>
+
+                        <field name="approved_by" widget="many2many_tags" readonly="1" />
+                    </group>
+                    <notebook>
+                        <page string="Revisions">
+                            <field name="revision_ids" mode="tree" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom" create="false" delete="false" decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'">
+                                    <field name="revision_number"/>
+                                    <field name="revision_date"/>
+                                    <field name="document_id" invisible="1"/>
+                                    <field name="previous_revision_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('document_id', '=', document_id)]" />
+                                    <field name="revision_description"/>
+                                    <field name="modified_by"/>
+                                    <field name="approved_by"/>
+                                    <field name="date_approved"/>
+                                    <field name="release_to" widget="many2many_tags"/>
+                                    <field name="obsolete_date" readonly="1"/>
+                                    <field name="state"/>
+                                    <button name="action_release_revision" string="Release" type="object" class="btn-info" states="approved" groups="customer_part_creation.group_document_user,customer_part_creation.group_document_manager,customer_part_creation.group_document_admin" confirm="Are you sure you want to release this revision?"/>
+                                    <button name="action_request_approval" string="Request Approval" type="object" class="btn-primary" states="draft" confirm="Are you sure you want to request approval for this revision?"/>
+                                    <button name="action_approve" string="Approve" type="object" class="btn-success" states="pending_approval" groups="customer_part_creation.group_document_approver,customer_part_creation.group_document_manager" confirm="Are you sure you want to approve this revision?"/>
+                                    <button
+                                        name="get_formview_action"
+                                        type="object"
+                                        string="Open"
+                                        class="btn-secondary"
+                                    />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_document_control_tree" model="ir.ui.view">
+        <field name="name">document.control.tree</field>
+        <field name="model">document.control</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'">
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="part_number_id"/>
+                <field name="customer_name"/>
+                <field name="state" widget="badge" decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_document_control" model="ir.actions.act_window">
+        <field name="name">Part Creation Documents</field>
+        <field name="res_model">document.control</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_document_control" name="Part Creation Documents"
+        parent="menu_document_control_root"
+        action="action_document_control"/>
+
+
+</odoo>

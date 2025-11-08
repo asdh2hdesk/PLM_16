@@ -1,0 +1,883 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* customer_part_creation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-01 05:44+0000\n"
+"PO-Revision-Date: 2025-08-01 05:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_part_creation
+#: model:mail.template,body_html:customer_part_creation.email_template_revision_released
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">A new revision has been released for the following document:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.document_id.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.document_id.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Number:</strong> <t t-out=\"object.revision_number or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Description:</strong> <t t-out=\"object.revision_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.obsolete_date.strftime('%Y-%m-%d') if object.obsolete_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"user.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the revision as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">A new revision has been released for the following document:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.document_id.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.document_id.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Number:</strong> <t t-out=\"object.revision_number or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Description:</strong> <t t-out=\"object.revision_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.obsolete_date.strftime('%Y-%m-%d') if object.obsolete_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"user.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the revision as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+
+#. module: customer_part_creation
+#: model:mail.template,body_html:customer_part_creation.email_template_document_released
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">We are pleased to inform you that the following document has been released:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Number:</strong> <t t-out=\"object.part_number_id.default_code or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Description:</strong> <t t-out=\"object.part_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Customer:</strong> <t t-out=\"object.customer_name.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.release_date.strftime('%Y-%m-%d') if object.release_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"object.released_by.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the document as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">We are pleased to inform you that the following document has been released:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Number:</strong> <t t-out=\"object.part_number_id.default_code or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Description:</strong> <t t-out=\"object.part_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Customer:</strong> <t t-out=\"object.customer_name.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.release_date.strftime('%Y-%m-%d') if object.release_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"object.released_by.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the document as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_needaction
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_needaction
+msgid "Action Needed"
+msgstr " Action Needed (कार्रवाई आवश्यक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_ids
+msgid "Activities"
+msgstr " Activities (गतिविधियाँ)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_exception_decoration
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr " Activity Exception Decoration (गतिविधि अपवाद सजावट)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_state
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_state
+msgid "Activity State"
+msgstr " Activity State (गतिविधि अवस्था)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_type_icon
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_type_icon
+msgid "Activity Type Icon"
+msgstr " Activity Type Icon (गतिविधि प्रकार आइकन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__actual_end_date
+msgid "Actual End Date"
+msgstr " Actual End Date (वास्तविक अंत तिथि)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__actual_start_date
+msgid "Actual Start Date"
+msgstr " Actual Start Date (वास्तविक प्रारंभ तिथि)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Add Revision"
+msgstr " Add Revision (संशोधन जोड़ें)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_product_product__product_description
+#: model:ir.model.fields,help:customer_part_creation.field_product_template__product_description
+msgid "Add full product description here"
+msgstr " Add full product description here (यहां पूर्ण उत्पाद विवरण जोड़ें)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_approval_config
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_approval_config
+msgid "Approval Configuration"
+msgstr " Approval Configuration (अनुमोदन विन्यास)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Approve"
+msgstr " Approve (मंज़ूरी देना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__approved
+msgid "Approved"
+msgstr " Approved (अनुमत)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__approved_by
+msgid "Approved By"
+msgstr " Approved By (के द्वारा अनुमोदित)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__approver_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__iatf_members_ids
+msgid "Approvers"
+msgstr " Approvers (अनुमोदन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_attachment_count
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_attachment_count
+msgid "Attachment Count"
+msgstr " Attachment Count (अनुलग्नक गणना)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Cancel"
+msgstr " Cancel (रद्द करना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__cancled
+msgid "Cancled"
+msgstr " Cancled (चकमा देना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__category_ids
+msgid "Category"
+msgstr " Category (वर्ग)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__name
+msgid "Category Name"
+msgstr " Category Name (श्रेणी नाम)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__company_id
+msgid "Company"
+msgstr " Company (कंपनी)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__create_uid
+msgid "Created by"
+msgstr " Created by (के द्वारा बनाई गई)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__create_date
+msgid "Created on"
+msgstr " Created on (पर बनाया)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_drawing_revision
+msgid "Current Drawing Revision"
+msgstr " Current Drawing Revision (वर्तमान ड्राइंग संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_drawing_revision_details
+msgid "Current Drawing Revision Details"
+msgstr " Current Drawing Revision Details (वर्तमान ड्राइंग संशोधन विवरण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_revision_id
+msgid "Current Revision"
+msgstr " Current Revision (वर्तमान संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_drawing
+msgid "Customer Drawing"
+msgstr " Customer Drawing (ग्राहक आरेखण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__partner_id
+msgid "Customer Name"
+msgstr " Customer Name (ग्राहक नाम)"
+
+#. module: customer_part_creation
+#: model:ir.module.category,name:customer_part_creation.cpc_category
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_control_root
+msgid "Customer Part Creation"
+msgstr " Customer Part Creation (ग्राहक भाग निर्माण)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_control
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_control
+msgid "Customer Part Creation Documents"
+msgstr " Customer Part Creation Documents (ग्राहक भाग निर्माण दस्तावेज)"
+
+#. module: customer_part_creation
+#: model:ir.module.category,description:customer_part_creation.cpc_category
+msgid "Customer Part Creation System Categories"
+msgstr ""
+" Customer Part Creation System Categories (ग्राहक भाग निर्माण प्रणाली "
+"श्रेणियां)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_description
+msgid "Customer Part Description"
+msgstr " Customer Part Description (ग्राहक भाग विवरण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_number
+msgid "Customer Part Number"
+msgstr " Customer Part Number (ग्राहक भाग संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_part_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_name
+msgid "Customer Part name"
+msgstr " Customer Part name (ग्राहक भाग का नाम)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_part_no
+msgid "Customer Part num"
+msgstr " Customer Part num (ग्राहक भाग संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_id
+msgid "Customer name"
+msgstr " Customer name (ग्राहक नाम)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__date_creation
+msgid "Date of Creation"
+msgstr " Date of Creation (निर्माण की तारीख)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_date
+msgid "Date of Modification"
+msgstr " Date of Modification (संशोधन की तारीख)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__date_approved
+msgid "Date of Modification Approved"
+msgstr " Date of Modification Approved (अनुमोदित संशोधन की तारीख)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_revision_form
+msgid "Describe changes in this revision..."
+msgstr ""
+" Describe changes in this revision... (इस संशोधन में परिवर्तन का वर्णन करें "
+"...)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__display_name
+msgid "Display Name"
+msgstr " Display Name (प्रदर्शित होने वाला नाम)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__doc_type
+msgid "Doc Type"
+msgstr " Doc Type (डॉक्टर प्रकार)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__document_id
+msgid "Document"
+msgstr " Document (दस्तावेज़)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_admin
+msgid "Document Admin"
+msgstr " Document Admin (दस्तावेज़ व्यवस्थापक)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_approval_config
+msgid "Document Approval Configuration"
+msgstr " Document Approval Configuration (दस्तावेज़ अनुमोदन विन्यास)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_approver
+msgid "Document Approver"
+msgstr " Document Approver (दस्तावेज़ स्वप्रोवर)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_category
+msgid "Document Category"
+msgstr " Document Category (प्रलेख श्रेणी)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_manager
+msgid "Document Manager"
+msgstr " Document Manager (दस्तावेज़ प्रबंधक)"
+
+#. module: customer_part_creation
+#: model:mail.template,name:customer_part_creation.email_template_document_released
+msgid "Document Released Notification"
+msgstr " Document Released Notification (दस्तावेज़ जारी अधिसूचना)"
+
+#. module: customer_part_creation
+#: model:mail.template,subject:customer_part_creation.email_template_document_released
+msgid "Document Released: {{object.sequence}} - {{object.name}}"
+msgstr ""
+" Document Released: {{object.sequence}} - {{object.name}} (दस्तावेज़ जारी "
+"किया गया: {{object.cherence}} - {{object.name}}})"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_revision
+msgid "Document Revision History"
+msgstr " Document Revision History (दस्तावेज़ संशोधन इतिहास)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_revision
+msgid "Document Revisions"
+msgstr " Document Revisions (दस्तावेज़ संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_revisions
+msgid "Document Revisions History"
+msgstr " Document Revisions History (दस्तावेज़ संशोधन इतिहास)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__state
+msgid "Document Status"
+msgstr " Document Status (दस्तावेज़ स्थिति)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_user
+msgid "Document User"
+msgstr " Document User (दस्तावेज़ उपयोगकर्ता)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__draft
+msgid "Draft"
+msgstr " Draft (मसौदा)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_control
+msgid "Drawing Control Document"
+msgstr " Drawing Control Document (आरेखण नियंत्रण प्रलेख)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_no
+msgid "Drawing No."
+msgstr " Drawing No. (ड्राइंग नंबर।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_rev_date
+msgid "Drawing Rev. Date"
+msgstr " Drawing Rev. Date (ड्राइंग रेव। दिनांक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_internal
+msgid "Drawing Upload Internal"
+msgstr " Drawing Upload Internal (ड्राइंग अपलोड आंतरिक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_rev_no
+msgid "Drawing. Rev. No."
+msgstr " Drawing. Rev. No. (चित्रकला।रेव। सं।)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Enter customer drawing details..."
+msgstr ""
+" Enter customer drawing details... (ग्राहक ड्राइंग विवरण दर्ज करें ...)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Enter internal drawing details..."
+msgstr ""
+" Enter internal drawing details... (आंतरिक ड्राइंग विवरण दर्ज करें ...)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_revision_form
+msgid "Enter previous revision drawings details..."
+msgstr ""
+" Enter previous revision drawings details... (पिछले संशोधन चित्र विवरण दर्ज "
+"करें ...)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_follower_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_follower_ids
+msgid "Followers"
+msgstr " Followers (समर्थक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_partner_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_partner_ids
+msgid "Followers (Partners)"
+msgstr " Followers (Partners) (अनुयायी (भागीदार))"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_type_icon
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr " Font awesome icon e.g. fa-tasks (फ़ॉन्ट भयानक आइकन उदा।एफए-टास्क)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__name
+msgid "Format Number"
+msgstr " Format Number (प्रारूप संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__has_message
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__has_message
+msgid "Has Message"
+msgstr " Has Message (संदेश है)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__id
+msgid "ID"
+msgstr " ID (पहचान)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_exception_icon
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_exception_icon
+msgid "Icon"
+msgstr " Icon (आइकन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_exception_icon
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+" Icon to indicate an exception activity. (एक अपवाद गतिविधि को इंगित करने के "
+"लिए आइकन।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_needaction
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+" If checked, new messages require your attention. (यदि जाँच की जाती है, तो "
+"नए संदेशों को आपके ध्यान की आवश्यकता होती है।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_sms_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+" If checked, some messages have a delivery error. (यदि जाँच की जाती है, तो "
+"कुछ संदेशों में डिलीवरी त्रुटि होती है।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_is_follower
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_is_follower
+msgid "Is Follower"
+msgstr " Is Follower (अनुयायी है)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__language_id
+msgid "Language"
+msgstr " Language (भाषा)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision____last_update
+msgid "Last Modified on"
+msgstr " Last Modified on (अंतिम रूप से संशोधित)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__write_uid
+msgid "Last Updated by"
+msgstr " Last Updated by (द्वारा अंतिम अद्यतन किया गया)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__write_date
+msgid "Last Updated on"
+msgstr " Last Updated on (अंतिम बार अद्यतन किया गया)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__link
+msgid "Link"
+msgstr " Link (जोड़ना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_main_attachment_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_main_attachment_id
+msgid "Main Attachment"
+msgstr " Main Attachment (मुख्य अनुलग्नक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__member_name
+msgid "Member Name"
+msgstr " Member Name (सदस्य नाम)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_error
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_error
+msgid "Message Delivery error"
+msgstr " Message Delivery error (संदेश वितरण त्रुटि)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_ids
+msgid "Messages"
+msgstr " Messages (संदेशों)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__approved_by
+msgid "Modification Approved By"
+msgstr " Modification Approved By (द्वारा अनुमोदित संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__modified_by
+msgid "Modification By"
+msgstr " Modification By (द्वारा संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__previous_revision_drawings
+msgid "Modified Revision Drawings"
+msgstr " Modified Revision Drawings (संशोधित संशोधन चित्र)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__my_activity_date_deadline
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr " My Activity Deadline (मेरी गतिविधि की समय सीमा)"
+
+#. module: customer_part_creation
+#. odoo-python
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#, python-format
+msgid "New"
+msgstr " New (नया)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_calendar_event_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr " Next Activity Calendar Event (अगली गतिविधि कैलेंडर घटना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_date_deadline
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr " Next Activity Deadline (अगली गतिविधि की समय सीमा)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_summary
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_summary
+msgid "Next Activity Summary"
+msgstr " Next Activity Summary (अगली गतिविधि सारांश)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_type_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_type_id
+msgid "Next Activity Type"
+msgstr " Next Activity Type (अगली गतिविधि प्रकार)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_needaction_counter
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_needaction_counter
+msgid "Number of Actions"
+msgstr " Number of Actions (कार्यों की संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_error_counter
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_error_counter
+msgid "Number of errors"
+msgstr " Number of errors (त्रुटियों की संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_needaction_counter
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+" Number of messages requiring action (कार्रवाई की आवश्यकता वाले संदेशों की "
+"संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_error_counter
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+" Number of messages with delivery error (वितरण त्रुटि के साथ संदेशों की "
+"संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__obsolete_date
+msgid "Obsolete Date"
+msgstr " Obsolete Date (अप्रचलित तारीख)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_id
+msgid "Part"
+msgstr " Part (भाग)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_description
+msgid "Part Description"
+msgstr " Part Description (भाग का विवरण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_name
+msgid "Part Name"
+msgstr " Part Name (नाम का हिस्सा)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_number
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_number_id
+msgid "Part Number"
+msgstr " Part Number (भाग संख्या)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__pending_approval
+msgid "Pending Approval"
+msgstr " Pending Approval (लंबित अनुमोदन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__plan_end_date
+msgid "Plan End Date"
+msgstr " Plan End Date (योजना समाप्ति तिथि)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__plan_start_date
+msgid "Plan Start Date"
+msgstr " Plan Start Date (योजना शुरू तिथि)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__previous_revision_ids
+msgid "Previous Revisions"
+msgstr " Previous Revisions (पिछला संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_product_template
+msgid "Product"
+msgstr " Product (उत्पाद)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_product_product__product_description
+#: model:ir.model.fields,field_description:customer_part_creation.field_product_template__product_description
+msgid "Product Description"
+msgstr " Product Description (उत्पाद वर्णन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__project_id
+msgid "Project Name"
+msgstr " Project Name (प्रोजेक्ट नाम)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Release"
+msgstr " Release (मुक्त करना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__release_date
+msgid "Release Date"
+msgstr " Release Date (रिलीज़ की तारीख)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Release Document"
+msgstr " Release Document (विमोचन दस्तावेज़)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__release_to
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__release_to
+msgid "Release To"
+msgstr " Release To (जारी करना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__released
+msgid "Released"
+msgstr " Released (जारी किया)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__released_by
+msgid "Released By"
+msgstr " Released By (द्वारा जारी)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Request Approval"
+msgstr " Request Approval (अनुरोध अनुमोदन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_user_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_user_id
+msgid "Responsible User"
+msgstr " Responsible User (जिम्मेदार उपयोगकर्ता)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__drawing_file
+msgid "Revised Drawing"
+msgstr " Revised Drawing (संशोधित आरेखण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_description
+msgid "Revision Description"
+msgstr " Revision Description (संशोधन विवरण)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_number
+msgid "Revision No."
+msgstr " Revision No. (संशोधन सं।)"
+
+#. module: customer_part_creation
+#: model:mail.template,name:customer_part_creation.email_template_revision_released
+msgid "Revision Released Notification"
+msgstr " Revision Released Notification (संशोधन ने सूचना जारी की)"
+
+#. module: customer_part_creation
+#: model:mail.template,subject:customer_part_creation.email_template_revision_released
+msgid ""
+"Revision Released: {{object.revision_number}} for Document "
+"{{object.document_id.sequence}}"
+msgstr ""
+" Revision Released: {{object.revision_number}} for Document "
+"{{object.document_id.sequence}} (संशोधन जारी: {{object.revision_number}} "
+"दस्तावेज़ के लिए {{object.document_id.cherence}}}})"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__revision_ids
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Revisions"
+msgstr " Revisions (संशोधन)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_sms_error
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr " SMS Delivery error (एसएमएस वितरण त्रुटि)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__show_buttons
+msgid "Show Buttons"
+msgstr " Show Buttons (बटन दिखाएं)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__sequence
+msgid "Sr. No"
+msgstr " Sr. No (क्रमांक)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__final_status
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__state
+msgid "Status"
+msgstr " Status (स्थिति)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_state
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+" Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities. (गतिविधियों के आधार पर स्थिति\n"
+"अतिदेय: नियत तारीख पहले ही पारित हो चुकी है\n"
+"आज: गतिविधि की तारीख आज है\n"
+"नियोजित: भविष्य की गतिविधियाँ।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__language_id
+msgid "Target language for automatic field translation."
+msgstr ""
+" Target language for automatic field translation. (स्वचालित क्षेत्र अनुवाद "
+"के लिए लक्ष्य भाषा।)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__to_be_approved_by
+msgid "To Be Approved By"
+msgstr " To Be Approved By (द्वारा अनुमोदित किया जाना)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_exception_decoration
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+" Type of the exception activity on record. (रिकॉर्ड पर अपवाद गतिविधि का "
+"प्रकार।)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Undo"
+msgstr " Undo (पूर्ववत)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__user_has_access_to_approve
+msgid "User Has Access"
+msgstr " User Has Access (उपयोगकर्ता की पहुंच है)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__website_message_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__website_message_ids
+msgid "Website Messages"
+msgstr " Website Messages (वेबसाइट संदेश)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__website_message_ids
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__website_message_ids
+msgid "Website communication history"
+msgstr " Website communication history (वेबसाइट संचार इतिहास)"

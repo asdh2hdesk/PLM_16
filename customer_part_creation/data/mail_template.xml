@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="email_template_document_released" model="mail.template">
+        <field name="name">Document Released Notification</field>
+        <field name="model_id" ref="model_document_control"/>
+        <field name="subject">Document Released: {{object.sequence}} - {{object.name}}</field>
+        <field name="email_from">{{user.email}}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px; font-family: Arial, sans-serif;">
+               <p style="font-size: 14px;">Dear <t t-out="ctx.get('recipient_user', user).name if ctx.get('recipient_user') else 'User'"/>,</p>
+                <p style="font-size: 14px;">We are pleased to inform you that the following document has been released:</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li><strong>Document Reference:</strong> <t t-out="object.sequence or 'N/A'"/></li>
+                    <li><strong>Document Name:</strong> <t t-out="object.name or 'N/A'"/></li>
+                    <li><strong>Part Number:</strong> <t t-out="object.part_number_id.default_code or 'N/A'"/></li>
+                    <li><strong>Part Description:</strong> <t t-out="object.part_description or 'N/A'"/></li>
+                    <li><strong>Customer:</strong> <t t-out="object.customer_name.name or 'N/A'"/></li>
+                    <li><strong>Release Date:</strong> <t t-out="object.release_date.strftime('%Y-%m-%d') if object.release_date else 'N/A'"/></li>
+                    <li><strong>Released By:</strong> <t t-out="object.released_by.name or 'N/A'"/></li>
+                </ul>
+                <p style="font-size: 14px;">Please review the document as necessary.</p>
+                <br/>
+                <p style="font-size: 14px;">Best regards,</p>
+                <p style="font-size: 14px;"><t t-out="user.name or ''"/><br/><t t-out="user.company_id.name or ''"/></p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+
+    <record id="email_template_revision_released" model="mail.template">
+        <field name="name">Revision Released Notification</field>
+        <field name="model_id" ref="model_document_revision"/>
+        <field name="subject">Revision Released: {{object.revision_number}} for Document {{object.document_id.sequence}}</field>
+        <field name="email_from">{{user.email}}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px; font-family: Arial, sans-serif;">
+               <p style="font-size: 14px;">Dear <t t-out="ctx.get('recipient_user', user).name if ctx.get('recipient_user') else 'User'"/>,</p>
+                <p style="font-size: 14px;">A new revision has been released for the following document:</p>
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li><strong>Document Reference:</strong> <t t-out="object.document_id.sequence or 'N/A'"/></li>
+                    <li><strong>Document Name:</strong> <t t-out="object.document_id.name or 'N/A'"/></li>
+                    <li><strong>Revision Number:</strong> <t t-out="object.revision_number or 'N/A'"/></li>
+                    <li><strong>Revision Description:</strong> <t t-out="object.revision_description or 'N/A'"/></li>
+                    <li><strong>Release Date:</strong> <t t-out="object.obsolete_date.strftime('%Y-%m-%d') if object.obsolete_date else 'N/A'"/></li>
+                    <li><strong>Released By:</strong> <t t-out="user.name or 'N/A'"/></li>
+                </ul>
+                <p style="font-size: 14px;">Please review the revision as necessary.</p>
+                <br/>
+                <p style="font-size: 14px;">Best regards,</p>
+                <p style="font-size: 14px;"><t t-out="user.name or ''"/><br/><t t-out="user.company_id.name or ''"/></p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="True"/>
+    </record>
+</odoo>

@@ -20,7 +20,7 @@
             		string="Last Week" 
             		domain="[('create_date','&gt;=',(datetime.date.today() - datetime.timedelta(weeks=2)).strftime('%%Y-%%m-%%d'))]"/>
                 <separator orientation="vertical"/>
-                <field name="engineering_code"/>
+                <field name="engineering_code" invisible="1"/>
                 <field name="name"/>
                 <field name="description" invisible="1"/>
                 <separator orientation="vertical"/>
@@ -154,14 +154,17 @@
 	                    <field name="name" string="Description" colspan="4"/>
                         <field name="id" invisible="1"/>
                         <group name="engineering_group" colspan="4" col="6">
-	                        <field name="engineering_code"  colspan="4" select="1" attrs="{'readonly':[('id','>',0)]}"/>
+                            <field name="default_code"/>
+                            <field name="barcode"/>
+                            <field name="categ_id"/>
+	                        <field name="engineering_code"  colspan="4" select="1" attrs="{'readonly':[('id','>',0)]}" invisible="1"/>
 	                        <field name="engineering_revision" colspan="2"
-	                                    attrs="{'readonly':[('id','>',0)]}"/>
+	                                    attrs="{'readonly':[('id','>',0)]}" invisible="1"/>
                         </group>
-                        <group name="str_description" colspan="4">
+                        <group name="str_description" colspan="4" invisible="1">
 	                        <field name="std_description"
 	                               colspan="4"
-	                               attrs="{'readonly':[('engineering_state','in',['released','obsoleted'])]}"/>
+	                               attrs="{'readonly':[('engineering_state','in',['released','obsoleted'])]}" invisible="1"/>
 	                        <field name="show_std_field1" invisible="1"/>
 	                        <field name="show_std_field2" invisible="1"/>
 	                        <field name="show_std_field3" invisible="1"/>
@@ -169,7 +172,7 @@
 	                        <field name="readonly_std_umc2" invisible="1"/>
 	                        <field name="readonly_std_umc3" invisible="1"/>
                         </group>
-                        <group name="std_desc_attrs" colspan="4" string="Standard Description Parameters" attrs="{'invisible': [('std_description','=', False)]}">
+                        <group name="std_desc_attrs" colspan="4" string="Standard Description Parameters" attrs="{'invisible': [('std_description','=', False)]}" invisible="1">
                             <field name="std_umc1"
                                    force_save="1"
                                    attrs="{'readonly':['|',('readonly_std_umc1','=',True),('engineering_state','in',['released','obsoleted'])], 'invisible': [('show_std_field1','=',False)]}"/>
@@ -290,7 +293,7 @@
                         type="object"
                         string="Template"
                         class="oe_stat_button"
-                        icon="fa-tag">
+                        icon="fa-tag" invisible="1">
                 </button>
             </xpath>
             <xpath expr="//div[@name='options']" position="attributes">
@@ -301,16 +304,19 @@
                <field name="is_engcode_editable" invisible="1"/>
                <group>
 	                <group>
-	                    <field name="engineering_code" attrs="{'readonly':[('is_engcode_editable','=', False)]}"/>
+                        <field name="default_code"/>
+                        <field name="barcode"/>
+	                    <field name="engineering_code" attrs="{'readonly':[('is_engcode_editable','=', False)]}" invisible="1"/>
 	                </group>
 	                <group>
-	                    <field name="engineering_revision" attrs="{'readonly':[('is_engcode_editable','=', False)]}"/>
+                        <field name="categ_id"/>
+	                    <field name="engineering_revision" attrs="{'readonly':[('is_engcode_editable','=', False)]}" invisible="1"/>
 	                </group>
                </group>       
                <group>
                		<group>
                			<group colpsan="3" col="3">
-	                		<field name="std_description" colspan="4" attrs="{'readonly':[('engineering_state','in',['released','obsoleted'])]}"/>
+	                		<field name="std_description" colspan="4" attrs="{'readonly':[('engineering_state','in',['released','obsoleted'])]}" invisible="1"/>
 	                		<separator colspan="3" string="" invisible="1"/>
 	               			<field name="show_std_field1" invisible="1" colspan="1"/>
 	               			<field name="show_std_field2" invisible="1" colspan="1"/>
@@ -322,7 +328,7 @@
 	                	</group>
 	                </group>
 	                
-                    <group name="std_desc_attrs" col="4" colspan="4" string="" attrs="{'invisible': [('std_description','=', False)]}">
+                    <group name="std_desc_attrs" col="4" colspan="4" string="" attrs="{'invisible': [('std_description','=', False)]}" invisible="1">
                         <p><b colpspan="4" size="32">Standard Description Parameters:  </b><a target="new"  href="https://www.omniasolutions.website/blog/developer-and-it-here-you-will-find-post-regarding-very-technical-aspect-of-programming-and-it-those-thinks-are-daily-used-by-omniasolutions-and-we-hope-you-that-will-help-you-3/post/standard-description-39" title="Standard description parameters info" colspan="4"><i class="fa fa-info-circle"></i></a></p>   
                             <separator colspan="1"/>
                             <group col="4" colspan="4">
@@ -373,7 +379,7 @@
 						<field name="engineering_workflow_date"  readonly="1"/>
 					</group>
 				</page>
-                <page string="Linked Documents" name="linkeddocuments">
+                <page string="Linked Documents" name="linkeddocuments" invisible="1">
                     <group colspan="4">
                         <button class="oe_inline oe_stat_button" type="object" icon="fa-list-alt"
                                 name="action_rev_docs" string="Revision Rel Docs"/>
@@ -397,15 +403,15 @@
         <field name="arch" type="xml">
             <xpath expr="//kanban/field[1]" position="after">
                 <field name="linkeddocuments"/>
-                <field name="engineering_code"/>
-                <field name="engineering_revision"/>
+                <field name="engineering_code" invisible="1"/>
+                <field name="engineering_revision" invisible="1"/>
                 <field name="engineering_state"/>
             </xpath>
             
             <xpath expr="//div/div[hasclass('o_kanban_image')]" position="replace">
                 <t t-value="record.engineering_state.raw_value" t-set="stateToUse"/>
-                <field name="engineering_code"/>-
-                <field name="engineering_revision"/>-
+                <field name="engineering_code" invisible="1"/>-
+                <field name="engineering_revision" invisible="1"/>-
                 <t t-if="stateToUse == 'draft'">
 				    <span style="color: rgb(110, 51, 197);padding-left: 5px;">
 				        <b>

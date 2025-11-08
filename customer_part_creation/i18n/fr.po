@@ -1,0 +1,892 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* customer_part_creation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-01 05:40+0000\n"
+"PO-Revision-Date: 2025-08-01 05:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_part_creation
+#: model:mail.template,body_html:customer_part_creation.email_template_revision_released
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">A new revision has been released for the following document:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.document_id.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.document_id.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Number:</strong> <t t-out=\"object.revision_number or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Description:</strong> <t t-out=\"object.revision_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.obsolete_date.strftime('%Y-%m-%d') if object.obsolete_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"user.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the revision as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">A new revision has been released for the following document:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.document_id.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.document_id.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Number:</strong> <t t-out=\"object.revision_number or 'N/A'\"></t></li>\n"
+"                    <li><strong>Revision Description:</strong> <t t-out=\"object.revision_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.obsolete_date.strftime('%Y-%m-%d') if object.obsolete_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"user.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the revision as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+
+#. module: customer_part_creation
+#: model:mail.template,body_html:customer_part_creation.email_template_document_released
+msgid ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">We are pleased to inform you that the following document has been released:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Number:</strong> <t t-out=\"object.part_number_id.default_code or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Description:</strong> <t t-out=\"object.part_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Customer:</strong> <t t-out=\"object.customer_name.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.release_date.strftime('%Y-%m-%d') if object.release_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"object.released_by.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the document as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px; font-family: Arial, sans-serif;\">\n"
+"               <p style=\"font-size: 14px;\">Dear <t t-out=\"ctx.recipient_user.name if ctx.get('recipient_user') else 'User'\"></t>,</p>\n"
+"                <p style=\"font-size: 14px;\">We are pleased to inform you that the following document has been released:</p>\n"
+"                <ul style=\"list-style-type: none; padding-left: 0;\">\n"
+"                    <li><strong>Document Reference:</strong> <t t-out=\"object.sequence or 'N/A'\"></t></li>\n"
+"                    <li><strong>Document Name:</strong> <t t-out=\"object.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Number:</strong> <t t-out=\"object.part_number_id.default_code or 'N/A'\"></t></li>\n"
+"                    <li><strong>Part Description:</strong> <t t-out=\"object.part_description or 'N/A'\"></t></li>\n"
+"                    <li><strong>Customer:</strong> <t t-out=\"object.customer_name.name or 'N/A'\"></t></li>\n"
+"                    <li><strong>Release Date:</strong> <t t-out=\"object.release_date.strftime('%Y-%m-%d') if object.release_date else 'N/A'\"></t></li>\n"
+"                    <li><strong>Released By:</strong> <t t-out=\"object.released_by.name or 'N/A'\"></t></li>\n"
+"                </ul>\n"
+"                <p style=\"font-size: 14px;\">Please review the document as necessary.</p>\n"
+"                <br>\n"
+"                <p style=\"font-size: 14px;\">Best regards,</p>\n"
+"                <p style=\"font-size: 14px;\"><t t-out=\"user.name or ''\"></t><br><t t-out=\"user.company_id.name or ''\"></t></p>\n"
+"            </div>\n"
+"        "
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_needaction
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_needaction
+msgid "Action Needed"
+msgstr "Action Needed (Action nécessaire)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_ids
+msgid "Activities"
+msgstr "Activities (Activités)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_exception_decoration
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Activity Exception Decoration (Décoration d'exception d'activité)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_state
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_state
+msgid "Activity State"
+msgstr "Activity State (État d'activité)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_type_icon
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Activity Type Icon (Icône de type d'activité)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__actual_end_date
+msgid "Actual End Date"
+msgstr "Actual End Date (Date de fin réelle)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__actual_start_date
+msgid "Actual Start Date"
+msgstr "Actual Start Date (Date de début réelle)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Add Revision"
+msgstr "Add Revision (Ajouter une révision)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_product_product__product_description
+#: model:ir.model.fields,help:customer_part_creation.field_product_template__product_description
+msgid "Add full product description here"
+msgstr ""
+"Add full product description here (Ajouter une description complète du "
+"produit ici)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_approval_config
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_approval_config
+msgid "Approval Configuration"
+msgstr "Approval Configuration (Configuration d'approbation)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Approve"
+msgstr "Approve (Approuver)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__approved
+msgid "Approved"
+msgstr "Approved"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__approved_by
+msgid "Approved By"
+msgstr "Approved By (Approuvé par)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__approver_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__iatf_members_ids
+msgid "Approvers"
+msgstr "Approvers (Approvers)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_attachment_count
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_attachment_count
+msgid "Attachment Count"
+msgstr "Attachment Count (Nombre de pièces jointes)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Cancel"
+msgstr "Cancel (Annuler)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__cancled
+msgid "Cancled"
+msgstr "Cancled (Annulé)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__category_ids
+msgid "Category"
+msgstr "Category (Catégorie)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__name
+msgid "Category Name"
+msgstr "Category Name (Nom de catégorie)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__company_id
+msgid "Company"
+msgstr "Company (Entreprise)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__create_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__create_uid
+msgid "Created by"
+msgstr "Created by (Créé par)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__create_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__create_date
+msgid "Created on"
+msgstr "Created on (Créé sur)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_drawing_revision
+msgid "Current Drawing Revision"
+msgstr "Current Drawing Revision (Révision actuelle de dessin)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_drawing_revision_details
+msgid "Current Drawing Revision Details"
+msgstr ""
+"Current Drawing Revision Details (Détails de révision actuelle du dessin)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__current_revision_id
+msgid "Current Revision"
+msgstr "Current Revision (Révision actuelle)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_drawing
+msgid "Customer Drawing"
+msgstr "Customer Drawing (Dessin client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__partner_id
+msgid "Customer Name"
+msgstr "Customer Name (Nom du client)"
+
+#. module: customer_part_creation
+#: model:ir.module.category,name:customer_part_creation.cpc_category
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_control_root
+msgid "Customer Part Creation"
+msgstr "Customer Part Creation (Création de la partie client)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_control
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_control
+msgid "Customer Part Creation Documents"
+msgstr ""
+"Customer Part Creation Documents (Documents de création de pièces du client)"
+
+#. module: customer_part_creation
+#: model:ir.module.category,description:customer_part_creation.cpc_category
+msgid "Customer Part Creation System Categories"
+msgstr ""
+"Customer Part Creation System Categories (Catégories de systèmes de création"
+" de pièces client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_description
+msgid "Customer Part Description"
+msgstr "Customer Part Description (Description de la pièce du client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_number
+msgid "Customer Part Number"
+msgstr "Customer Part Number (Numéro de pièce du client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_part_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__customer_part_name
+msgid "Customer Part name"
+msgstr "Customer Part name (Nom de partie client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_part_no
+msgid "Customer Part num"
+msgstr "Customer Part num (Numéro de pièce du client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__cus_id
+msgid "Customer name"
+msgstr "Customer name (Nom du client)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__date_creation
+msgid "Date of Creation"
+msgstr "Date of Creation (Date de création)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_date
+msgid "Date of Modification"
+msgstr "Date of Modification (Date de modification)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__date_approved
+msgid "Date of Modification Approved"
+msgstr "Date of Modification Approved (Date de modification approuvée)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_revision_form
+msgid "Describe changes in this revision..."
+msgstr ""
+"Describe changes in this revision... (Décrire les changements dans cette "
+"révision ...)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__display_name
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__display_name
+msgid "Display Name"
+msgstr "Display Name (Nom d'affichage)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__doc_type
+msgid "Doc Type"
+msgstr "Doc Type (Type de doc)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__document_id
+msgid "Document"
+msgstr "Document (Document)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_admin
+msgid "Document Admin"
+msgstr "Document Admin (Documenter l'administrateur)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_approval_config
+msgid "Document Approval Configuration"
+msgstr ""
+"Document Approval Configuration (Configuration de l'approbation du document)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_approver
+msgid "Document Approver"
+msgstr "Document Approver (Approbateur de documents)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_category
+msgid "Document Category"
+msgstr "Document Category (Catégorie de documents)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_manager
+msgid "Document Manager"
+msgstr "Document Manager (Gestionnaire de documents)"
+
+#. module: customer_part_creation
+#: model:mail.template,name:customer_part_creation.email_template_document_released
+msgid "Document Released Notification"
+msgstr "Document Released Notification (Notification publiée sur le document)"
+
+#. module: customer_part_creation
+#: model:mail.template,subject:customer_part_creation.email_template_document_released
+msgid "Document Released: {{object.sequence}} - {{object.name}}"
+msgstr ""
+"Document Released: {{object.sequence}} - {{object.name}} (Document publié: "
+"{{objet.Sequence}} - {{object.name}})"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_revision
+msgid "Document Revision History"
+msgstr "Document Revision History (Documer l'historique de révision)"
+
+#. module: customer_part_creation
+#: model:ir.actions.act_window,name:customer_part_creation.action_document_revision
+msgid "Document Revisions"
+msgstr "Document Revisions (Révisions de documents)"
+
+#. module: customer_part_creation
+#: model:ir.ui.menu,name:customer_part_creation.menu_document_revisions
+msgid "Document Revisions History"
+msgstr "Document Revisions History (Documer les révisions de l'histoire)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__state
+msgid "Document Status"
+msgstr "Document Status (Statut de document)"
+
+#. module: customer_part_creation
+#: model:res.groups,name:customer_part_creation.group_document_user
+msgid "Document User"
+msgstr "Document User (Documenter l'utilisateur)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__draft
+msgid "Draft"
+msgstr "Draft (Brouillon)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_document_control
+msgid "Drawing Control Document"
+msgstr "Drawing Control Document (Document de contrôle du dessin)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_no
+msgid "Drawing No."
+msgstr "Drawing No. (N ° de dessin)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_rev_date
+msgid "Drawing Rev. Date"
+msgstr "Drawing Rev. Date (Dessin de la date)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_internal
+msgid "Drawing Upload Internal"
+msgstr "Drawing Upload Internal (Dessin télécharger interne)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__drawing_rev_no
+msgid "Drawing. Rev. No."
+msgstr "Drawing. Rev. No. (Dessin.Rév. No.)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Enter customer drawing details..."
+msgstr ""
+"Enter customer drawing details... (Entrez les détails du dessin client ...)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Enter internal drawing details..."
+msgstr ""
+"Enter internal drawing details... (Entrez les détails du dessin interne ...)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_revision_form
+msgid "Enter previous revision drawings details..."
+msgstr ""
+"Enter previous revision drawings details... (Entrez les détails des dessins "
+"de révision précédents ...)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_follower_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_follower_ids
+msgid "Followers"
+msgstr "Followers"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_partner_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Followers (Partners) (Abonnés (partenaires))"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_type_icon
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+"Font awesome icon e.g. fa-tasks (Icône géniale de police, par exempleFA-"
+"TASS)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__name
+msgid "Format Number"
+msgstr "Format Number (Numéro de format)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__has_message
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__has_message
+msgid "Has Message"
+msgstr "Has Message (A un message)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__id
+msgid "ID"
+msgstr "ID (IDENTIFIANT)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_exception_icon
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_exception_icon
+msgid "Icon"
+msgstr "Icon (Icône)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_exception_icon
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+"Icon to indicate an exception activity. (Icône pour indiquer une activité "
+"d'exception.)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_needaction
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+"If checked, new messages require your attention. (S'il est vérifié, les "
+"nouveaux messages nécessitent votre attention.)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_sms_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_error
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"If checked, some messages have a delivery error. (S'il est vérifié, certains"
+" messages ont une erreur de livraison.)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_is_follower
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_is_follower
+msgid "Is Follower"
+msgstr "Is Follower (Est un adepte)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__language_id
+msgid "Language"
+msgstr "Language (Langue)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control____last_update
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on (Dernier modification sur)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__write_uid
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by (Dernière mise à jour par)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_approval_config__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_category__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__write_date
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on (Dernière mise à jour sur)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__link
+msgid "Link"
+msgstr "Link (Lien)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_main_attachment_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Main Attachment (Attachement principal)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__member_name
+msgid "Member Name"
+msgstr "Member Name (Nom de membre)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_error
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_error
+msgid "Message Delivery error"
+msgstr "Message Delivery error (Erreur de livraison de messages)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_ids
+msgid "Messages"
+msgstr "Messages (Messages)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__approved_by
+msgid "Modification Approved By"
+msgstr "Modification Approved By (Modification approuvée par)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__modified_by
+msgid "Modification By"
+msgstr "Modification By (Modification de)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__previous_revision_drawings
+msgid "Modified Revision Drawings"
+msgstr "Modified Revision Drawings (Dessins de révision modifiés)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__my_activity_date_deadline
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "My Activity Deadline (Ma date limite d'activité)"
+
+#. module: customer_part_creation
+#. odoo-python
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#: code:addons/customer_part_creation/models/drawing_control.py:0
+#, python-format
+msgid "New"
+msgstr "New"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_calendar_event_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+"Next Activity Calendar Event (Prochain événement du calendrier d'activité)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_date_deadline
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Next Activity Deadline (Date limite d'activité suivante)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_summary
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_summary
+msgid "Next Activity Summary"
+msgstr "Next Activity Summary (Résumé de l'activité suivante)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_type_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_type_id
+msgid "Next Activity Type"
+msgstr "Next Activity Type (Type d'activité suivante)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_needaction_counter
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Number of Actions (Nombre d'actions)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_error_counter
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_error_counter
+msgid "Number of errors"
+msgstr "Number of errors (Nombre d'erreurs)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_needaction_counter
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+"Number of messages requiring action (Nombre de messages nécessitant une "
+"action)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__message_has_error_counter
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+"Number of messages with delivery error (Nombre de messages avec erreur de "
+"livraison)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__obsolete_date
+msgid "Obsolete Date"
+msgstr "Obsolete Date (Date obsolète)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_id
+msgid "Part"
+msgstr "Part (Partie)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_description
+msgid "Part Description"
+msgstr "Part Description (Description des pièces)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_name
+msgid "Part Name"
+msgstr "Part Name (Nom de pièce)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_number
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__part_number_id
+msgid "Part Number"
+msgstr "Part Number (Numéro de pièce)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__pending_approval
+msgid "Pending Approval"
+msgstr "Pending Approval (Approbation en attente)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__plan_end_date
+msgid "Plan End Date"
+msgstr "Plan End Date (Planifier la date de fin)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__plan_start_date
+msgid "Plan Start Date"
+msgstr "Plan Start Date (Planifier la date de début)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__previous_revision_ids
+msgid "Previous Revisions"
+msgstr "Previous Revisions (Révisions antérieures)"
+
+#. module: customer_part_creation
+#: model:ir.model,name:customer_part_creation.model_product_template
+msgid "Product"
+msgstr "Product (Produit)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_product_product__product_description
+#: model:ir.model.fields,field_description:customer_part_creation.field_product_template__product_description
+msgid "Product Description"
+msgstr "Product Description (Description du produit)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__project_id
+msgid "Project Name"
+msgstr "Project Name (Nom du projet)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Release"
+msgstr "Release (Libérer)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__release_date
+msgid "Release Date"
+msgstr "Release Date (Date de sortie)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Release Document"
+msgstr "Release Document (Document de publication)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__release_to
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__release_to
+msgid "Release To"
+msgstr "Release To (Relâcher)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields.selection,name:customer_part_creation.selection__document_control__state__released
+msgid "Released"
+msgstr "Released"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__released_by
+msgid "Released By"
+msgstr "Released By (Libéré par)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Request Approval"
+msgstr "Request Approval (Demander l'approbation)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__activity_user_id
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__activity_user_id
+msgid "Responsible User"
+msgstr "Responsible User (Utilisateur responsable)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__drawing_file
+msgid "Revised Drawing"
+msgstr "Revised Drawing (Dessin révisé)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_description
+msgid "Revision Description"
+msgstr "Revision Description (Description de la révision)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__revision_number
+msgid "Revision No."
+msgstr "Revision No. (Révision n °)"
+
+#. module: customer_part_creation
+#: model:mail.template,name:customer_part_creation.email_template_revision_released
+msgid "Revision Released Notification"
+msgstr "Revision Released Notification (Notification publiée par révision)"
+
+#. module: customer_part_creation
+#: model:mail.template,subject:customer_part_creation.email_template_revision_released
+msgid ""
+"Revision Released: {{object.revision_number}} for Document "
+"{{object.document_id.sequence}}"
+msgstr ""
+"Revision Released: {{object.revision_number}} for Document "
+"{{object.document_id.sequence}} (Révision publiée: "
+"{{object.revision_number}} pour le document {{object.document_id.sence}})"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__revision_ids
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Revisions"
+msgstr "Revisions (Révisions)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__message_has_sms_error
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "SMS Delivery error (Erreur de livraison SMS)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__show_buttons
+msgid "Show Buttons"
+msgstr "Show Buttons (Afficher les boutons)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__sequence
+msgid "Sr. No"
+msgstr "Sr. No (Sr. Non)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__final_status
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__state
+msgid "Status"
+msgstr "Status (Statut)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_state
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities. (Statut basé sur les activités\n"
+"En retard: la date d'échéance est déjà adoptée\n"
+"Aujourd'hui: la date d'activité est aujourd'hui\n"
+"Planifié: activités futures.)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__language_id
+msgid "Target language for automatic field translation."
+msgstr ""
+"Target language for automatic field translation. (Langue cible pour la "
+"traduction automatique sur le terrain.)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__to_be_approved_by
+msgid "To Be Approved By"
+msgstr "To Be Approved By (Être approuvé par)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__activity_exception_decoration
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+"Type of the exception activity on record. (Type de l'activité d'exception "
+"enregistrée.)"
+
+#. module: customer_part_creation
+#: model_terms:ir.ui.view,arch_db:customer_part_creation.view_document_control_form
+msgid "Undo"
+msgstr "Undo (Défaire)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__user_has_access_to_approve
+msgid "User Has Access"
+msgstr "User Has Access (L'utilisateur a accès)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_control__website_message_ids
+#: model:ir.model.fields,field_description:customer_part_creation.field_document_revision__website_message_ids
+msgid "Website Messages"
+msgstr "Website Messages (Messages du site Web)"
+
+#. module: customer_part_creation
+#: model:ir.model.fields,help:customer_part_creation.field_document_control__website_message_ids
+#: model:ir.model.fields,help:customer_part_creation.field_document_revision__website_message_ids
+msgid "Website communication history"
+msgstr ""
+"Website communication history (Historique de communication du site Web)"

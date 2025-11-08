@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Default Document Approval Configuration -->
+        <record id="default_document_approval_config" model="document.approval.config">
+            <!-- <field name="name">Default Approval Configuration</field> -->
+            <field name="approver_ids" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>

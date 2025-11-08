@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Sequence correction -->
+    <record id="seq_engineering_change_note_fix" model="ir.sequence">
+        <field name="name">Engineering Change Note Fixed</field>
+        <field name="code">asd.ecn</field>
+        <field name="prefix">ECN/ECR/%(year)s/</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <!-- ECN Tree View -->
+    <record id="view_asd_ecn_tree" model="ir.ui.view">
+        <field name="name">asd.ecn.tree</field>
+        <field name="model">asd.ecn</field>
+        <field name="arch" type="xml">
+            <tree string="Engineering Change Notes" decoration-info="state=='draft'"
+                  decoration-warning="state=='under_review'" decoration-success="state=='completed'"
+                  decoration-danger="state=='rejected'">
+                <field name="ecn_number"/>
+                <field name="ecn_date"/>
+                <field name="document_control_id"/>
+                <field name="part_id" string="Part Reference"/>
+                <field name="part_name"/>
+                <field name="partner_id"/>
+                <field name="emp_id"/>
+                <field name="department"/>
+                <field name="state"/>
+                <field name="target_completion_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_asd_ecn_form" model="ir.ui.view">
+        <field name="name">asd.ecn.form</field>
+        <field name="model">asd.ecn</field>
+        <field name="arch" type="xml">
+            <form string="ECN">
+                <header>
+                    <button name="action_submit" string="Submit" type="object" class="oe_highlight" states="draft"/>
+                    <button name="action_start_review" string="Start Review" type="object" class="oe_highlight"
+                            states="submitted"
+                            confirm="Are you sure you want to submit this ECN?"/>
+                    <button name="action_move_to_feasibility" string="Check Feasibility" type="object"
+                            class="oe_highlight"
+                            states="under_review"/>
+                    <button name="action_request_cft_approval" string="Request CFT Approval" type="object"
+                            class="oe_highlight" states="feasibility_check"/>
+                    <button name="action_plan_implementation" string="Plan Implementation" type="object"
+                            class="oe_highlight" states="cft_approval"/>
+                    <button name="action_complete" string="Send for Approval" type="object" class="oe_highlight"
+                            states="implementation"
+                            attrs="{'invisible': ['|', ('state', 'in', ['completed', 'rejected']), ('all_approved', '=', False)]}"/>
+
+                    <button name="action_reset_to_draft" string="Reset to Draft" type="object"
+                            states="submitted,under_review"/>
+                    <button name="action_reject" string="Reject ECN" type="object" class="btn-danger"
+                            attrs="{'invisible': [('state', 'in', ['draft','completed', 'rejected'])]}"
+                            confirm="Are you sure you want to reject this ECN?"/>
+                    <button name="generate_xlsx_report" type="object"
+                            class="oe_stat_button" icon="fa-file-excel-o">
+                        <span>Generate Report</span>
+                    </button>
+                    <!-- CFT Member Approval Buttons -->
+                    <button name="action_approve" string="Approve" type="object"
+                            class="btn-success"
+                            attrs="{'invisible': ['|', ('state', 'not in', ['implementation']), ('user_is_team_member', '=', False)]}"/>
+                    <button name="action_reject" string="Reject" type="object"
+                            class="btn-danger"
+                            attrs="{'invisible': ['|', ('state', 'not in', ['implementation']), ('user_is_team_member', '=', False)]}"/>
+                    <button name="action_request_review" string="Request Review" type="object"
+                            class="btn-warning"
+                            attrs="{'invisible': ['|', ('state', 'not in', ['implementation']), ('user_is_team_member', '=', False)]}"/>
+
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,submitted,under_review,feasibility_check,cft_approval,implementation,completed"/>
+                </header>
+                <sheet>
+                    <!-- Ribbons -->
+                    <widget name="web_ribbon" title="Draft" bg_color="bg-warning"
+                            attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <widget name="web_ribbon" title="Submitted" bg_color="bg-info"
+                            attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+                    <widget name="web_ribbon" title="Under Review" bg_color="bg-primary"
+                            attrs="{'invisible': [('state', '!=', 'under_review')]}"/>
+                    <widget name="web_ribbon" title="Feasibility Check" bg_color="bg-info"
+                            attrs="{'invisible': [('state', '!=', 'feasibility_check')]}"/>
+                    <widget name="web_ribbon" title="CFT Approval" bg_color="bg-warning"
+                            attrs="{'invisible': [('state', '!=', 'cft_approval')]}"/>
+                    <widget name="web_ribbon" title="Implementation" bg_color="bg-success"
+                            attrs="{'invisible': [('state', '!=', 'implementation')]}"/>
+                    <widget name="web_ribbon" title="Completed" bg_color="bg-success"
+                            attrs="{'invisible': [('state', '!=', 'completed')]}"/>
+                    <widget name="web_ribbon" title="Rejected" bg_color="bg-danger"
+                            attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                    <div class="oe_title">
+                        <label for="ecn_number" string="ECN/ECR Number"/>
+                        <h1>
+                            <div class="d-flex">
+                                <field class="text-break" name="ecn_number" readonly="1"/>
+                            </div>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="user_has_access_to_approve" invisible="1"/>
+                            <field name="final_status" invisible="1"/>
+                            <field name="user_is_team_member" invisible="1"/>
+                            <field name="all_approved" invisible="1"/>
+                            <field name="any_rejected" invisible="1"/>
+                            <field name="any_review" invisible="1"/>
+                            <field name="document_control_id"/>
+                            <field name="part_id" String="Part Reference"/>
+                            <field name="part_name"/>
+                            <field name="part_number"/>
+
+                            <field name="related_parts" widget="many2many_tags"/>
+                            <field name="target_completion_date"/>
+                            <field name="completion_status"/>
+                        </group>
+                        <group>
+                            <field name="ecn_date"/>
+                            <field name="emp_id"/>
+                            <field name="department"/>
+                            <field name="co_ord"/>
+                            <field name="partner_id"/>
+
+                            <field name="end_date" readonly="1"/>
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Assign CFT Members" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                            <field name="team_approval_ids">
+                                <tree editable="bottom">
+                                    <field name="employee_id"/>
+                                    <field name="department_id"/>
+                                    <field name="approval_status"/>
+                                    <field name="approval_date"/>
+                                    <field name="comments"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <!-- Step 1: Initial Information -->
+                        <page string="Initial Information" attrs="{'invisible': [('state', 'in', ['draft'])]}">
+                            <group string="Origin">
+                                <group>
+                                    <field name="change_received_from"/>
+                                </group>
+                                <group>
+                                    <field name="change_person"/>
+                                </group>
+                            </group>
+                            <group>
+                                <field name="description"
+                                       attrs="{'required': [('state', '!=', 'draft')]}"
+                                       widget="html"/>
+                            </group>
+                            <group>
+                                <group string="Existing">
+                                    <field name="existing"/>
+                                </group>
+                                <group string="Proposed">
+                                    <field name="proposed"/>
+                                </group>
+                            </group>
+
+                        </page>
+
+                        <!-- Step 2: Change Details -->
+                        <page string="Change Details and Risk Assessment Analysis"
+                              attrs="{'invisible': [('state', 'in', ['draft','submitted'])]}">
+
+                            <group string="Existing Material Disposition">
+                                <group>
+                                    <field name="scraped"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="userd_in"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="specification"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="quantity"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                </group>
+
+
+                            </group>
+                            <button string="Quantity Fetch Button" type="object" name="dummy_action"
+                                    class="btn-primary"/>
+
+                            <group string="Purpose of Change">
+                                <group>
+                                    <field name="specific_change"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="process_change"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="quality_imp"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="cost_reduce"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="standardisation"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+
+                                    <field name="sub_suppiler"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="improve_machine"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                    <field name="customer_requirement"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"/>
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Risk Assessment Analysis">
+                                    <field name="four_m_type_ids"
+                                           attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}">
+                                        <tree editable="bottom">
+                                            <field name="types" width="100px"/>
+
+                                            <field name="man" width="80px"/>
+                                            <field name="machine" width="80px"/>
+                                            <field name="material" width="80px"/>
+                                            <field name="method" width="80px"/>
+                                            <field name="measure" width="80px"/>
+                                            <field name="environment" width="80px"/>
+                                            <field name="description" width="120px"/>
+                                            <field name="responsibility_id" width="100px"/>
+                                            <field name="status" width="80px"/>
+
+                                        </tree>
+                                    </field>
+
+                                </page>
+                            </notebook>
+                            <group string="Remarks">
+                                <field name="remark"
+                                       attrs="{'readonly': [('state', 'not in', ['submitted', 'under_review'])]}"
+                                       nolabel="1"/>
+                            </group>
+                        </page>
+                        <!-- Step 3: Feasibility & Impact Assessment -->
+                        <page string="Feasibility Check"
+                              attrs="{'invisible': [('state', 'in', ['draft', 'submitted','under_review'])]}">
+                            <group string="Impact of Changes">
+                                <group>
+                                    <field name="first_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="secound_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="third_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="forth_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="fifth_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="sixth_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="seven_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="eight_impact"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                </group>
+                            </group>
+
+                            <style>
+                                .o_form_label {
+                                min-width: 400px !important;
+                                max-width: 400px !important;
+                                width: 400px !important;
+                                white-space: normal !important;
+                                }
+                            </style>
+                            <group string="Feasibility Assessment">
+                                <group>
+                                    <field name="feasible"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                    <field name="not_feasible"
+                                           attrs="{'readonly': [('state', 'not in', ['under_review', 'feasibility_check'])]}"/>
+                                </group>
+                            </group>
+
+                        </page>
+
+                        <!-- Step 5: Implementation Planning -->
+                        <page string="Implementation Plan"
+                              attrs="{'invisible': [('state', 'in', ['draft', 'submitted', 'under_review', 'feasibility_check','cft_approval'])]}">
+
+                            <field name="change_required_ids"
+                                   attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])]}">
+                                <tree editable="bottom" >
+                                    <field name="sl_no" readonly="1"/>
+
+                                    <field name="bom_line_id" readonly="1"/>
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="format" attrs="{'invisible': [('bom_line_id', '!=', False)]}"/>
+
+                                    <field name="change_required"/>
+                                    <field name="responsibility_id"/>
+                                    <field name="target_date"/>
+                                    <field name="ecn_attachment"
+                                           attrs="{'invisible' : [('change_required', '=', False)]}"
+                                           widget="attachment"/>
+                                    <button string="Open"
+                                            name="action_open_format"
+                                            type="object"
+                                            class="oe_highlight btn-sm"
+                                            style="min-width: 80px;"
+                                            icon="fa-external-link"
+                                            title="Open Component/Format"
+                                            attrs="{'invisible': [('change_required', '=', False)]}"/>
+                                </tree>
+                            </field>
+
+                            <notebook>
+                                <page string="Additional Formats">
+                                    <field name="new_format_ids"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])]}">
+                                        <tree editable="bottom">
+                                            <field name="formate_name"/>
+                                            <field name="description"/>
+                                            <field name="change_required"/>
+                                            <field name="responsibility_id"/>
+                                            <field name="target_date"/>
+                                            <field name="ecn_attachment"
+                                                   attrs="{'invisible' : [('change_required', '=', False)]}"
+                                                   widget="attachment"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+
+                            <group string="PPAP Requirements">
+                                <group>
+                                    <field name="ppap_approval_required"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])]}"/>
+                                    <field name="date_of_ppap_submission"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])], 'invisible': [('ppap_approval_required', '=', False)]}"/>
+                                    <field name="date_of_approval_received"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])], 'invisible': [('ppap_approval_required', '=', False)]}"/>
+                                    <field name="date_of_pilot_lot_submission"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])]}"/>
+                                    <field name="date_of_regular_submission"
+                                           attrs="{'readonly': [('state', 'not in', ['cft_approval', 'implementation'])]}"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <!-- Step 6: Completion/Rejection -->
+                        <page string="Completion/Rejection"
+                              attrs="{'invisible': [('state', 'in', ['draft', 'submitted', 'under_review', 'feasibility_check', 'cft_approval','implementation'])]}">
+                            <group>
+                                <label for="completion_notes" string="Completion Notes"
+                                       attrs="{'invisible': [('state', '=', 'rejected')]}"/>
+                                <label for="completion_notes" string="Rejection Reason"
+                                       attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                                <field name="completion_notes" nolabel="1"
+                                       attrs="{'required': [('state', 'in', ['completed', 'rejected'])], 'readonly': [('state', 'in', ['completed', 'rejected'])]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                    <notebook>
+                        <page string="Approval History">
+                            <field name="approval_history_ids" readonly="1">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="user_id"/>
+                                    <field name="action"/>
+                                    <field name="comments"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <!-- ECN Search View -->
+    <record id="view_asd_ecn_search" model="ir.ui.view">
+        <field name="name">asd.ecn.search</field>
+        <field name="model">asd.ecn</field>
+        <field name="arch" type="xml">
+            <search string="Search Engineering Change Notes">
+                <field name="ecn_number"/>
+                <field name="document_control_id"/>
+                <field name="part_id"/>
+                <field name="partner_id"/>
+                <field name="emp_id"/>
+                <field name="department"/>
+                <filter string="Draft" name="draft" domain="[('state','=','draft')]"/>
+                <filter string="Submitted" name="submitted" domain="[('state','=','submitted')]"/>
+                <filter string="Under Review" name="under_review" domain="[('state','=','under_review')]"/>
+                <filter string="Feasibility Check" name="feasibility_check"
+                        domain="[('state','=','feasibility_check')]"/>
+                <filter string="CFT Approval" name="cft_approval" domain="[('state','=','cft_approval')]"/>
+                <filter string="Implementation" name="implementation" domain="[('state','=','implementation')]"/>
+                <filter string="Completed" name="completed" domain="[('state','=','completed')]"/>
+                <filter string="Rejected" name="rejected" domain="[('state','=','rejected')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Part" name="group_by_part" context="{'group_by': 'part_id'}"/>
+                    <filter string="Customer" name="group_by_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Department" name="group_by_department" context="{'group_by': 'department'}"/>
+                    <filter string="Status" name="group_by_state" context="{'group_by': 'state'}"/>
+                    <filter string="ECN Date" name="group_by_month" context="{'group_by': 'ecn_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Wizard for Completion/Rejection Notes -->
+    <record id="view_ecn_completion_wizard" model="ir.ui.view">
+        <field name="name">ecn.completion.wizard.form</field>
+        <field name="model">ecn.completion.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Complete/Reject ECN">
+                <group>
+                    <field name="ecn_id" invisible="1"/>
+                    <field name="action_type" invisible="1"/>
+                    <label for="notes" string="Completion Notes"
+                           attrs="{'invisible': [('action_type', '=', 'reject')]}"/>
+                    <label for="notes" string="Rejection Reason"
+                           attrs="{'invisible': [('action_type', '=', 'complete')]}"/>
+                    <field name="notes" nolabel="1" required="1"/>
+                </group>
+                <footer>
+                    <button name="confirm_action" string="Confirm" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Approval Wizard View -->
+    <record id="view_ecn_approval_wizard" model="ir.ui.view">
+        <field name="name">ecn.approval.wizard.form</field>
+        <field name="model">ecn.approval.wizard</field>
+        <field name="arch" type="xml">
+            <form string="ECN/ECR Approval">
+                <group>
+                    <field name="ecn_id" invisible="1"/>
+                    <field name="action_type"/>
+                    <field name="comments" required="1"/>
+                </group>
+                <footer>
+                    <button name="confirm_action" string="Confirm" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Approval History Tree View -->
+    <record id="view_ecn_approval_history_tree" model="ir.ui.view">
+        <field name="name">ecn.approval.history.tree</field>
+        <field name="model">ecn.approval.history</field>
+        <field name="arch" type="xml">
+            <tree string="Approval History">
+                <field name="ecn_id"/>
+                <field name="date"/>
+                <field name="user_id"/>
+                <field name="action"/>
+                <field name="comments"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Security Record for Approval History -->
+    <record id="ir_rule_ecn_approval_history" model="ir.rule">
+        <field name="name">ECN/ECR Approval History Access</field>
+        <field name="model_id" ref="model_ecn_approval_history"/>
+        <field name="domain_force">[('ecn_id.user_has_access_to_approve', '=', True)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+
+    <!-- ECN Action Window -->
+    <record id="action_asd_ecn" model="ir.actions.act_window">
+        <field name="name">Engineering Change Notes</field>
+        <field name="res_model">asd.ecn</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="binding_view_types">form</field>
+        <field name="search_view_id" ref="view_asd_ecn_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Engineering Change Note
+            </p>
+            <p>
+                Engineering Change Notes help track and manage changes to products and processes.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_asd_ecn_root" name="ECN" sequence="10"/>
+    <menuitem id="menu_asd_ecn" name="ECN/ECR" parent="menu_asd_ecn_root" action="action_asd_ecn" sequence="10"/>
+</odoo>

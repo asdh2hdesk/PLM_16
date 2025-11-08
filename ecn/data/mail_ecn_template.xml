@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- Template for ECN Submission -->
+        <record id="mail_template_ecn_submitted" model="mail.template">
+            <field name="name">ECN: Submitted for Review</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Submitted for Review</field>
+            <field name="email_from">${object.create_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${', '.join([member.employee_id.work_email for member in object.team_approval_ids if member.employee_id.work_email])}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#454748;">Engineering Change Note: ${object.ecn_number}</h2>
+                    <p>Dear Team Member,</p>
+                    <p>An Engineering Change Note has been submitted and requires your review.</p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                        <li>Customer: ${object.partner_id.name or ''}</li>
+                        <li>Submitted by: ${object.emp_id.name or ''}</li>
+                    </ul>
+                    <p>Please login to the system to review and approve this ECN.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- Template for Implementation Stage -->
+        <record id="mail_template_ecn_implementation" model="mail.template">
+            <field name="name">ECN: Ready for Final Approval</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Ready for Final Approval</field>
+            <field name="email_from">${object.create_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${', '.join([member.employee_id.work_email for member in object.team_approval_ids if member.employee_id.work_email])}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#454748;">Engineering Change Note: ${object.ecn_number}</h2>
+                    <p>Dear Team Member,</p>
+                    <p>The implementation planning for ECN ${object.ecn_number} has been completed and requires your
+                        final approval.
+                    </p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                    </ul>
+                    <p>Please login to the system to review and approve the implementation plan.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- Template for Status Updates -->
+        <record id="mail_template_ecn_status_update" model="mail.template">
+            <field name="name">ECN: Status Update</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Status Updated to ${object.state}</field>
+            <field name="email_from">${object.write_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${', '.join([member.employee_id.work_email for member in object.team_approval_ids if member.employee_id.work_email])}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#454748;">Engineering Change Note: ${object.ecn_number}</h2>
+                    <p>Dear Team Member,</p>
+                    <p>The status of ECN ${object.ecn_number} has been updated to <strong>${object.state}</strong>.
+                    </p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                        <li>Updated by: ${object.write_uid.name or ''}</li>
+                    </ul>
+                    <p>Please login to the system to view the changes.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- New Template: Individual Approval Required -->
+        <record id="mail_template_ecn_approval_required" model="mail.template">
+            <field name="name">ECN: Your Approval Required</field>
+            <field name="model_id" ref="model_ecn_team_approval"/>
+            <field name="subject">ECN ${object.ecn_id.ecn_number} - Your Approval Required</field>
+            <field name="email_from">${object.ecn_id.create_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${object.employee_id.work_email or ''}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#454748;">Engineering Change Note: ${object.ecn_id.ecn_number}</h2>
+                    <p>Dear ${object.employee_id.name},</p>
+                    <p>Your approval is required for the Engineering Change Note ${object.ecn_id.ecn_number}.</p>
+                    <ul>
+                        <li>Project: ${object.ecn_id.project.name or ''}</li>
+                        <li>Part: ${object.ecn_id.part_name or ''} (${object.ecn_id.part_number or ''})</li>
+                        <li>Customer: ${object.ecn_id.partner_id.name or ''}</li>
+                        <li>Current Stage: ${object.ecn_id.state or ''}</li>
+                    </ul>
+                    <p>As a representative of the ${object.department_id.name or 'your department'}, your input is vital for this change.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.ecn_id.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            Review ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- New Template: ECN Completed -->
+        <record id="mail_template_ecn_completed" model="mail.template">
+            <field name="name">ECN: Process Completed</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Process Completed</field>
+            <field name="email_from">${object.write_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${', '.join([member.employee_id.work_email for member in object.team_approval_ids if member.employee_id.work_email])}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#454748;">Engineering Change Note: ${object.ecn_number}</h2>
+                    <p>Dear Team Member,</p>
+                    <p>The Engineering Change Note ${object.ecn_number} has been successfully completed.</p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                        <li>Completion Date: ${object.end_date or ''}</li>
+                    </ul>
+                    <p>Notes: ${object.completion_notes or 'No notes provided.'}</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View Completed ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- New Template: ECN Rejected -->
+        <record id="mail_template_ecn_rejected" model="mail.template">
+            <field name="name">ECN: Rejected</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Rejected</field>
+            <field name="email_from">${object.write_uid.email_formatted or user.email_formatted}</field>
+            <field name="email_to">${object.emp_id.work_email or object.create_uid.email}</field>
+            <field name="email_cc">${', '.join([member.employee_id.work_email for member in object.team_approval_ids if member.employee_id.work_email])}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#DC3545;">Engineering Change Note: ${object.ecn_number} - REJECTED</h2>
+                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>
+                    <p>Unfortunately, the Engineering Change Note ${object.ecn_number} has been rejected.</p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                        <li>Rejection Date: ${format_date(ctx.get('rejection_date', ''))}</li>
+                    </ul>
+                    <p><strong>Reason for Rejection:</strong> ${object.completion_notes or 'No reason provided.'}</p>
+                    <p>If you wish to revise and resubmit this ECN, please create a new ECN with the required changes.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View Rejected ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+
+        <!-- New Template: Individual Review Request -->
+        <record id="mail_template_ecn_review_requested" model="mail.template">
+            <field name="name">ECN: Review Requested</field>
+            <field name="model_id" ref="model_asd_ecn"/>
+            <field name="subject">ECN ${object.ecn_number} - Additional Review Requested</field>
+            <field name="email_from">${ctx.get('reviewer_email', user.email_formatted)}</field>
+            <field name="email_to">${object.emp_id.work_email or object.create_uid.email}</field>
+            <field name="body_html" type="html">
+                <div style="padding:15px; background-color:#F8F8F8; border-radius:10px;">
+                    <h2 style="color:#FFC107;">Engineering Change Note: ${object.ecn_number} - Review Requested</h2>
+                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>
+                    <p>Additional information or clarification has been requested for ECN ${object.ecn_number}.</p>
+                    <ul>
+                        <li>Project: ${object.project.name or ''}</li>
+                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>
+                        <li>Requested by: ${ctx.get('reviewer_name', '')}</li>
+                    </ul>
+                    <p><strong>Comments:</strong> ${ctx.get('review_comments', 'No specific comments provided.')}</p>
+                    <p>Please review and provide the requested information or clarification.</p>
+                    <div style="margin-top:15px;">
+                        <a href="/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form"
+                           style="padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;">
+                            View ECN
+                        </a>
+                    </div>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

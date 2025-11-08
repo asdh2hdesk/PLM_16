@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ecn.access_asd_ecn,access_asd_ecn,ecn.model_asd_ecn,base.group_user,1,1,1,1
+ecn.access_ecn_format,access_ecn_format,ecn.model_ecn_format,base.group_user,1,1,1,1
+ecn.access_ecn_new_format,access_ecn_new_format,ecn.model_ecn_new_format,base.group_user,1,1,1,1
+ecn.access_asd_ecn_line,access_asd_ecn_line,ecn.model_asd_ecn_line,base.group_user,1,1,1,1
+ecn.access_ecn_category,access_ecn_category,ecn.model_ecn_category,base.group_user,1,1,1,1
+ecn.access_ecn_four_m_type,access_ecn_four_m_type,ecn.model_ecn_four_m_type,base.group_user,1,1,1,1
+ecn.access_ecn_team_approval,access_ecn_team_approval,ecn.model_ecn_team_approval,base.group_user,1,1,1,1
+ecn.access_ecn_approval_history,access_ecn_approval_history,ecn.model_ecn_approval_history,base.group_user,1,1,1,1
+
+ecn.access_ecn_completion_wizard,access_ecn_completion_wizard,ecn.model_ecn_completion_wizard,base.group_user,1,1,1,1
+ecn.access_ecn_approval_wizard,access_ecn_approval_wizard,ecn.model_ecn_approval_wizard,base.group_user,1,1,1,1
+

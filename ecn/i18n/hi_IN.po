@@ -1,0 +1,1831 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ecn
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-06 06:44+0000\n"
+"PO-Revision-Date: 2025-06-06 06:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__first_impact
+msgid "1.Can engineering performance specifications be met as written?"
+msgstr ""
+" 1.Can engineering performance specifications be met as written? (1. क्या "
+"इंजीनियरिंग प्रदर्शन विनिर्देशों को लिखा जा सकता है?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__secound_impact
+msgid "2.Is there adequate capacity to produce product?"
+msgstr ""
+" 2.Is there adequate capacity to produce product? (2. क्या उत्पाद का उत्पादन"
+" करने की पर्याप्त क्षमता है?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__third_impact
+msgid "3.Can product be manufactured with Cpk's that meet requirements?"
+msgstr ""
+" 3.Can product be manufactured with Cpk's that meet requirements? (3. क्या "
+"उत्पाद CPK के साथ निर्मित हो सकता है जो आवश्यकताओं को पूरा करता है?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__forth_impact
+msgid "4.Can statistical process control required on product?"
+msgstr ""
+" 4.Can statistical process control required on product? (4. उत्पाद पर आवश्यक"
+" सांख्यिकीय प्रक्रिया नियंत्रण?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__four_m_type_ids
+msgid "4M Type Impacts"
+msgstr " 4M Type Impacts (4 मीटर प्रकार के प्रभाव)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__fifth_impact
+msgid ""
+"5.Does the design allow the use of efficient material handling techniques?"
+msgstr ""
+" 5.Does the design allow the use of efficient material handling techniques? "
+"(5. डिज़ाइन कुशल सामग्री हैंडलिंग तकनीकों के उपयोग की अनुमति देता है?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__sixth_impact
+msgid "6.Costs for tooling?"
+msgstr " 6.Costs for tooling? (6. टूलिंग के लिए?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__seven_impact
+msgid "7.Costs for capital equipment?"
+msgstr " 7.Costs for capital equipment? (पूंजी उपकरण के लिए 7.Costs?)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__eight_impact
+msgid "8.Alternative manufacturing methods?"
+msgstr ""
+" 8.Alternative manufacturing methods? (8. एलेन्टेटिव मैन्युफैक्चरिंग "
+"मेथड्स?)"
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_approval_required
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_id.ecn_number}</h2>\n"
+"                    <p>Dear ${object.employee_id.name},</p>\n"
+"                    <p>Your approval is required for the Engineering Change Note ${object.ecn_id.ecn_number}.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.ecn_id.project.name or ''}</li>\n"
+"                        <li>Part: ${object.ecn_id.part_name or ''} (${object.ecn_id.part_number or ''})</li>\n"
+"                        <li>Customer: ${object.ecn_id.partner_id.name or ''}</li>\n"
+"                        <li>Current Stage: ${object.ecn_id.state or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>As a representative of the ${object.department_id.name or 'your department'}, your input is vital for this change.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.ecn_id.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            Review ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_id.ecn_number}</h2>\n"
+"                    <p>Dear ${object.employee_id.name},</p>\n"
+"                    <p>Your approval is required for the Engineering Change Note ${object.ecn_id.ecn_number}.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.ecn_id.project.name or ''}</li>\n"
+"                        <li>Part: ${object.ecn_id.part_name or ''} (${object.ecn_id.part_number or ''})</li>\n"
+"                        <li>Customer: ${object.ecn_id.partner_id.name or ''}</li>\n"
+"                        <li>Current Stage: ${object.ecn_id.state or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>As a representative of the ${object.department_id.name or 'your department'}, your input is vital for this change.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.ecn_id.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            Review ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_submitted
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>An Engineering Change Note has been submitted and requires your review.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Customer: ${object.partner_id.name or ''}</li>\n"
+"                        <li>Submitted by: ${object.emp_id.name or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to review and approve this ECN.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>An Engineering Change Note has been submitted and requires your review.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Customer: ${object.partner_id.name or ''}</li>\n"
+"                        <li>Submitted by: ${object.emp_id.name or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to review and approve this ECN.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_completed
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The Engineering Change Note ${object.ecn_number} has been successfully completed.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Completion Date: ${object.end_date or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Notes: ${object.completion_notes or 'No notes provided.'}</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View Completed ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The Engineering Change Note ${object.ecn_number} has been successfully completed.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Completion Date: ${object.end_date or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Notes: ${object.completion_notes or 'No notes provided.'}</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View Completed ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_implementation
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The implementation planning for ECN ${object.ecn_number} has been completed and requires your\n"
+"                        final approval.\n"
+"                    </p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to review and approve the implementation plan.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The implementation planning for ECN ${object.ecn_number} has been completed and requires your\n"
+"                        final approval.\n"
+"                    </p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to review and approve the implementation plan.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_status_update
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The status of ECN ${object.ecn_number} has been updated to <strong>${object.state}</strong>.\n"
+"                    </p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Updated by: ${object.write_uid.name or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to view the changes.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#454748;\">Engineering Change Note: ${object.ecn_number}</h2>\n"
+"                    <p>Dear Team Member,</p>\n"
+"                    <p>The status of ECN ${object.ecn_number} has been updated to <strong>${object.state}</strong>.\n"
+"                    </p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Updated by: ${object.write_uid.name or ''}</li>\n"
+"                    </ul>\n"
+"                    <p>Please login to the system to view the changes.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_rejected
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#DC3545;\">Engineering Change Note: ${object.ecn_number} - REJECTED</h2>\n"
+"                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>\n"
+"                    <p>Unfortunately, the Engineering Change Note ${object.ecn_number} has been rejected.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Rejection Date: ${format_date(ctx.get('rejection_date', ''))}</li>\n"
+"                    </ul>\n"
+"                    <p><strong>Reason for Rejection:</strong> ${object.completion_notes or 'No reason provided.'}</p>\n"
+"                    <p>If you wish to revise and resubmit this ECN, please create a new ECN with the required changes.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View Rejected ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#DC3545;\">Engineering Change Note: ${object.ecn_number} - REJECTED</h2>\n"
+"                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>\n"
+"                    <p>Unfortunately, the Engineering Change Note ${object.ecn_number} has been rejected.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Rejection Date: ${format_date(ctx.get('rejection_date', ''))}</li>\n"
+"                    </ul>\n"
+"                    <p><strong>Reason for Rejection:</strong> ${object.completion_notes or 'No reason provided.'}</p>\n"
+"                    <p>If you wish to revise and resubmit this ECN, please create a new ECN with the required changes.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View Rejected ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model:mail.template,body_html:ecn.mail_template_ecn_review_requested
+msgid ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#FFC107;\">Engineering Change Note: ${object.ecn_number} - Review Requested</h2>\n"
+"                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>\n"
+"                    <p>Additional information or clarification has been requested for ECN ${object.ecn_number}.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Requested by: ${ctx.get('reviewer_name', '')}</li>\n"
+"                    </ul>\n"
+"                    <p><strong>Comments:</strong> ${ctx.get('review_comments', 'No specific comments provided.')}</p>\n"
+"                    <p>Please review and provide the requested information or clarification.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"padding:15px; background-color:#F8F8F8; border-radius:10px;\">\n"
+"                    <h2 style=\"color:#FFC107;\">Engineering Change Note: ${object.ecn_number} - Review Requested</h2>\n"
+"                    <p>Dear ${object.emp_id.name or 'Proposer'},</p>\n"
+"                    <p>Additional information or clarification has been requested for ECN ${object.ecn_number}.</p>\n"
+"                    <ul>\n"
+"                        <li>Project: ${object.project.name or ''}</li>\n"
+"                        <li>Part: ${object.part_name or ''} (${object.part_number or ''})</li>\n"
+"                        <li>Requested by: ${ctx.get('reviewer_name', '')}</li>\n"
+"                    </ul>\n"
+"                    <p><strong>Comments:</strong> ${ctx.get('review_comments', 'No specific comments provided.')}</p>\n"
+"                    <p>Please review and provide the requested information or clarification.</p>\n"
+"                    <div style=\"margin-top:15px;\">\n"
+"                        <a href=\"/web#id=${object.id}&amp;model=asd.ecn&amp;view_type=form\" style=\"padding:8px 16px; background-color:#875A7B; color:#fff; border-radius:5px; text-decoration:none;\">\n"
+"                            View ECN\n"
+"                        </a>\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "<span>Generate Report</span>"
+msgstr "<span>Generate Report</span>"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__action
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__action
+msgid "Action"
+msgstr " Action (कार्रवाई)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_needaction
+msgid "Action Needed"
+msgstr " Action Needed (कार्रवाई आवश्यक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__description
+msgid "Action Plan"
+msgstr " Action Plan (कार्य योजना)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ppap_action_points_form
+msgid "Action Points Formats"
+msgstr " Action Points Formats (कार्रवाई अंक प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__action_type
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__action_type
+msgid "Action Type"
+msgstr " Action Type (क्रिया प्रकार)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_ids
+msgid "Activities"
+msgstr " Activities (गतिविधियाँ)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr " Activity Exception Decoration (गतिविधि अपवाद सजावट)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_state
+msgid "Activity State"
+msgstr " Activity State (गतिविधि अवस्था)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_type_icon
+msgid "Activity Type Icon"
+msgstr " Activity Type Icon (गतिविधि प्रकार आइकन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__end_date
+msgid "Actual Completion Date"
+msgstr " Actual Completion Date (वास्तविक समापन तिथि)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ppap_action_points_form
+msgid "Additional Action Points Formats"
+msgstr " Additional Action Points Formats (अतिरिक्त कार्रवाई अंक प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__additional_ids
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Additional Formats"
+msgstr " Additional Formats (अतिरिक्त प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__ppap_id
+msgid "Additional Lines"
+msgstr " Additional Lines (अतिरिक्त लाइनें)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__all_approved
+msgid "All Approved"
+msgstr " All Approved (सभी स्वीकृत)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__any_rejected
+msgid "Any Rejected"
+msgstr " Any Rejected (किसी भी अस्वीकृत)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__any_review
+msgid "Any Review"
+msgstr " Any Review (कोई समीक्षा)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__approval_date
+msgid "Approval Date"
+msgstr " Approval Date (अनुमोदन तिथि)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__approval_history_ids
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_approval_history_tree
+msgid "Approval History"
+msgstr " Approval History (अनुमोदन इतिहास)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Approve"
+msgstr " Approve (मंज़ूरी देना)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__final_status__approved
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__approved
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_team_approval__approval_status__approved
+msgid "Approved"
+msgstr " Approved (अनुमत)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__iatf_members_ids
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__iatf_members_ids
+msgid "Approvers"
+msgstr " Approvers (अनुमोदन)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Are you sure you want to reject this ECN?"
+msgstr ""
+" Are you sure you want to reject this ECN? (क्या आप सुनिश्चित हैं कि आप इस "
+"ईसीएन को अस्वीकार करना चाहते हैं?)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Are you sure you want to submit this ECN?"
+msgstr ""
+" Are you sure you want to submit this ECN? (क्या आप सुनिश्चित हैं कि आप इस "
+"ECN को जमा करना चाहते हैं?)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Assign CFT Members"
+msgstr " Assign CFT Members (CFT सदस्यों को असाइन करें)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_attachment_count
+msgid "Attachment Count"
+msgstr " Attachment Count (अनुलग्नक गणना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__ecn_attachment
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__ecn_attachment
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__ecn_attachment
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__ecn_attachment
+msgid "Attachments"
+msgstr " Attachments (संलग्नक)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__cft_approval
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "CFT Approval"
+msgstr " CFT Approval (सीएफटी अनुमोदन)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__cft_approval_requested
+msgid "CFT Approval Requested"
+msgstr " CFT Approval Requested (सीएफटी अनुमोदन का अनुरोध किया)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__team_approval_ids
+msgid "CFT Team Approvals"
+msgstr " CFT Team Approvals (सीएफटी टीम अनुमोदन)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_approval_wizard
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_completion_wizard
+msgid "Cancel"
+msgstr " Cancel (रद्द करना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__name
+msgid "Category Name"
+msgstr " Category Name (श्रेणी नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__change_person
+msgid "Change"
+msgstr " Change (परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__description
+msgid "Change Description"
+msgstr " Change Description (विवरण बदलें)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Change Details and Risk Assessment Analysis"
+msgstr ""
+" Change Details and Risk Assessment Analysis (विवरण और जोखिम मूल्यांकन "
+"विश्लेषण बदलें)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__change_received_from
+msgid "Change Received From"
+msgstr " Change Received From (से प्राप्त परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__change_required_ids
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__change_required_id
+msgid "Change Required"
+msgstr " Change Required (आवश्यक परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__change_required
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__change_required
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__change_required
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__change_required
+msgid "Change Required (Y/N)"
+msgstr " Change Required (Y/N) (आवश्यक परिवर्तन (y/n))"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Check Feasibility"
+msgstr " Check Feasibility (व्यवहार्यता की जाँच करें)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_four_m_type__status__closed
+msgid "Closed"
+msgstr " Closed (बंद किया हुआ)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__co_ord
+msgid "Co-Ordinator"
+msgstr " Co-Ordinator (समन्वयक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__comments
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__comments
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__comments
+msgid "Comments"
+msgstr " Comments (सूचना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__company_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__company_id
+msgid "Company"
+msgstr " Company (कंपनी)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_completion_wizard__action_type__complete
+msgid "Complete"
+msgstr " Complete (पूरा)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_completion_wizard
+msgid "Complete/Reject ECN"
+msgstr " Complete/Reject ECN (ECN को पूरा/अस्वीकार करें)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__completed
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__completed
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Completed"
+msgstr " Completed (पुरा होना।)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_completion_wizard
+msgid "Completion Notes"
+msgstr " Completion Notes (पूर्णता नोट)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__completion_status
+msgid "Completion Status"
+msgstr " Completion Status (समापन स्थिति)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Completion/Rejection"
+msgstr " Completion/Rejection (पूर्णता/अस्वीकृति)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_approval_wizard
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_completion_wizard
+msgid "Confirm"
+msgstr " Confirm (पुष्टि करना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__cost_reduce
+msgid "Cost Reduction"
+msgstr " Cost Reduction (लागत में कमी)"
+
+#. module: ecn
+#: model_terms:ir.actions.act_window,help:ecn.action_ppap_action_points
+msgid "Create and manage PPAP Action Points."
+msgstr ""
+" Create and manage PPAP Action Points. (PPAP एक्शन पॉइंट बनाएं और प्रबंधित "
+"करें।)"
+
+#. module: ecn
+#: model_terms:ir.actions.act_window,help:ecn.action_asd_ecn
+msgid "Create your first Engineering Change Note"
+msgstr ""
+" Create your first Engineering Change Note (अपना पहला इंजीनियरिंग चेंज नोट "
+"बनाएं)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__create_uid
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__create_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__create_uid
+msgid "Created by"
+msgstr " Created by (के द्वारा बनाई गई)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__create_date
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__create_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__create_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__create_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__create_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__create_date
+msgid "Created on"
+msgstr " Created on (पर बनाया)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__change_received_from__customer
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Customer"
+msgstr " Customer (ग्राहक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__partner_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__partner_id
+msgid "Customer Name"
+msgstr " Customer Name (ग्राहक नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__cus_part_name
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__customer_part_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__cus_part_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__customer_part_name
+msgid "Customer Part name"
+msgstr " Customer Part name (ग्राहक भाग का नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__cus_part_no
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__cus_part_no
+msgid "Customer Part num"
+msgstr " Customer Part num (ग्राहक भाग संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__customer_requirement
+msgid "Customer Requirement"
+msgstr " Customer Requirement (ग्राहक की आवश्यकता)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__cus_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__cus_id
+msgid "Customer name"
+msgstr " Customer name (ग्राहक नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__date
+msgid "Date"
+msgstr " Date (तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__date_of_approval_received
+msgid "Date of Approval Submission"
+msgstr " Date of Approval Submission (अनुमोदन की तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__date_of_ppap_submission
+msgid "Date of PPAP Submission"
+msgstr " Date of PPAP Submission (पीपीएपी प्रस्तुत करने की तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__date_of_pilot_lot_submission
+msgid "Date of Pilot Lot Submission"
+msgstr " Date of Pilot Lot Submission (पायलट लॉट सबमिशन की तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__date_of_regular_submission
+msgid "Date of Regular Production"
+msgstr " Date of Regular Production (नियमित उत्पादन की तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__department
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__department_id
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Department"
+msgstr " Department (विभाग)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__description
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__description
+msgid "Description"
+msgstr " Description (विवरण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__specific_change
+msgid "Design / Specification Change"
+msgstr " Design / Specification Change (डिजाइन / विनिर्देश परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__display_name
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__display_name
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__display_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__display_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__display_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__display_name
+msgid "Display Name"
+msgstr " Display Name (प्रदर्शित होने वाला नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__doc_type
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__doc_type
+msgid "Doc Type"
+msgstr " Doc Type (डॉक्टर प्रकार)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__draft
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Draft"
+msgstr " Draft (मसौदा)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__draft_changes
+msgid "Draft Changes"
+msgstr " Draft Changes (ड्राफ्ट परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__drawing_no
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__drawing_no
+msgid "Drawing No."
+msgstr " Drawing No. (ड्राइंग नंबर।)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__drawing_rev_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__drawing_rev_date
+msgid "Drawing Rev. Date"
+msgstr " Drawing Rev. Date (ड्राइंग रेव। दिनांक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__drawing_rev_no
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__drawing_rev_no
+msgid "Drawing. Rev. No."
+msgstr " Drawing. Rev. No. (चित्रकला।रेव। सं।)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__drg_no
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__drg_no
+msgid "Drg. No."
+msgstr " Drg. No. (Drg।नहीं।)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__ecn_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__ecn_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__ecn_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__ecn_id
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "ECN"
+msgstr " ECN (ईसीएन)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_approval_required
+msgid "ECN ${object.ecn_id.ecn_number} - Your Approval Required"
+msgstr ""
+" ECN ${object.ecn_id.ecn_number} - Your Approval Required (ECN $ "
+"{object.ecn_id.ecn_number} - आपकी स्वीकृति आवश्यक है)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_review_requested
+msgid "ECN ${object.ecn_number} - Additional Review Requested"
+msgstr ""
+" ECN ${object.ecn_number} - Additional Review Requested (ECN $ "
+"{object.ecn_number} - अतिरिक्त समीक्षा अनुरोधित)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_completed
+msgid "ECN ${object.ecn_number} - Process Completed"
+msgstr ""
+" ECN ${object.ecn_number} - Process Completed (ECN $ {object.ecn_number} - "
+"प्रक्रिया पूरी हुई)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_implementation
+msgid "ECN ${object.ecn_number} - Ready for Final Approval"
+msgstr ""
+" ECN ${object.ecn_number} - Ready for Final Approval (ECN $ "
+"{object.ecn_number} - अंतिम अनुमोदन के लिए तैयार)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_rejected
+msgid "ECN ${object.ecn_number} - Rejected"
+msgstr ""
+" ECN ${object.ecn_number} - Rejected (ECN $ {object.ecn_number} - अस्वीकृत)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_status_update
+msgid "ECN ${object.ecn_number} - Status Updated to ${object.state}"
+msgstr ""
+" ECN ${object.ecn_number} - Status Updated to ${object.state} (Ecn $ "
+"{object.ecn_number} - $ {object.state} के लिए अद्यतन स्थिति)"
+
+#. module: ecn
+#: model:mail.template,subject:ecn.mail_template_ecn_submitted
+msgid "ECN ${object.ecn_number} - Submitted for Review"
+msgstr ""
+" ECN ${object.ecn_number} - Submitted for Review (ECN $ {object.ecn_number} "
+"- समीक्षा के लिए प्रस्तुत किया गया)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "ECN Date"
+msgstr " ECN Date (ईसीएन तिथि)"
+
+#. module: ecn
+#: model:ir.ui.menu,name:ecn.menu_asd_ecn_root
+msgid "ECN and PPAP "
+msgstr " ECN and PPAP  (ईसीएन और पीपीएपी)"
+
+#. module: ecn
+#: model:ir.ui.menu,name:ecn.menu_asd_ecn
+msgid "ECN/ECR"
+msgstr " ECN/ECR (ईसीएन/ईसीआर)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_four_m_type
+msgid "ECN/ECR 4M Type"
+msgstr " ECN/ECR 4M Type (ईसीएन/ईसीआर 4 एम प्रकार)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_approval_wizard
+msgid "ECN/ECR Approval"
+msgstr " ECN/ECR Approval (ईसीएन/ईसीआर अनुमोदन)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_approval_history
+msgid "ECN/ECR Approval History"
+msgstr " ECN/ECR Approval History (ईसीएन/ईसीआर अनुमोदन इतिहास)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_approval_wizard
+msgid "ECN/ECR Approval Wizard"
+msgstr " ECN/ECR Approval Wizard (ईसीएन/ईसीआर अनुमोदन विज़ार्ड)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_category
+msgid "ECN/ECR Category"
+msgstr " ECN/ECR Category (ईसीएन/ईसीआर श्रेणी)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_completion_wizard
+msgid "ECN/ECR Completion Wizard"
+msgstr " ECN/ECR Completion Wizard (ईसीएन/ईसीआर पूर्णता विज़ार्ड)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__ecn_date
+msgid "ECN/ECR Date"
+msgstr " ECN/ECR Date (ईसीएन/ईसीआर तिथि)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_format
+msgid "ECN/ECR Format"
+msgstr " ECN/ECR Format (ईसीएन/ईसीआर प्रारूप)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_new_format
+msgid "ECN/ECR New Format"
+msgstr " ECN/ECR New Format (ईसीएन/ईसीआर नया प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__ecn_number
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "ECN/ECR Number"
+msgstr " ECN/ECR Number (ईसीएन/ईसीआर नंबर)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ecn_team_approval
+msgid "ECN/ECR Team Member Approval"
+msgstr " ECN/ECR Team Member Approval (ईसीएन/ईसीआर टीम सदस्य अनुमोदन)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_completed
+msgid "ECN: Process Completed"
+msgstr " ECN: Process Completed (ECN: प्रक्रिया पूरी हुई)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_implementation
+msgid "ECN: Ready for Final Approval"
+msgstr " ECN: Ready for Final Approval (ECN: अंतिम अनुमोदन के लिए तैयार)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_rejected
+msgid "ECN: Rejected"
+msgstr " ECN: Rejected (ECN: अस्वीकृत)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_review_requested
+msgid "ECN: Review Requested"
+msgstr " ECN: Review Requested (ECN: समीक्षा अनुरोध किया)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_status_update
+msgid "ECN: Status Update"
+msgstr " ECN: Status Update (ECN: स्थिति अद्यतन)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_submitted
+msgid "ECN: Submitted for Review"
+msgstr " ECN: Submitted for Review (ECN: समीक्षा के लिए प्रस्तुत किया गया)"
+
+#. module: ecn
+#: model:mail.template,name:ecn.mail_template_ecn_approval_required
+msgid "ECN: Your Approval Required"
+msgstr " ECN: Your Approval Required (ECN: आपकी स्वीकृति की आवश्यकता है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__ecn_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__ecn_id
+msgid "Ecn"
+msgstr " Ecn (ईसीएन)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_asd_ecn
+msgid "Engineering Change Note"
+msgstr " Engineering Change Note (इंजीनियरी परिवर्तन नोट)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_asd_ecn_line
+msgid "Engineering Change Note Line"
+msgstr " Engineering Change Note Line (इंजीनियरी परिवर्तन नोट लाइन)"
+
+#. module: ecn
+#: model:ir.actions.act_window,name:ecn.action_asd_ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_tree
+msgid "Engineering Change Notes"
+msgstr " Engineering Change Notes (इंजीनियरी परिवर्तन नोट्स)"
+
+#. module: ecn
+#: model_terms:ir.actions.act_window,help:ecn.action_asd_ecn
+msgid ""
+"Engineering Change Notes help track and manage changes to products and "
+"processes."
+msgstr ""
+" Engineering Change Notes help track and manage changes to products and "
+"processes. (इंजीनियरिंग परिवर्तन नोट्स उत्पादों और प्रक्रियाओं में परिवर्तन "
+"को ट्रैक और प्रबंधित करने में मदद करते हैं।)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__environment
+msgid "Environment"
+msgstr " Environment (पर्यावरण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__existing
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Existing"
+msgstr " Existing (मौजूदा)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Existing Material Disposition"
+msgstr " Existing Material Disposition (मौजूदा सामग्री स्वभाव)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Feasibility Assessment"
+msgstr " Feasibility Assessment (व्यवहार्यता आकलन)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__feasibility_check
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Feasibility Check"
+msgstr " Feasibility Check (व्यवहार्यता जाँच)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__feasible
+msgid "Feasible"
+msgstr " Feasible (संभव)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__final_status
+msgid "Final Status"
+msgstr " Final Status (अंतिम स्थिति)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_follower_ids
+msgid "Followers"
+msgstr " Followers (समर्थक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_partner_ids
+msgid "Followers (Partners)"
+msgstr " Followers (Partners) (अनुयायी (भागीदार))"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr " Font awesome icon e.g. fa-tasks (फ़ॉन्ट भयानक आइकन उदा।एफए-टास्क)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__format
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__formate_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__formate_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__format
+msgid "Format"
+msgstr " Format (प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__name
+msgid "Format Name"
+msgstr " Format Name (प्रारूप नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__generate_xlsx_file
+msgid "Generate XLSX File"
+msgstr " Generate XLSX File (XLSX फ़ाइल उत्पन्न करें)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Group By"
+msgstr " Group By (द्वारा समूह बनाएं)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__has_message
+msgid "Has Message"
+msgstr " Has Message (संदेश है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__id
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__id
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__id
+msgid "ID"
+msgstr " ID (पहचान)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_exception_icon
+msgid "Icon"
+msgstr " Icon (आइकन)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+" Icon to indicate an exception activity. (एक अपवाद गतिविधि को इंगित करने के "
+"लिए आइकन।)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+" If checked, new messages require your attention. (यदि जाँच की जाती है, तो "
+"नए संदेशों को आपके ध्यान की आवश्यकता होती है।)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__message_has_error
+#: model:ir.model.fields,help:ecn.field_asd_ecn__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+" If checked, some messages have a delivery error. (यदि जाँच की जाती है, तो "
+"कुछ संदेशों में डिलीवरी त्रुटि होती है।)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Impact of Changes"
+msgstr " Impact of Changes (परिवर्तन का प्रभाव)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Implementation"
+msgstr " Implementation (कार्यान्वयन)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Implementation Plan"
+msgstr " Implementation Plan (कार्यान्वयन योजना)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__implementation
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__implementation_planning
+msgid "Implementation Planning"
+msgstr " Implementation Planning (कार्यान्वयन योजना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__improve_machine
+msgid "Improvement In Machining"
+msgstr " Improvement In Machining (मशीनिंग में सुधार)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__quality_imp
+msgid "Improvement In Performance / Quality"
+msgstr " Improvement In Performance / Quality (प्रदर्शन / गुणवत्ता में सुधार)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_four_m_type__status__in_progress
+msgid "In Progress"
+msgstr " In Progress (प्रगति पर है)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Initial Information"
+msgstr " Initial Information (प्रारंभिक सूचना)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__change_received_from__internal
+msgid "Internal"
+msgstr " Internal (आंतरिक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_is_follower
+msgid "Is Follower"
+msgstr " Is Follower (अनुयायी है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn____last_update
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_category____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_format____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format____last_update
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval____last_update
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points____last_update
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add____last_update
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line____last_update
+msgid "Last Modified on"
+msgstr " Last Modified on (अंतिम रूप से संशोधित)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__write_uid
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__write_uid
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__write_uid
+msgid "Last Updated by"
+msgstr " Last Updated by (द्वारा अंतिम अद्यतन किया गया)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__write_date
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_wizard__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_category__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_format__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__write_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__write_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__write_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__write_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__write_date
+msgid "Last Updated on"
+msgstr " Last Updated on (अंतिम बार अद्यतन किया गया)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__link
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__link
+msgid "Link"
+msgstr " Link (जोड़ना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__machine
+msgid "Machine"
+msgstr " Machine (मशीन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_main_attachment_id
+msgid "Main Attachment"
+msgstr " Main Attachment (मुख्य अनुलग्नक)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__man
+msgid "Man"
+msgstr " Man (आदमी)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__material
+msgid "Material"
+msgstr " Material (सामग्री)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__measure
+msgid "Measurement"
+msgstr " Measurement (माप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__member_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__member_name
+msgid "Member Name"
+msgstr " Member Name (सदस्य नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_has_error
+msgid "Message Delivery error"
+msgstr " Message Delivery error (संदेश वितरण त्रुटि)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_ids
+msgid "Messages"
+msgstr " Messages (संदेशों)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__method
+msgid "Method"
+msgstr " Method (तरीका)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__feasibility_check
+msgid "Moved to Feasibility Check"
+msgstr " Moved to Feasibility Check (व्यवहार्यता जांच में चले गए)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr " My Activity Deadline (मेरी गतिविधि की समय सीमा)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_team_approval__approval_status__review
+msgid "Need Review"
+msgstr " Need Review (समीक्षा की आवश्यकता है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__new_format_ids
+msgid "New Format"
+msgstr " New Format (नया प्रारूप)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr " Next Activity Calendar Event (अगली गतिविधि कैलेंडर घटना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr " Next Activity Deadline (अगली गतिविधि की समय सीमा)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_summary
+msgid "Next Activity Summary"
+msgstr " Next Activity Summary (अगली गतिविधि सारांश)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_type_id
+msgid "Next Activity Type"
+msgstr " Next Activity Type (अगली गतिविधि प्रकार)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__non_conformity_ids
+msgid "Non Conformity"
+msgstr " Non Conformity (अनन्य अनुरूपता)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__non_conformity_count
+msgid "Non Conformity Count"
+msgstr " Non Conformity Count (गैर -अनुरूपता गणना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__not_feasible
+msgid "Not Feasible"
+msgstr " Not Feasible (लाभप्रद नहीं)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_four_m_type__status__not_started
+msgid "Not Started"
+msgstr " Not Started (शुरू नहीं)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__completion_notes
+#: model:ir.model.fields,field_description:ecn.field_ecn_completion_wizard__notes
+msgid "Notes"
+msgstr " Notes (नोट)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_needaction_counter
+msgid "Number of Actions"
+msgstr " Number of Actions (कार्यों की संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_has_error_counter
+msgid "Number of errors"
+msgstr " Number of errors (त्रुटियों की संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+" Number of messages requiring action (कार्रवाई की आवश्यकता वाले संदेशों की "
+"संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+" Number of messages with delivery error (वितरण त्रुटि के साथ संदेशों की "
+"संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_four_m_type__status__open
+msgid "Open"
+msgstr " Open (खुला)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_ppap_action_points_form
+msgid "Open Format"
+msgstr " Open Format (खुला प्रारूप)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Origin"
+msgstr " Origin (मूल)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__original_values
+msgid "Original Values"
+msgstr " Original Values (मूल मूल्य)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_ppap_action_points_form
+msgid "PPAP ACTION POINTS"
+msgstr " PPAP ACTION POINTS (पीपीएपी एक्शन पॉइंट्स)"
+
+#. module: ecn
+#: model:ir.actions.act_window,name:ecn.action_ppap_action_points
+#: model:ir.model,name:ecn.model_ppap_action_points
+#: model:ir.model,name:ecn.model_ppap_action_points_line
+#: model:ir.ui.menu,name:ecn.menu_ppap_action_points
+#: model_terms:ir.ui.view,arch_db:ecn.view_ppap_action_points_form
+msgid "PPAP Action Points"
+msgstr " PPAP Action Points (पीपीएपी एक्शन पॉइंट्स)"
+
+#. module: ecn
+#: model:ir.model,name:ecn.model_ppap_action_points_add
+msgid "PPAP Action Points Additional Formats"
+msgstr ""
+" PPAP Action Points Additional Formats (PPAP एक्शन अतिरिक्त प्रारूप इंगित "
+"करता है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__ppap_ids
+msgid "PPAP Action Points Line"
+msgstr " PPAP Action Points Line (पीपीएपी एक्शन पॉइंट लाइन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__ppap_approval_required
+msgid "PPAP Approval Required"
+msgstr " PPAP Approval Required (पीपीएपी अनुमोदन आवश्यक)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "PPAP Requirements"
+msgstr " PPAP Requirements (पीपीएपी आवश्यकताएँ)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Part"
+msgstr " Part (भाग)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__part_description
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__part_description
+msgid "Part Description"
+msgstr " Part Description (भाग का विवरण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__part_name
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__part_name
+msgid "Part Name"
+msgstr " Part Name (नाम का हिस्सा)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__part_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__part_id
+msgid "Part No."
+msgstr " Part No. (भाग संख्या)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__part_number
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__part_number
+msgid "Part Number"
+msgstr " Part Number (भाग संख्या)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_tree
+msgid "Part Reference"
+msgstr " Part Reference (भाग संदर्भ)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_team_approval__approval_status__pending
+msgid "Pending"
+msgstr " Pending (लंबित)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Plan Implementation"
+msgstr " Plan Implementation (योजना कार्यान्वयन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__process_change
+msgid "Process Change"
+msgstr " Process Change (प्रक्रिया परिवर्तन)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__project
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__project
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Project"
+msgstr " Project (परियोजना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__project_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__project_id
+msgid "Project Name"
+msgstr " Project Name (प्रोजेक्ट नाम)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__proposed
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Proposed"
+msgstr " Proposed (प्रस्तावित)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__emp_id
+msgid "Proposer Name"
+msgstr " Proposer Name (प्रस्तावक नाम)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Purpose of Change"
+msgstr " Purpose of Change (परिवर्तन का उद्देश्य)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__quantity
+msgid "Quantity"
+msgstr " Quantity (मात्रा)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Quantity Fetch Button"
+msgstr " Quantity Fetch Button (मात्रा प्राप्ति बटन)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_wizard__action_type__reject
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_completion_wizard__action_type__reject
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Reject"
+msgstr " Reject (अस्वीकार करना)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Reject ECN"
+msgstr " Reject ECN (ईसीएन को अस्वीकार करना)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__final_status__rejected
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__rejected
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__rejected
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_team_approval__approval_status__rejected
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Rejected"
+msgstr " Rejected (अस्वीकार कर दिया)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_ecn_completion_wizard
+msgid "Rejection Reason"
+msgstr " Rejection Reason (अस्वीकृति कारण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__related_parts
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__related_parts
+msgid "Related Parts"
+msgstr " Related Parts (संबंधित भाग)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__remark
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Remarks"
+msgstr " Remarks (टिप्पणी)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Request CFT Approval"
+msgstr " Request CFT Approval (CFT अनुमोदन का अनुरोध करें)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_wizard__action_type__review
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Request Review"
+msgstr " Request Review (अनुरोध समीक्षा)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__reset_approvals
+msgid "Reset Approvals for Implementation"
+msgstr ""
+" Reset Approvals for Implementation (कार्यान्वयन के लिए अनुमोदन रीसेट करें)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Reset to Draft"
+msgstr " Reset to Draft (मसौदा तैयार करना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__responsibility_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__responsibility_id
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__responsibility_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__responsibility_id
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__responsibility_id
+msgid "Responsibility"
+msgstr " Responsibility (ज़िम्मेदारी)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__activity_user_id
+msgid "Responsible User"
+msgstr " Responsible User (जिम्मेदार उपयोगकर्ता)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Risk Assessment Analysis"
+msgstr " Risk Assessment Analysis (जोखिम मूल्यांकन विश्लेषण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__sl_no
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__sl_no
+msgid "S.No"
+msgstr "S.No"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr " SMS Delivery error (एसएमएस वितरण त्रुटि)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__scraped
+msgid "Scraped"
+msgstr " Scraped (स्क्रेप की गई)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Search Engineering Change Notes"
+msgstr " Search Engineering Change Notes (खोज इंजीनियरिंग परिवर्तन नोट्स)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Send for Approval"
+msgstr " Send for Approval (अनुमोदन के लिए भेजें)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__show_buttons
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__show_buttons
+msgid "Show Buttons"
+msgstr " Show Buttons (बटन दिखाएं)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__completion_status
+msgid "Shows whether the task was completed early, on time, or late."
+msgstr ""
+" Shows whether the task was completed early, on time, or late. (यह दिखाता है"
+" कि क्या कार्य समय पर, या देर से पूरा हो गया था।)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__standardisation
+msgid "Standardisation"
+msgstr " Standardisation (मानकीकरण)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__start_date
+msgid "Start Date"
+msgstr " Start Date (आरंभ करने की तिथि)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Start Review"
+msgstr " Start Review (समीक्षा शुरू करें)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__started_review
+msgid "Started Review"
+msgstr " Started Review (समीक्षा शुरू की)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__state
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__status
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__approval_status
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__final_status
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__state
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Status"
+msgstr " Status (स्थिति)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+" Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities. (गतिविधियों के आधार पर स्थिति\n"
+"अतिदेय: नियत तारीख पहले ही पारित हो चुकी है\n"
+"आज: गतिविधि की तारीख आज है\n"
+"नियोजित: भविष्य की गतिविधियाँ।)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn_line__draft_changes
+msgid "Stores draft changes as JSON"
+msgstr ""
+" Stores draft changes as JSON (JSON के रूप में स्टोर ड्राफ्ट में बदलाव)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn_line__original_values
+msgid "Stores original values before changes"
+msgstr ""
+" Stores original values before changes (परिवर्तन से पहले मूल मूल्यों को "
+"संग्रहीत करता है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__sub_suppiler
+msgid "Sub- Supplier Requirement"
+msgstr " Sub- Supplier Requirement (उप-आपूर्तिकर्ता आवश्यकता)"
+
+#. module: ecn
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+msgid "Submit"
+msgstr " Submit (जमा करना)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__submitted
+#: model:ir.model.fields.selection,name:ecn.selection__ecn_approval_history__action__submitted
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Submitted"
+msgstr " Submitted (प्रस्तुत किया हुआ)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__change_received_from__supplier
+msgid "Supplier"
+msgstr " Supplier (देने वाला)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__table
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__table
+msgid "Table"
+msgstr " Table (मेज़)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__target_completion_date
+msgid "Target Completion Date"
+msgstr " Target Completion Date (लक्ष्य समापन तिथि)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn_line__target_date
+#: model:ir.model.fields,field_description:ecn.field_ecn_new_format__target_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_add__target_date
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__target_date
+msgid "Target Date"
+msgstr " Target Date (नियोजित तारीख)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_team_approval__employee_id
+msgid "Team Member"
+msgstr " Team Member (टीम के सदस्य)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__specification
+msgid "To be converted as per new specification"
+msgstr ""
+" To be converted as per new specification (नए विनिर्देश के अनुसार परिवर्तित "
+"किया जाना)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__userd_in
+msgid "To be used as it is"
+msgstr " To be used as it is (जैसा कि इसका उपयोग किया जाना है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_four_m_type__types
+msgid "Type"
+msgstr " Type (प्रकार)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+" Type of the exception activity on record. (रिकॉर्ड पर अपवाद गतिविधि का "
+"प्रकार।)"
+
+#. module: ecn
+#: model:ir.model.fields.selection,name:ecn.selection__asd_ecn__state__under_review
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_form
+#: model_terms:ir.ui.view,arch_db:ecn.view_asd_ecn_search
+msgid "Under Review"
+msgstr " Under Review (समीक्षा के अंतर्गत)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ecn_approval_history__user_id
+msgid "User"
+msgstr " User (उपयोगकर्ता)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__user_has_access_to_approve
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points__user_has_access_to_approve
+msgid "User Has Access"
+msgstr " User Has Access (उपयोगकर्ता की पहुंच है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__user_is_team_member
+msgid "User Is Team Member"
+msgstr " User Is Team Member (उपयोगकर्ता टीम का सदस्य है)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_asd_ecn__website_message_ids
+msgid "Website Messages"
+msgstr " Website Messages (वेबसाइट संदेश)"
+
+#. module: ecn
+#: model:ir.model.fields,help:ecn.field_asd_ecn__website_message_ids
+msgid "Website communication history"
+msgstr " Website communication history (वेबसाइट संचार इतिहास)"
+
+#. module: ecn
+#: model:ir.model.fields,field_description:ecn.field_ppap_action_points_line__ppap_id
+msgid "lines"
+msgstr " lines (पंक्तियां)"

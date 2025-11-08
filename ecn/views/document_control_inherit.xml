@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_document_control_form_ecn_inherit" model="ir.ui.view">
+        <field name="name">document.control.form.ecn.inherit</field>
+        <field name="model">document.control</field>
+        <field name="inherit_id" ref="customer_part_creation.view_document_control_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Add ECN button in header after existing buttons -->
+            <xpath expr="//button[@name='action_cancel']" position="after">
+                <button name="action_create_ecn"
+                        string="Create ECN"
+                        type="object"
+                        class="btn-primary"
+                        states="released"
+                        confirm="Are you sure you want to create an Engineering Change Note?"/>
+            </xpath>
+
+            <!-- Add stat button box at the top of the sheet -->
+            <xpath expr="//sheet/group[1]" position="before">
+                <div class="oe_button_box" name="button_box">
+                    <button name="action_view_ecns"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-exchange"
+                            attrs="{'invisible': [('ecn_count', '=', 0)]}">
+                        <field name="ecn_count" widget="statinfo" string="ECNs"/>
+                    </button>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

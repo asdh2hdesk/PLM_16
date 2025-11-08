@@ -20,7 +20,7 @@
                             <field name="sequence" readonly="1"/>
                             <field name="name" attrs="{'readonly': [('state', '=', 'released')]}"/>
                             <field name="part_number_id" attrs="{'readonly': [('state', '=', 'released')]}"/>
-                            <field name="part_description" readonly="1"/>
+                            <field name="part_description"/>
                             <field name="customer_name" attrs="{'readonly': [('state', '=', 'released')]}"/>
                             <field name="category_ids" widget="many2many_tags" attrs="{'readonly': [('state', '=', 'released')]}"/>
                             <field name="customer_part_number" attrs="{'readonly': [('state', '=', 'released')]}"/>
@@ -81,6 +81,7 @@
         <field name="model">document.control</field>
         <field name="arch" type="xml">
             <tree decoration-success="state == 'approved'" decoration-info="state == 'released'" decoration-warning="state == 'pending_approval'" decoration-danger="state == 'cancled'">
+                <field name="sr_no_1"/>
                 <field name="sequence"/>
                 <field name="name"/>
                 <field name="part_number_id"/>

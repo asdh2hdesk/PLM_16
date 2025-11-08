@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Part Version Diff Form View -->
+    <record id="view_part_version_diff_form" model="ir.ui.view">
+        <field name="name">part.version.diff.form</field>
+        <field name="model">part.version.diff</field>
+        <field name="arch" type="xml">
+            <form string="Part Version Comparison">
+                <header>
+                    <button name="action_compare" string="Compare Parts"
+                            type="object" class="oe_highlight"
+                            attrs="{'invisible': [('state', '=', 'compared')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,compared"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+
+                    <group>
+                        <group string="Part A (From)">
+                            <field name="part_a_id" options="{'no_create': True}"/>
+                            <field name="part_a_name" readonly="1"/>
+                            <field name="part_a_default_code" readonly="1"/>
+                            <field name="document_a_id" readonly="1"/>
+                        </group>
+                        <group string="Part B (To)">
+                            <field name="part_b_id" options="{'no_create': True}"/>
+                            <field name="part_b_name" readonly="1"/>
+                            <field name="part_b_default_code" readonly="1"/>
+                            <field name="document_b_id" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <group>
+                            <field name="comparison_type"/>
+                            <field name="compared_by" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="compared_date" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <!-- Summary Statistics -->
+                    <group string="Summary" attrs="{'invisible': [('state', '!=', 'compared')]}">
+                        <group string="BOM Changes">
+                            <field name="total_bom_changes"/>
+                            <field name="bom_additions"/>
+                            <field name="bom_deletions"/>
+                            <field name="bom_modifications"/>
+                        </group>
+                        <group string="File Changes">
+                            <field name="total_file_changes"/>
+                            <field name="file_additions"/>
+                            <field name="file_deletions"/>
+                        </group>
+                        <group string="Revisions">
+                            <field name="revision_count_a"/>
+                            <field name="revision_count_b"/>
+                        </group>
+                        <group string="technical">
+                            <field name="total_technical_changes"/>
+                        </group>
+                    </group>
+
+                    <!-- Comparison Results -->
+                    <notebook attrs="{'invisible': [('state', '!=', 'compared')]}">
+                        <page string="BOM Differences"
+                              attrs="{'invisible': [('comparison_type', 'not in', ['all', 'bom'])]}">
+                            <field name="bom_differences_html" widget="html" readonly="1"/>
+                        </page>
+
+                        <page string="Document Differences"
+                              attrs="{'invisible': [('comparison_type', 'not in', ['all', 'documents'])]}">
+                            <field name="document_differences_html" widget="html" readonly="1"/>
+                        </page>
+
+                        <page string="Revision Differences"
+                              attrs="{'invisible': [('comparison_type', 'not in', ['all', 'revisions'])]}">
+                            <field name="revision_differences_html" widget="html" readonly="1"/>
+                        </page>
+                        <page string="Technical Differences"
+                              attrs="{'invisible': [('comparison_type', 'not in', ['all', 'technical'])]}">
+                            <field name="technical_differences_html" widget="html" readonly="1"/>
+                        </page>
+
+<!--                        <page string="File Differences"-->
+<!--                              attrs="{'invisible': [('comparison_type', 'not in', ['all', 'files'])]}">-->
+<!--                            <field name="file_differences_html" widget="html" readonly="1"/>-->
+<!--                        </page>-->
+
+<!--                        <page string="Raw Data (JSON)">-->
+<!--                            <group>-->
+<!--                                <field name="bom_differences" widget="text" readonly="1"-->
+<!--                                       attrs="{'invisible': [('comparison_type', 'not in', ['all', 'bom'])]}"/>-->
+<!--                                <field name="document_differences" widget="text" readonly="1"-->
+<!--                                       attrs="{'invisible': [('comparison_type', 'not in', ['all', 'documents'])]}"/>-->
+<!--                                <field name="revision_differences" widget="text" readonly="1"-->
+<!--                                       attrs="{'invisible': [('comparison_type', 'not in', ['all', 'revisions'])]}"/>-->
+<!--                                <field name="file_differences" widget="text" readonly="1"-->
+<!--                                       attrs="{'invisible': [('comparison_type', 'not in', ['all', 'files'])]}"/>-->
+<!--                            </group>-->
+<!--                        </page>-->
+                    </notebook>
+
+<!--                    <group>-->
+<!--                        <field name="notes" placeholder="Add any notes about this comparison..."/>-->
+<!--                    </group>-->
+                </sheet>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <!-- Part Version Diff Tree View -->
+    <record id="view_part_version_diff_tree" model="ir.ui.view">
+        <field name="name">part.version.diff.tree</field>
+        <field name="model">part.version.diff</field>
+        <field name="arch" type="xml">
+            <tree string="Part Version Comparisons">
+                <field name="name"/>
+                <field name="part_a_default_code"/>
+                <field name="part_b_default_code"/>
+                <field name="comparison_type"/>
+                <field name="total_bom_changes"/>
+                <field name="total_file_changes"/>
+                <field name="compared_by"/>
+                <field name="compared_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Part Version Diff Search View -->
+    <record id="view_part_version_diff_search" model="ir.ui.view">
+        <field name="name">part.version.diff.search</field>
+        <field name="model">part.version.diff</field>
+        <field name="arch" type="xml">
+            <search string="Search Part Comparisons">
+                <field name="name"/>
+                <field name="part_a_id"/>
+                <field name="part_b_id"/>
+                <field name="compared_by"/>
+                <filter string="My Comparisons" name="my_comparisons"
+                        domain="[('compared_by', '=', uid)]"/>
+                <filter string="Draft" name="draft"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter string="Compared" name="compared"
+                        domain="[('state', '=', 'compared')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Comparison Type" name="group_type"
+                            context="{'group_by': 'comparison_type'}"/>
+                    <filter string="Compared By" name="group_user"
+                            context="{'group_by': 'compared_by'}"/>
+                    <filter string="Comparison Date" name="group_date"
+                            context="{'group_by': 'compared_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action to open from Product -->
+    <record id="action_compare_with_part" model="ir.actions.act_window">
+        <field name="name">Compare with Another Part</field>
+        <field name="res_model">part.version.diff</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_part_a_id': active_id,
+            'default_comparison_type': 'all'
+        }</field>
+    </record>
+
+    <!-- Add button to product form -->
+<!--    <record id="view_product_template_form_inherit_version_diff" model="ir.ui.view">-->
+<!--        <field name="name">product.template.form.inherit.version.diff</field>-->
+<!--        <field name="model">product.template</field>-->
+<!--        <field name="inherit_id" ref="product.product_template_form_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//div[@name='button_box']" position="inside">-->
+<!--                <button name="%(action_compare_with_part)d"-->
+<!--                        type="action"-->
+<!--                        class="oe_stat_button"-->
+<!--                        icon="fa-balance-scale"-->
+<!--                        string="Compare Part"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

@@ -26,10 +26,18 @@ class DrawingDocument(models.Model):
     _description = 'Drawing Control Document'
     _rec_name = 'sequence'
 
-    sequence = fields.Char(string='Sr. No', readonly=True, default=lambda self: _('New'))
+    sequence = fields.Char(string='Product Sr. No.', readonly=True, default=lambda self: _('New'))
+    sr_no_1 = fields.Integer(string='Sr. No.', compute='_compute_sr_no_1', store=False)
+
+    @api.depends()
+    def _compute_sr_no_1(self):
+        """Automatically assign serial numbers based on record order"""
+        for index, record in enumerate(self, start=1):
+            record.sr_no_1 = index
     name = fields.Char(string='Format Number', required=False, tracking=True,translate=True)
     part_number_id = fields.Many2one('product.product', string='Part Number', tracking=True)
-    part_description = fields.Char(string='Part Description', related='part_number_id.name', readonly=True,translate=True)
+    part_description_1 = fields.Char(string='Part Description', related='part_number_id.name', readonly=True,translate=True)
+    part_description = fields.Char(string='Part Description', translate=True)
     customer_name = fields.Many2one('res.partner', string='Customer Name', tracking=True)
     customer_part_number = fields.Char(string='Customer Part Number')
     customer_part_description = fields.Char(string='Customer Part Description',translate=True)
@@ -53,11 +61,10 @@ class DrawingDocument(models.Model):
     date_creation = fields.Date(string='Date of Creation', default=fields.Date.today, tracking=True)
     drawing_internal = fields.Html(string='Drawing Upload Internal')
     # drawing_internal_attachment = fields.Binary(string='Internal Drawing Attachment', attachment=True)
-    drawing_internal_attachment_ids = fields.One2many(
+    drawing_internal_attachment_ids = fields.Many2many(
         'ir.attachment',
-        'res_id',
-        domain=[('res_model', '=', 'document.control'), ('res_field', '=', 'drawing_internal_attachment_ids')],
-        string='Attachments'
+        string='Attachments',
+        help='Upload multiple files as attachments'
     )
 
     # Count field (optional, useful for displaying count)

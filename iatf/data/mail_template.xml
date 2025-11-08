@@ -1,0 +1,79 @@
+<odoo>
+    <data>
+        <record id="sending_mail_template_risk_assessment" model="mail.template">
+            <field name="name">Notification Risk Assessment</field>
+            <field name="model_id" ref="iatf.model_risk_assessment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="email_from">egelsoftware.in@gmail.com</field>
+            <field name="email_to">{{object.user_id.email}}</field>
+            <field name="subject">{{'Need to discuss'}}</field>
+            <field name="body_html" type="html">
+                <div>
+                    <h1>Checking mail template</h1>
+                </div>
+            </field>
+        </record>
+
+    <!-- Document Approval Mail Template -->
+        <record id="mom_document_approval_mail_template" model="mail.template">
+             <field name="name">Mom Document approval</field>
+             <field name="model_id" ref="iatf.model_mom"/>
+             <field name="auto_delete" eval="False"/>
+             <!-- <field name="email_to">{{object.requested_by_id.login}}</field> -->
+             <field name="subject">Document: {{object._description}} </field>
+             <field name="body_html" type='html'>
+                <div>
+                   <p>
+                      Dear Sir/Madam,
+                      <br/>
+                      Please approve this <strong>Format:- <t t-out="object._description"/></strong>.
+                      <b>Click on this link:- </b> <t t-out="object.link"/><br/><br/>
+                   </p>
+                   <br/>
+                      Thanks &#38; Regards
+                   <br/>
+                </div>
+             </field>
+        </record>
+        <record id="mom_document_approved_mail_template" model="mail.template">
+             <field name="name">Mom Document approval</field>
+             <field name="model_id" ref="iatf.model_mom"/>
+             <field name="auto_delete" eval="False"/>
+             <!-- <field name="email_to">{{object.requested_by_id.login}}</field> -->
+             <field name="subject">Document: {{object._description}} </field>
+             <field name="body_html" type='html'>
+                <div>
+                   <p>
+                      Dear Sir/Madam,
+                      <br/>
+                      Please approve this <strong>Format:- <t t-out="object._description"/></strong>.
+                      <b>Click on this link:- </b> <t t-out="object.link"/><br/><br/>
+                   </p>
+                   <br/>
+                      Thanks &#38; Regards
+                   <br/>
+                </div>
+             </field>
+          </record>
+<!--        <record id="document_revision_mail_template" model="mail.template">-->
+<!--             <field name="name">Mom Document approval</field>-->
+<!--             <field name="model_id" ref="iatf.model_mom"/>-->
+<!--             <field name="auto_delete" eval="False"/>-->
+<!--             &lt;!&ndash; <field name="email_to">{{object.requested_by_id.login}}</field> &ndash;&gt;-->
+<!--             <field name="subject">Document: {{object._description}} </field>-->
+<!--             <field name="body_html" type='html'>-->
+<!--                <div>-->
+<!--                   <p>-->
+<!--                      Dear Sir/Madam,-->
+<!--                      <br/>-->
+<!--                       <t t-out="object.revision_required_by"/><strong>Format:- <t t-out="object._description"/></strong>.-->
+<!--                      <b>Click on this link:- </b> <t t-out="object.link"/><br/><br/>-->
+<!--                   </p>-->
+<!--                   <br/>-->
+<!--                      Thanks &#38; Regards-->
+<!--                   <br/>-->
+<!--                </div>-->
+<!--             </field>-->
+<!--          </record>-->
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <!-- Document Fully Approved Mail Template -->
+        <record id="mom_document_fully_approved_mail_template" model="mail.template">
+             <field name="name">Document Fully Approved</field>
+             <field name="model_id" ref="iatf.model_mom"/>
+             <field name="auto_delete" eval="False"/>
+<!--             <field name="email_to">{{object.initiated_by_id.email}}</field>-->
+             <field name="subject">Document Approved: {{object._description}}</field>
+             <field name="body_html" type="html">
+                <div>
+                   <p>
+                      Dear Sir/Mam,
+                      <br/>
+                      We are pleased to inform you that the document titled
+                      <strong>{{object._description}}</strong> has been approved by all the approvers.
+                      <br/><br/>
+                      The document is now finalized and can be accessed through the link below:
+                      <br/>
+                      <b>Click here to view the approved document:</b>
+                      <a t-att-href="object.link"><t t-out="object.link"/></a>
+                   </p>
+                   <br/>
+                      Thanks &#38; Regards,
+                      <br/>
+                     {{object.company_id.name}}
+                   <br/>
+                </div>
+             </field>
+        </record>
+    </data>
+</odoo>

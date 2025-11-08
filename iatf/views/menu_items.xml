@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="iatf_menu_root" name="QMS"  web_icon="iatf,static/description/IATF.png" sequence="1"/>
+        <menuitem id="iatf_menu_marketing" name="Marketing" parent="iatf_menu_root" sequence="1"/>
+        <menuitem id="iatf_menu_engg" name="Engineering" parent="iatf_menu_root" sequence="2"/>
+        <menuitem id="iatf_menu_production" name="Production" parent="iatf_menu_root" sequence="3"/>
+        <menuitem id="iatf_menu_quality" name="Quality" parent="iatf_menu_root" sequence="4"/>
+        <menuitem id="iatf_menu_maintenance" name="Maintenance" parent="iatf_menu_root" sequence="5"/>
+        <menuitem id="iatf_menu_hr" name="HR" parent="iatf_menu_root" sequence="6"/>
+        <menuitem id="iatf_menu_safety" name="Safety" parent="iatf_menu_root" sequence="7"/>
+        <menuitem id="iatf_menu_purchase" name="Purchase" parent="iatf_menu_root" sequence="8"/>
+        <menuitem id="iatf_menu_instore" name="Incoming Store" parent="iatf_menu_root" sequence="9"/>
+        <menuitem id="iatf_menu_fgstore" name="FG Store" parent="iatf_menu_root" sequence="10"/>
+        <menuitem id="iatf_menu_doc_manage" name="Projects" parent="iatf_menu_root" sequence="10"/>
+    </data>
+</odoo>

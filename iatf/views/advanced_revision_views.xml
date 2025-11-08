@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Advanced Revision History Tree View -->
+    <record id="view_advanced_revision_history_tree" model="ir.ui.view">
+        <field name="name">advanced.revision.history.tree</field>
+        <field name="model">advanced.revision.history</field>
+        <field name="arch" type="xml">
+            <tree decoration-info="revision_status == 'draft'"
+                  decoration-success="revision_status == 'approved'"
+                  decoration-warning="revision_status == 'confirmed'"
+                  default_order="revision_number desc">
+                <field name="revision_number"/>
+                <field name="revision_format"/>
+                <field name="name"/>
+                <field name="revision_date"/>
+                <field name="revised_by"/>
+                <field name="change_reason"/>
+                <field name="revision_status" widget="badge"
+                       decoration-danger="revision_status == 'draft'"
+                       decoration-success="revision_status == 'approved'"
+                       decoration-info="revision_status == 'confirmed'"/>
+                <field name="is_major_revision" widget="boolean_toggle"/>
+                <field name="affects_quality" widget="boolean_toggle"/>
+                <field name="affects_safety" widget="boolean_toggle"/>
+                <field name="affects_cost" widget="boolean_toggle"/>
+                <field name="res_model" optional="hide"/>
+                <field name="res_id" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Advanced Revision History Form View -->
+    <record id="view_advanced_revision_history_form" model="ir.ui.view">
+        <field name="name">advanced.revision.history.form</field>
+        <field name="model">advanced.revision.history</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="revision_status" widget="statusbar"
+                           statusbar_visible="draft,confirmed,approved"/>
+                    <button name="action_confirm_revision" string="Confirm Revision"
+                            type="object" class="btn-primary"
+                            attrs="{'invisible': [('revision_status', '!=', 'draft')]}"/>
+                    <button name="action_approve_revision" string="Approve Revision"
+                            type="object" class="btn-success"
+                            attrs="{'invisible': [('revision_status', '!=', 'confirmed')]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Revision Title"/>
+                        </h1>
+                        <h3>
+                            <field name="revision_format" readonly="1"/>
+                        </h3>
+                    </div>
+
+                    <!-- Document Reference Card -->
+                    <div class="alert alert-info" role="alert">
+                        <strong>Document:</strong>
+                        <field name="res_model" readonly="1"/>
+                        (ID: <field name="res_id" readonly="1"/>)
+                    </div>
+
+                    <group>
+                        <group string="Revision Details">
+                            <field name="revision_number"/>
+                            <field name="revision_date"/>
+                            <field name="revised_by"/>
+                            <field name="change_reason"/>
+                        </group>
+                        <group string="Impact Assessment">
+                            <field name="is_major_revision"/>
+                            <field name="affects_quality"/>
+                            <field name="affects_safety"/>
+                            <field name="affects_cost"/>
+                        </group>
+                    </group>
+
+                    <group string="Summary">
+                        <field name="revision_summary" nolabel="1"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Field Changes" name="field_changes">
+                            <field name="field_changes_ids" readonly="1">
+                                <tree editable="false" create="false" delete="false"
+                                      decoration-bf="not is_nested_change"
+                                      decoration-it="is_nested_change and not is_deep_nested"
+                                      decoration-muted="is_deep_nested">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="field_label" width="300px"/>
+                                    <field name="field_type" optional="hide"/>
+                                    <field name="change_type" widget="badge"
+                                           decoration-danger="change_type == 'removed'"
+                                           decoration-success="change_type == 'added'"
+                                           decoration-info="change_type == 'modified'"/>
+                                    <field name="old_value_display" string="Previous Value" width="200px"/>
+                                    <field name="new_value_display" string="New Value" width="200px"/>
+                                    <field name="impact_level" widget="badge"
+                                           decoration-danger="impact_level == 'critical'"
+                                           decoration-warning="impact_level == 'high'"
+                                           decoration-info="impact_level == 'medium'"
+                                           decoration-success="impact_level == 'low'"/>
+                                    <field name="change_description"/>
+                                    <field name="nesting_level" optional="hide"/>
+                                    <field name="is_nested_change" invisible="1"/>
+                                    <field name="is_deep_nested" invisible="1"/>
+                                    <field name="field_name" optional="hide"/>
+                                    <field name="old_value" optional="hide"/>
+                                    <field name="new_value" optional="hide"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <div class="oe_title">
+                                            <h1>
+                                                <field name="field_label"/>
+                                            </h1>
+                                            <h3>
+                                                <field name="change_type" widget="badge"
+                                                       decoration-danger="change_type == 'removed'"
+                                                       decoration-success="change_type == 'added'"
+                                                       decoration-info="change_type == 'modified'"/>
+                                            </h3>
+                                        </div>
+                                        <group>
+                                            <group>
+                                                <field name="field_name"/>
+                                                <field name="field_type"/>
+                                                <field name="impact_level"/>
+                                                <field name="sequence"/>
+                                            </group>
+                                        </group>
+                                        <group string="Value Changes">
+                                            <group>
+                                                <field name="old_value_display" string="Previous Value (Display)"/>
+                                                <field name="old_value" string="Previous Value (Raw)" readonly="1"/>
+                                            </group>
+                                            <group>
+                                                <field name="new_value_display" string="New Value (Display)"/>
+                                                <field name="new_value" string="New Value (Raw)" readonly="1"/>
+                                            </group>
+                                        </group>
+                                        <group string="Description">
+                                            <field name="change_description" nolabel="1"/>
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Approval Details" name="approval_details">
+                            <group>
+                                <group string="Approval Information">
+                                    <field name="approval_required"/>
+                                    <field name="approved_by"/>
+                                    <field name="approval_date"/>
+                                </group>
+                                <group string="State Information">
+                                    <field name="previous_state"/>
+                                    <field name="new_state"/>
+                                </group>
+                            </group>
+                            <group string="Approval Comments">
+                                <field name="approval_comment" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Advanced Revision Field Change Tree View -->
+    <record id="view_advanced_revision_field_change_tree" model="ir.ui.view">
+        <field name="name">advanced.revision.field.change.tree</field>
+        <field name="model">advanced.revision.field.change</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" create="false" delete="false"
+                  decoration-bf="not is_nested_change"
+                  decoration-it="is_nested_change and not is_deep_nested"
+                  decoration-muted="is_deep_nested">
+                <field name="sequence" widget="handle"/>
+                <field name="field_label" width="400px"/>
+                <field name="field_type" optional="hide"/>
+                <field name="change_type" widget="badge"
+                       decoration-danger="change_type == 'removed'"
+                       decoration-success="change_type == 'added'"
+                       decoration-info="change_type == 'modified'"/>
+                <field name="old_value_display" string="Previous Value" width="200px"/>
+                <field name="new_value_display" string="New Value" width="200px"/>
+                <field name="impact_level" widget="badge"
+                       decoration-danger="impact_level == 'critical'"
+                       decoration-warning="impact_level == 'high'"
+                       decoration-info="impact_level == 'medium'"
+                       decoration-success="impact_level == 'low'"/>
+                <field name="change_description"/>
+                <field name="nesting_level" optional="hide"/>
+                <field name="is_nested_change" invisible="1"/>
+                <field name="is_deep_nested" invisible="1"/>
+                <field name="field_name" optional="hide"/>
+                <field name="old_value" optional="hide"/>
+                <field name="new_value" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Advanced Revision Field Change Form View -->
+    <record id="view_advanced_revision_field_change_form" model="ir.ui.view">
+        <field name="name">advanced.revision.field.change.form</field>
+        <field name="model">advanced.revision.field.change</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="field_label"/>
+                        </h1>
+                        <h3>
+                            <field name="change_type" widget="badge"
+                                   decoration-danger="change_type == 'removed'"
+                                   decoration-success="change_type == 'added'"
+                                   decoration-info="change_type == 'modified'"/>
+                        </h3>
+                    </div>
+                    <group>
+                        <group string="Field Information">
+                            <field name="revision_id"/>
+                            <field name="field_name"/>
+                            <field name="field_type"/>
+                            <field name="sequence"/>
+                        </group>
+                        <group string="Change Information">
+                            <field name="impact_level"/>
+                            <field name="change_type"/>
+                        </group>
+                    </group>
+                    <group string="Value Changes">
+                        <group>
+                            <field name="old_value_display" string="Previous Value (Display)"/>
+                            <field name="old_value" string="Previous Value (Raw)"/>
+                        </group>
+                        <group>
+                            <field name="new_value_display" string="New Value (Display)"/>
+                            <field name="new_value" string="New Value (Raw)"/>
+                        </group>
+                    </group>
+                    <group string="Description">
+                        <field name="change_description" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Advanced Revision Wizard Form View -->
+    <record id="view_advanced_revision_wizard_form" model="ir.ui.view">
+        <field name="name">advanced.revision.wizard.form</field>
+        <field name="model">advanced.revision.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Start Document Revision">
+                <sheet>
+                    <div class="alert alert-info" role="alert">
+                        <h4><i class="fa fa-info-circle"/> Document Information</h4>
+                        <strong>Document:</strong> <field name="document_name" readonly="1" nolabel="1"/>
+                        <br/>
+                        <strong>Current Revision:</strong> <field name="current_revision" readonly="1" nolabel="1"/>
+                        <br/>
+                        <strong>Model:</strong> <field name="res_model" readonly="1" nolabel="1"/>
+                    </div>
+
+                    <group string="Revision Details">
+                        <group>
+                            <field name="revision_name" placeholder="e.g., Process Optimization Update"/>
+                            <field name="change_reason"/>
+                        </group>
+                        <group>
+                            <field name="is_major_revision"/>
+                            <field name="affects_quality"/>
+                            <field name="affects_safety"/>
+                            <field name="affects_cost"/>
+                        </group>
+                    </group>
+
+                    <group string="Revision Summary">
+                        <field name="revision_summary" nolabel="1"
+                               placeholder="Describe the changes and reasons for this revision in detail..."/>
+                    </group>
+
+                    <group string="Confirmation">
+                        <field name="confirm_revision"/>
+                        <label for="confirm_revision" string="I understand and confirm this revision"/>
+                    </group>
+
+                    <div class="alert alert-warning" role="alert">
+                        <h4><i class="fa fa-warning"/> Important Notice</h4>
+                        <p>Starting a revision will:</p>
+                        <ul>
+                            <li>Create a new revision history entry with incremented version number</li>
+                            <li>Set the document back to draft state</li>
+                            <li>Reset all approval statuses and comments</li>
+                            <li>Enable change tracking for all future modifications</li>
+                            <li>Require re-approval through the standard workflow</li>
+                        </ul>
+                    </div>
+                </sheet>
+                <footer>
+                    <button name="action_create_revision" string="Start Revision"
+                            type="object" class="btn-primary"
+                            attrs="{'invisible': [('confirm_revision', '=', False)]}"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Enhanced Revision History Section Template for Document Forms -->
+    <template id="advanced_revision_history_section">
+        <separator string="Advanced Revision History"/>
+        <div class="alert alert-info" role="alert"
+             attrs="{'invisible': [('total_revisions', '=', 0)]}">
+            <strong>Current Revision:</strong>
+            <field name="current_revision_format" readonly="1" nolabel="1"/>
+            | <strong>Total Revisions:</strong>
+            <field name="total_revisions" readonly="1" nolabel="1"/>
+            | <strong>Last Modified:</strong>
+            <field name="last_revision_date" readonly="1" nolabel="1"/>
+            by <field name="last_revised_by" readonly="1" nolabel="1"/>
+        </div>
+
+        <group>
+            <group string="Current Revision Info">
+                <field name="current_revision_number"/>
+                <field name="revision_date"/>
+                <field name="revision_state" widget="badge"
+                       decoration-info="revision_state == 'draft'"
+                       decoration-warning="revision_state == 'under_revision'"
+                       decoration-primary="revision_state == 'revision_pending_approval'"
+                       decoration-success="revision_state == 'revision_approved'"/>
+            </group>
+            <group string="Revision Controls">
+                <button name="action_start_revision" string="Start New Revision"
+                        type="object" class="btn-warning"
+                        attrs="{'invisible': [('show_revision_button', '=', False)]}"
+                        icon="fa-edit"/>
+                <button name="action_confirm_revision" string="Confirm Revision"
+                        type="object" class="btn-primary"
+                        attrs="{'invisible': [('revision_state', '!=', 'under_revision')]}"
+                        icon="fa-check"/>
+                <button name="action_approve_revision" string="Approve Revision"
+                        type="object" class="btn-success"
+                        attrs="{'invisible': [('revision_state', '!=', 'revision_pending_approval')]}"
+                        icon="fa-thumbs-up"/>
+            </group>
+        </group>
+
+        <field name="revision_history_ids"
+               options="{'no_create': True, 'no_create_edit': True}"
+               readonly="1">
+            <tree>
+                <field name="revision_number"/>
+                <field name="revision_format"/>
+                <field name="name"/>
+                <field name="revision_date"/>
+                <field name="revised_by"/>
+                <field name="change_reason"/>
+                <field name="revision_status" widget="badge"
+                       decoration-danger="revision_status == 'draft'"
+                       decoration-success="revision_status == 'approved'"
+                       decoration-info="revision_status == 'confirmed'"/>
+                <field name="is_major_revision" widget="boolean_toggle"/>
+                <button name="action_view_field_changes"
+                        string="View Changes" type="object"
+                        icon="fa-list-alt"/>
+            </tree>
+        </field>
+    </template>
+
+    <!-- Search Views -->
+    <record id="view_advanced_revision_history_search" model="ir.ui.view">
+        <field name="name">advanced.revision.history.search</field>
+        <field name="model">advanced.revision.history</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="revision_number"/>
+                <field name="revised_by"/>
+                <field name="res_model"/>
+                <separator/>
+                <filter name="draft" string="Draft" domain="[('revision_status', '=', 'draft')]"/>
+                <filter name="confirmed" string="Confirmed" domain="[('revision_status', '=', 'confirmed')]"/>
+                <filter name="approved" string="Approved" domain="[('revision_status', '=', 'approved')]"/>
+                <separator/>
+                <filter name="major_revision" string="Major Revisions" domain="[('is_major_revision', '=', True)]"/>
+                <filter name="affects_quality" string="Affects Quality" domain="[('affects_quality', '=', True)]"/>
+                <filter name="affects_safety" string="Affects Safety" domain="[('affects_safety', '=', True)]"/>
+                <filter name="affects_cost" string="Affects Cost" domain="[('affects_cost', '=', True)]"/>
+                <separator/>
+                <filter name="this_week" string="This Week"
+                        domain="[('revision_date', '&gt;=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter name="this_month" string="This Month"
+                        domain="[('revision_date', '&gt;=', (context_today().replace(day=1)).strftime('%Y-%m-%d'))]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_model" string="Model" context="{'group_by': 'res_model'}"/>
+                    <filter name="group_by_status" string="Status" context="{'group_by': 'revision_status'}"/>
+                    <filter name="group_by_reason" string="Change Reason" context="{'group_by': 'change_reason'}"/>
+                    <filter name="group_by_revised_by" string="Revised By" context="{'group_by': 'revised_by'}"/>
+                    <filter name="group_by_date" string="Revision Date" context="{'group_by': 'revision_date'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_advanced_revision_field_change_search" model="ir.ui.view">
+        <field name="name">advanced.revision.field.change.search</field>
+        <field name="model">advanced.revision.field.change</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="field_label"/>
+                <field name="field_name"/>
+                <field name="revision_id"/>
+                <field name="change_description"/>
+                <separator/>
+                <filter name="direct_changes" string="Direct Field Changes" domain="[('is_nested_change', '=', False)]"/>
+                <filter name="nested_changes" string="Nested Changes (Level 2)" domain="[('is_nested_change', '=', True), ('is_deep_nested', '=', False)]"/>
+                <filter name="deep_nested_changes" string="Deep Nested Changes (Level 3+)" domain="[('is_deep_nested', '=', True)]"/>
+                <separator/>
+                <filter name="added" string="Added" domain="[('change_type', '=', 'added')]"/>
+                <filter name="modified" string="Modified" domain="[('change_type', '=', 'modified')]"/>
+                <filter name="removed" string="Removed" domain="[('change_type', '=', 'removed')]"/>
+                <separator/>
+                <filter name="critical" string="Critical Impact" domain="[('impact_level', '=', 'critical')]"/>
+                <filter name="high" string="High Impact" domain="[('impact_level', '=', 'high')]"/>
+                <filter name="medium" string="Medium Impact" domain="[('impact_level', '=', 'medium')]"/>
+                <filter name="low" string="Low Impact" domain="[('impact_level', '=', 'low')]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_by_revision" string="Revision" context="{'group_by': 'revision_id'}"/>
+                    <filter name="group_by_change_type" string="Change Type" context="{'group_by': 'change_type'}"/>
+                    <filter name="group_by_impact" string="Impact Level" context="{'group_by': 'impact_level'}"/>
+                    <filter name="group_by_field_type" string="Field Type" context="{'group_by': 'field_type'}"/>
+                    <filter name="group_by_nesting_level" string="Nesting Level" context="{'group_by': 'nesting_level'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_advanced_revision_history" model="ir.actions.act_window">
+        <field name="name">Revision History</field>
+        <field name="res_model">advanced.revision.history</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_advanced_revision_history_search"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No revision history found
+            </p>
+            <p>
+                Revision history will be automatically created when documents are revised.
+                Each revision tracks detailed field changes and approval workflow.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_advanced_revision_field_changes" model="ir.actions.act_window">
+        <field name="name">Field Changes</field>
+        <field name="res_model">advanced.revision.field.change</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_advanced_revision_field_change_search"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No field changes found
+            </p>
+            <p>
+                Field changes are tracked automatically during document revisions.
+                Each change shows the old and new values with impact assessment.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for opening field changes from revision history -->
+    <record id="action_revision_field_changes" model="ir.actions.act_window">
+        <field name="name">Revision Field Changes</field>
+        <field name="res_model">advanced.revision.field.change</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('revision_id', '=', active_id)]</field>
+        <field name="context">{'default_revision_id': active_id}</field>
+    </record>
+
+    <!-- Menu Items -->
+<!--    <menuitem id="menu_advanced_revision_history"-->
+<!--              name="Revision History"-->
+<!--              parent="iatf.iatf_menu_root"-->
+<!--              action="action_advanced_revision_history"-->
+<!--              sequence="100"/>-->
+
+<!--    <menuitem id="menu_advanced_revision_field_changes"-->
+<!--              name="Field Changes"-->
+<!--              parent="iatf.iatf_menu_root"-->
+<!--              action="action_advanced_revision_field_changes"-->
+<!--              sequence="101"/>-->
+
+    <!-- Smart buttons for documents using the mixin -->
+    <template id="revision_smart_buttons">
+        <div class="oe_button_box" name="button_box">
+            <button name="action_view_revisions"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-history"
+                    attrs="{'invisible': [('total_revisions', '=', 0)]}">
+                <field name="total_revisions" widget="statinfo" string="Revisions"/>
+            </button>
+        </div>
+    </template>
+</odoo>

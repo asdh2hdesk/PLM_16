@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+iatf.access_iatf_members_data,access_iatf_members_data,iatf.model_iatf_members_data,base.group_user,1,1,1,1
+iatf.access_approve_document_wizard,access_approve_document_wizard,iatf.model_approve_document_wizard,base.group_user,1,1,1,1
+iatf.access_document_revision_history,access_document_revision_history,iatf.model_document_revision_history,base.group_user,1,1,1,1
+iatf.access_document_revision_wizard,access_document_revision_wizard,iatf.model_document_revision_wizard,base.group_user,1,1,1,1
+
+
+iatf.access_advanced_revision_history,access_advanced_revision_history,iatf.model_advanced_revision_history,base.group_user,1,1,1,1
+iatf.access_advanced_revision_field_change,access_advanced_revision_field_change,iatf.model_advanced_revision_field_change,base.group_user,1,1,1,1
+iatf.access_advanced_revision_wizard,access_advanced_revision_wizard,iatf.model_advanced_revision_wizard,base.group_user,1,1,1,1
+
+
+

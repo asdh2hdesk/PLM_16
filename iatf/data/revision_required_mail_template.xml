@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+    <!-- Document Revision Requested Mail Template -->
+        <record id="mom_document_revision_requested_mail_template" model="mail.template">
+             <field name="name">Mom Document Revision Requested</field>
+             <field name="model_id" ref="iatf.model_mom"/>
+             <field name="auto_delete" eval="False"/>
+             <field name="email_to">{{object.initiated_by_id.email}}</field>
+             <field name="subject">Revision Requested for Document: {{object._description}}</field>
+             <field name="body_html" type="html">
+                <div>
+                   <p>
+                      Dear {{object.initiated_by_id.name}},
+                      <br/>
+                      The document titled <strong>{{object._description}}</strong> has been sent back for revision by the approver.
+                      <br/><br/>
+                      A new document with the same content has been generated for your convenience. Please make the necessary changes and resubmit it for approval.
+                      <br/><br/>
+                      <b>Click on this link to access the new document:</b>
+                      <a t-att-href="object.new_document_link"><t t-out="object.new_document_link"/></a>
+                   </p>
+                   <br/>
+                      Thanks &#38; Regards
+                   <br/>
+                </div>
+             </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,2836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <data>-->
+<!--        <record id="pfmea_analysis_line_1" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Packing</field>-->
+<!--            <field name="requirement">Damage free Packing</field>-->
+<!--            <field name="potential_failure">Not as per packaging standard FM-80018 and Document no</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing/Process:- Fitment problem due to damage End User:- -->
+<!--                Reduced Level of performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Not following approved standard</field>-->
+<!--            <field name="prevention">Random Audit at Supplier end by SQA</field>-->
+<!--            <field name="detection_desc">100% Inspection at receiving</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_2" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Packing</field>-->
+<!--            <field name="requirement">Traceability</field>-->
+<!--            <field name="potential_failure">Mixing of Manufacturing Lot</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing/Process:- No Traceability of parts End User:- No-->
+<!--                Traceability of parts in case of reduced performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Supplier not maintaining Traceability</field>-->
+<!--            <field name="prevention">Random Audit at supplier end by SQA</field>-->
+<!--            <field name="detection_desc">100% Inspection at receiving</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_3" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Assembly child parts inspection</field>-->
+<!--            <field name="requirement">Part as per print</field>-->
+<!--            <field name="potential_failure">Parts not as per print specification</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Fitment problem in assembly End User:-->
+<!--                function issue at customer end-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">NC parts from Suppliers</field>-->
+<!--            <field name="prevention">Supplier control/ Cp/Cpk&gt;1.33 or 100% inspection for special characteristics at-->
+<!--                supplier end-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% inspection of special characteristics/ fitment parameter</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_4" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Storage</field>-->
+<!--            <field name="requirement">Traceability</field>-->
+<!--            <field name="potential_failure">Mixing of Manufacturing Lot</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                No Traceability of parts-->
+<!--                End User:-->
+<!--                No Traceability of parts in case of reduced performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Wrong Placing of pallet/box against the location</field>-->
+<!--            <field name="prevention">Operator training and visual display of board</field>-->
+<!--            <field name="detection_desc">Random audit</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_5" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Washing of housing,gear &amp; pinion.</field>-->
+<!--            <field name="requirement">Parts free from contamination.</field>-->
+<!--            <field name="potential_failure">Parts not properly washed.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Parts contaminated surface.-->
+<!--                Fails in particle size &amp; Particle weight.-->
+<!--                End User:-->
+<!--                Reduced level of performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Washing chemical concentration less.</field>-->
+<!--            <field name="prevention">Chemical concentration is defined in GWI-PROD-37 &amp; checking of chemical-->
+<!--                concentration on daily basis.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">Checking of chemical concentration on daily basis by refactor &amp; record-->
+<!--                in TPM check sheet-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_6" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Washing of housing,gear &amp; pinion.</field>-->
+<!--            <field name="requirement">Parts free from contamination.</field>-->
+<!--            <field name="potential_failure">Parts not properly washed.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Parts contaminated surface.-->
+<!--                Fails in particle size &amp; Particle weight.-->
+<!--                End User:-->
+<!--                Reduced level of performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Incomplete cleaning cycle.</field>-->
+<!--            <field name="prevention">Washing cycle interlocked in machine Programme.</field>-->
+<!--            <field name="detection_desc">Machine runs in automatic cycle &amp; no manual interference.</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_7" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Washing of housing,gear &amp; pinion.</field>-->
+<!--            <field name="requirement">Parts free from contamination.</field>-->
+<!--            <field name="potential_failure">Parts not properly washed.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Parts contaminated surface.-->
+<!--                Fails in particle size &amp; Particle weight.-->
+<!--                End User:-->
+<!--                Reduced level of performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Washing solvent temperature not maintained.</field>-->
+<!--            <field name="prevention">- Temperature controller is available on machine and which are connected with-->
+<!--                sensor-->
+<!--                and give alarm in case of high/Low temperature.- Preventive maintenance as per schedule.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">- Error display on screen. - Temperature record in TPM check sheet</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_8" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">Washing of housing,gear &amp; pinion.</field>-->
+<!--            <field name="requirement">Parts free from contamination.</field>-->
+<!--            <field name="potential_failure">Parts not properly washed.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Parts contaminated surface.-->
+<!--                Fails in particle size &amp; Particle weight.-->
+<!--                End User:-->
+<!--                Reduced level of performance-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Washing media contaminated.</field>-->
+<!--            <field name="prevention">Machine having filter in every washing tanks which are connected with sensor and-->
+<!--                give alarm in case of filter blockage.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">- Millicore test on daily basis. - Tank cleaning record in TPM chck sheet-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_9" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.1</field>-->
+<!--            <field name="requirement">Correct part code marking</field>-->
+<!--            <field name="potential_failure">Wrong No. etching</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Wrong captured-->
+<!--                End User:-->
+<!--                Wrong assembly mounting on vehicle-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual entry done by operator at MES</field>-->
+<!--            <field name="prevention">MES,ERP system provides assembly no. to the laser marking machine</field>-->
+<!--            <field name="detection_desc">2D scanning machine to check the for the number etched after etchingt</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_10" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.2</field>-->
+<!--            <field name="requirement">Apply locative on the label</field>-->
+<!--            <field name="potential_failure">locative insufficiently applied on the label</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                No Traceability of assembly-->
+<!--                End User:-->
+<!--                No traceability of assembly-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual application of locative on label</field>-->
+<!--            <field name="prevention">Proximity sensor for pick of the locative done by operator. MES guides the operator-->
+<!--                when to apply the locative through display screen-->
+<!--            </field>-->
+<!--            <field name="detection_desc">Operator presses the confirmation button after applying the locative</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_11" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.3</field>-->
+<!--            <field name="requirement">Install hex socket( breather)</field>-->
+<!--            <field name="potential_failure">missing hex socket</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leakage-->
+<!--                End User:-->
+<!--                -&#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual application of locative on label</field>-->
+
+<!--            <field name="prevention">MES displays the light when the operator has to install the hex bolt</field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_12" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.3</field>-->
+<!--            <field name="requirement">Apply Torque 16 - 20 NM to the hex Socket</field>-->
+<!--            <field name="potential_failure">Less Torque applied</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leakage-->
+<!--                End User:-->
+<!--                -&#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Operator failed to follow SOP</field>-->
+<!--            <field name="prevention">MES displays the light when the operator has to install the hex bolt</field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_13" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.4</field>-->
+<!--            <field name="requirement">Install magnetic plug</field>-->
+<!--            <field name="potential_failure">missing magnetic plug</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leakage-->
+<!--                End User:-->
+<!--                -&#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Operator failed to follow SOP</field>-->
+<!--            <field name="prevention">Pick to light, MES displays the light when the operator has to install the magnetic-->
+<!--                plug-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_14" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.4</field>-->
+<!--            <field name="requirement">Apply Torque 16 - 20 NM to the magnetic plug</field>-->
+<!--            <field name="potential_failure">Less Torque applied</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leakage-->
+<!--                End User:-->
+<!--                Oil Leakage-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torque Value Not Set correctly</field>-->
+<!--            <field name="prevention">Periodic calibration of existing manual torque wrench</field>-->
+<!--            <field name="detection_desc">MES confirm the torque and shows the symbol</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_15" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.4</field>-->
+<!--            <field name="requirement">Apply Torque 16 - 20 NM to the magnetic plug</field>-->
+<!--            <field name="potential_failure">High torque applied</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Threads Damaged-->
+<!--                End User:-->
+<!--                Earlier leakage through hex socket bolt-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torque Value Not Set correctly</field>-->
+<!--            <field name="prevention">Periodic calibration of existing manual torque wrench</field>-->
+<!--            <field name="detection_desc">MES confirm the torque and shows the symbol</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_16" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.4</field>-->
+<!--            <field name="requirement">Apply Torque 16 - 20 NM to the magnetic plug</field>-->
+<!--            <field name="potential_failure">High torque applied</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Threads Damaged-->
+<!--                End User:-->
+<!--                Earlier leakage through hex socket bolt-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torque Value Not Set correctly</field>-->
+<!--            <field name="prevention">Periodic calibration of existing manual torque wrench</field>-->
+<!--            <field name="detection_desc">MES confirm the torque and shows the symbol</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_17" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.6</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">Missing shim</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL/ TTR failure-->
+<!--                End User:-->
+<!--                Reduced Performance/ Premature Failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Operator failed to follow SOP</field>-->
+<!--            <field name="prevention">Pick to light, MES displays the light when the operator has to install the shim-->
+<!--            </field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_18" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.6</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">incorrect shim selected</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure/TTR Failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual calculation and selection of shim</field>-->
+<!--            <field name="prevention">Auto calculation of shim selection, TTR</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_19" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.6</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">wrong shim calculation</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual pick from tray</field>-->
+<!--            <field name="prevention">Pick to light from tray</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_20" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">50.6</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">wrong shim calculation</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Gauge Faulty</field>-->
+<!--            <field name="prevention">Periodic calibration of Gauge</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_21" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">resting of cup on housing face</field>-->
+<!--            <field name="potential_failure">incline seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process: Misalignment of gear, No Bearing-->
+<!--                Preloading-->
+<!--                End User - Noise &amp; Premature Failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Insufficient hydraulic pressure</field>-->
+<!--            <field name="prevention">Following preventive maintenance schedule to ensure no leakages.</field>-->
+<!--            <field name="detection_desc">100 % noise testing. TTR</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_22" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">pressing bearing into pinion with specified load band</field>-->
+<!--            <field name="potential_failure">pressing force high</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                NA-->
+<!--                -End User:- -->
+<!--                Premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Pinion diameter oversize</field>-->
+<!--            <field name="prevention">Cpk/ 100% inspection at supplier end. Parts to be inspected as per sampling-->
+<!--                inspection plan.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">pressure force with alarm on the machine and capturing in to traceability-->
+<!--                system-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_23" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">pressing bearing into pinion with specified load band</field>-->
+<!--            <field name="potential_failure">pressing force low</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                NA-->
+<!--                -End User:- -->
+<!--                Premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Pinion diameter underside</field>-->
+<!--            <field name="prevention">- Cpk/ 100% inspection at supplier end - Parts to be inspected as per inspection-->
+<!--                plan at incoming-->
+<!--            </field>-->
+<!--            <field name="detection_desc">pressure force with alarm on the machine and capturing in to traceability-->
+<!--                system-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_24" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">correct orientation of the bearing cone</field>-->
+<!--            <field name="potential_failure">wrong orientation of bearing cone</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Component reject.-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Incorrectly placed during pressing</field>-->
+<!--            <field name="prevention">Tooling Poke Yoke to ensure bearing orientation is taken care</field>-->
+<!--            <field name="detection_desc">next operation not possible</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_25" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">100% seating of bearing cone on the pinion collar</field>-->
+<!--            <field name="potential_failure">Bearing cone not seating on the pinon collar</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Backlash error-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">High face run about of pressing tool</field>-->
+<!--            <field name="prevention">Following setup parameters</field>-->
+<!--            <field name="detection_desc">Inspect using Feeler Gauge at min 3 places</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_26" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60.1</field>-->
+<!--            <field name="requirement">correct pinion to be used</field>-->
+<!--            <field name="potential_failure">Incorrect pinion used</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Backlash error-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Mixing of the pinion</field>-->
+<!--            <field name="prevention">Dedicated Plastic Bins</field>-->
+<!--            <field name="detection_desc">EOL Testing</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_27" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">Resting of cup on housing face</field>-->
+<!--            <field name="potential_failure">Incline seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process: Misalignment of gear, No Bearing-->
+<!--                Preloading-->
+<!--                End User - Noise &amp; Premature-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Insufficient hydraulic pressure</field>-->
+<!--            <field name="prevention">Following preventive maintenance schedule to ensure no leakages.</field>-->
+<!--            <field name="detection_desc">100 % noise testing. TTR</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_28" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">Missing shim</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL/ TTR failure-->
+<!--                End User:-->
+<!--                Reduced Performance/ Premature Failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Operator failed to follow SOP</field>-->
+<!--            <field name="prevention">Following preventive maintenance schedule to ensure no leakages.</field>-->
+<!--            <field name="detection_desc">Pick to light, MES displays the light when the operator has to install the-->
+<!--                shim-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_29" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">incorrect shim selected</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure/TTR Failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual calculation and selection of shim</field>-->
+<!--            <field name="prevention">Auto calculation of shim selection, TTR</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_30" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">wrong shim calculation</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual pick from tray</field>-->
+<!--            <field name="prevention">Pick to light from tray</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_31" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">correct shim selection</field>-->
+<!--            <field name="potential_failure">wrong shim calculation</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                noisy gear box-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Gauge Faulty</field>-->
+<!--            <field name="prevention">Periodic calibration of gauge</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_32" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">Install spacer</field>-->
+<!--            <field name="potential_failure">Missing spacer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Backlash Error-->
+<!--                End User:-->
+<!--                &#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">No guidance to the operator for the operation</field>-->
+<!--            <field name="prevention">Operator system with acknowledge button after assembly</field>-->
+<!--            <field name="detection_desc">check Torque to rotate 100%</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_33" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">Tighten Pinion Nut Ideal contact pattern</field>-->
+<!--            <field name="potential_failure">Incorrect meshing pattern</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                &#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual torque wrench</field>-->
+<!--            <field name="prevention">DC tool will not apply more torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_34" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">60</field>-->
+<!--            <field name="requirement">Torque Diffident 400 - 500 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leak Test Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_35" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.1</field>-->
+<!--            <field name="requirement">Pressing of bush into differential housing</field>-->
+<!--            <field name="potential_failure">Not Properly Seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- issue with the Fitting of shaft-->
+<!--                assembly-->
+<!--                End User:-->
+<!--                Noisy transaxle-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Insufficient hydraulic pressure</field>-->
+<!--            <field name="prevention">PM schedule quarterly basis</field>-->
+<!--            <field name="detection_desc">100% Visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_36" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.1</field>-->
+<!--            <field name="requirement">Pressing of bush into crown</field>-->
+<!--            <field name="potential_failure">Not Properly Seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Vibration in Shaft-->
+<!--                End User:-->
+<!--                Noisy transaxle-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Insufficient hydraulic pressure</field>-->
+<!--            <field name="prevention">PM schedule quarterly basis</field>-->
+<!--            <field name="detection_desc">100% Visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_37" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.2</field>-->
+<!--            <field name="requirement">Install differential gear thrust washer</field>-->
+<!--            <field name="potential_failure">Missing of washer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User:-->
+<!--                Premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">No guidance to the operator for the operation</field>-->
+<!--            <field name="prevention">MES system Displays to be followed</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_38" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.2</field>-->
+<!--            <field name="requirement">Installation of cross shaft</field>-->
+<!--            <field name="potential_failure">Missing of cross shaft</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Next assembly operation not possible-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">No guidance to the operator for the operation</field>-->
+<!--            <field name="prevention">MES system Displays to be followed</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_39" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.2</field>-->
+<!--            <field name="requirement">proper fitting of cross shaft</field>-->
+<!--            <field name="potential_failure">Cross pin loose/ tight</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Next assembly operation not possible-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Cross pin out of spec.</field>-->
+<!--            <field name="prevention">Supplier to share inspection report with every lot</field>-->
+<!--            <field name="detection_desc">Visually</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_40" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.2</field>-->
+<!--            <field name="requirement">proper fitting of cross shaft</field>-->
+<!--            <field name="potential_failure">Cross pin loose/ tight</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Next assembly operation not possible-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Housing hole out of specification.</field>-->
+<!--            <field name="prevention">Supplier to share inspection report with every lot.</field>-->
+<!--            <field name="detection_desc">Sample inspection of the part</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_41" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.3</field>-->
+<!--            <field name="requirement">Assembly of crown on diff housing with 6 bolts at torque value 115 - 142 Nm.-->
+<!--            </field>-->
+<!--            <field name="potential_failure">Bolt torquing not as per specification.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Bolt loosening.-->
+<!--                End User - Noise-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual tightening or torquing.</field>-->
+<!--            <field name="prevention">DC tool will not apply more torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_42" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.3</field>-->
+<!--            <field name="requirement">All 6 bolts to tighten to 115-142 Nm</field>-->
+<!--            <field name="potential_failure">All bolts not tightened to the 115-142 Nm.</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Bolt loosening.-->
+<!--                End User - Noise-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual tightening or torquing.</field>-->
+<!--            <field name="prevention">DC tool will show no's of bolt tightened</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if any bolt tightening is missed it out-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_43" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70.4</field>-->
+<!--            <field name="requirement">Pressing Upper &amp; Lower Bearing Cone</field>-->
+<!--            <field name="potential_failure">Missing Cone</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_44" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">seal to be pressed</field>-->
+<!--            <field name="potential_failure">lip seal missing</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process - air leak test failure</field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">HydroPneumatic press machine will press only after the presence of seal in the-->
+<!--                fixture-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_45" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">Installation of O ring</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air leak test fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_46" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">Installation of Retainer Ring</field>-->
+<!--            <field name="potential_failure">Missing Retainer Ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Seal Pop out-->
+<!--                End User - Premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % visual checking</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_47" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">Bolting of 2 bolts</field>-->
+<!--            <field name="potential_failure">Missing of bolt</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air Leak Test-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_48" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">Installation of O ring</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air leak test fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_49" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">70</field>-->
+<!--            <field name="requirement">Checking Backlash</field>-->
+<!--            <field name="potential_failure">Out of specification</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Noisy gear box/Premature Failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual checking</field>-->
+<!--            <field name="prevention">adjusting through Chuck nut ring</field>-->
+<!--            <field name="detection_desc">100 % checking of backlash</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_50" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">80</field>-->
+<!--            <field name="requirement">Notch on Nut</field>-->
+<!--            <field name="potential_failure">Notch Missing</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                No. issue-->
+<!--                End User: Nut slip out, premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after denting</field>-->
+<!--            <field name="detection_desc">100% visual checking</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_51" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">80</field>-->
+<!--            <field name="requirement">Installation of Seal</field>-->
+<!--            <field name="potential_failure">Missing of seal</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air leak test failure-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after seal installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_52" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">80</field>-->
+<!--            <field name="requirement">Installation of Seal</field>-->
+<!--            <field name="potential_failure">wrong orientation</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air leak test failure-->
+<!--                End User:-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Tool to have poke yoke to make sure no wrong orientation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_53" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">80</field>-->
+<!--            <field name="requirement">Presence of Retainer Ring</field>-->
+<!--            <field name="potential_failure">Missing Retainer Ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Seal Pop out-->
+<!--                End User - Premature failure-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % visual checking</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_54" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.1</field>-->
+<!--            <field name="requirement">Installation of 2 O rings on piston</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Air Leak-->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_55" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.1</field>-->
+<!--            <field name="requirement">Installation of 2 belle-ville washers</field>-->
+<!--            <field name="potential_failure">missing of washer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Failure-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_56" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.1</field>-->
+<!--            <field name="requirement">installation of snap retainer</field>-->
+<!--            <field name="potential_failure">missing of snap retainer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_57" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.1</field>-->
+<!--            <field name="requirement">installation of retainer ring</field>-->
+<!--            <field name="potential_failure">Missing Retainer Ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User &#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_58" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.2</field>-->
+<!--            <field name="requirement">Air Leak test</field>-->
+<!--            <field name="potential_failure">Air test fails</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail ( oil Leakage)-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Machine Calibration Error</field>-->
+<!--            <field name="prevention">TPM Checksheet</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_59" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.2</field>-->
+<!--            <field name="requirement">Torquing of Breather Plug 15 Nm max</field>-->
+<!--            <field name="potential_failure">More torque then specification</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Thread Damage-->
+<!--                End User - -->
+<!--                &#45;&#45;&#45;&#45;-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Torque wreck not calibrated</field>-->
+<!--            <field name="prevention">TPM Checksheet/ Battery Operated Tool</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_60" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.2</field>-->
+<!--            <field name="requirement">installation of Breather plug</field>-->
+<!--            <field name="potential_failure">Missing of Breather Plug</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_61" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.2</field>-->
+<!--            <field name="requirement">Hydraulic Test</field>-->
+<!--            <field name="potential_failure">Hydraulic test fail</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Due to surface finish issue in inner surface of arm-->
+<!--            </field>-->
+<!--            <field name="prevention">- Cpk/ 100% inspection at supplier end - Parts to be inspected as per inspection-->
+<!--                plan at incoming.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_62" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of Optional Spacer</field>-->
+<!--            <field name="potential_failure">missing of spacer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_63" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of Cylindrical Spacer</field>-->
+<!--            <field name="potential_failure">missing of cylindrical spacer</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100% hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_64" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Correct Spacer thickness</field>-->
+<!--            <field name="potential_failure">incorrect spacer thickness</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Auto checking and pick to light of the spacer</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_65" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of Springs into the piston brake</field>-->
+<!--            <field name="potential_failure">Missing qty of spring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_66" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of Dowel pin</field>-->
+<!--            <field name="potential_failure">Missing of dowel pin</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc"></field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_67" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Torquing of Vite register freenode 15.7-12.7 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_68" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Torquing of Vite register freenode 10.7-8.7 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_69" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of 2 O ring</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_70" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of service spring brake coil</field>-->
+<!--            <field name="potential_failure">missing of service spring brake coil</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_71" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Installation of 3 No.'s</field>-->
+<!--            <field name="potential_failure">missing of any</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_72" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Disc Pack Assembly</field>-->
+<!--            <field name="potential_failure">Incorrect quantity of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Fixture to make sure the thickness of Disc-friction pad</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_73" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Sequence of disc-friction pads</field>-->
+<!--            <field name="potential_failure">Insequence of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Fixture to ensure correct sequence</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_74" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Sequence of disc-friction pads</field>-->
+<!--            <field name="potential_failure">Insequence of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Brake Fail-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Pick to light for sequence pick</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_75" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Torquing of Breather Plug 15 Nm max</field>-->
+<!--            <field name="potential_failure">More torque then specification</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_76" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Torquing of Drain Plugs 20-25 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_74" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement"></field> &lt;!&ndash;                    empty value of line number 95&ndash;&gt;-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_77" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Bolt tightening over the cover 30.6-37.8- Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">battery operated tool to provide exact value torque</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_78" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement"></field>   &lt;!&ndash;   empty value of line number 97&ndash;&gt;-->
+<!--            <field name="potential_failure">Torque greater than the required value</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- -->
+<!--                Housing thread damage-->
+<!--                End User - -->
+<!--                Brake Fail-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">battery operated tool to provide exact value torque</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_79" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Assembly of Shaft</field>-->
+<!--            <field name="potential_failure">Assembly Not possible</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next assembly not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Assembly</field>-->
+<!--            <field name="prevention">MES system Displays to be followed</field>-->
+<!--            <field name="detection_desc">100% EOL test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_80" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Correct qty of bolt tightened</field>-->
+<!--            <field name="potential_failure">missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                -&#45;&#45;-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_81" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no locative applied</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                &#45;&#45;&#45;&#45;-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after applying the loctite</field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_82" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">torque of stud to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Air leakage issue-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_83" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.3</field>-->
+<!--            <field name="requirement">torque of stud to torque 82-91 Nm</field> &lt;!&ndash; 101 empty value&ndash;&gt;-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Thread damage-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_84" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.4</field>-->
+<!--            <field name="requirement">Air Leak test</field>-->
+<!--            <field name="potential_failure">Air test fails</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail ( oil Leakage)-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Machine Calibration Error</field>-->
+<!--            <field name="prevention">TPM Checksheet</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_85" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90.4</field>-->
+<!--            <field name="requirement">Hydraulic Test</field>-->
+<!--            <field name="potential_failure">Hydraulic test fail</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Due to surface finish issue in inner surface of arm-->
+<!--            </field>-->
+<!--            <field name="prevention">- Cpk/ 100% inspection at supplier end - Parts to be inspected as per inspection-->
+<!--                plan at incoming.-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_86" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90</field>-->
+<!--            <field name="requirement">torque of Nut to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leakage issue-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_87" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90</field>-->
+<!--            <field name="requirement">torque of Nut to torque 82-91 Nm</field>&lt;!&ndash; empty value of 105&ndash;&gt;-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Thread damage-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_88" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90</field>-->
+<!--            <field name="requirement">torque of Bolts to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leakage issue-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_89" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">90</field>-->
+<!--            <field name="requirement">torque of Bolts to torque 82-91 Nm-->
+<!--            </field> &lt;!&ndash; This is empty value from line 108&ndash;&gt;-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- Thread damage-->
+<!--                End User - -->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_90" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.1</field>-->
+<!--            <field name="requirement">Installation of 2 O rings on piston</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air Leak-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_91" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.1</field>-->
+<!--            <field name="requirement">Installation of 2 bellevelle washers</field>-->
+<!--            <field name="potential_failure">missing of washer</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_92" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.1</field>-->
+<!--            <field name="requirement">installation of snap retainer</field>-->
+<!--            <field name="potential_failure">missing of snap retainer</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_93" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.2</field>-->
+<!--            <field name="requirement">Air Leak test</field>-->
+<!--            <field name="potential_failure">Air test fails</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail ( oil Leakage)-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Machine Calibration Error</field>-->
+<!--            <field name="prevention">TPM Checksheet</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_94" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.2</field>-->
+<!--            <field name="requirement">Torquing of Breather Plug 15 Nm max</field>-->
+<!--            <field name="potential_failure">More torque then specification</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Thread Damage-->
+<!--                End User - -->
+<!--                &#45;&#45;&#45;&#45;"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Torque wrech not calibrated</field>-->
+<!--            <field name="prevention">"TPM Checksheet/ Battery Operated Tool"</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_95" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.2</field>-->
+<!--            <field name="requirement">installation of Breather plug</field>-->
+<!--            <field name="potential_failure">Missing of Breather Plug</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_96" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.2</field>-->
+<!--            <field name="requirement">Hydraulic Test</field>-->
+<!--            <field name="potential_failure">Hydraulic test fail</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Due to surface finish issue in inner surface of arm-->
+<!--            </field>-->
+<!--            <field name="prevention">"- Cpk/ 100% inspection at supplier end - Parts to be inspected as per inspection-->
+<!--                plan at incoming. "-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_97" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of Optional Spacer</field>-->
+<!--            <field name="potential_failure">missing of spacer</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_98" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of Cylinderical Spacer</field>-->
+<!--            <field name="potential_failure">missing of Cylindrical spacer</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_99" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Correct Spacer thickness</field>-->
+<!--            <field name="potential_failure">incorrect spacer thickness</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Auto checking and pick to light of the spacer</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_100" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of Springs into the piston brake</field>-->
+<!--            <field name="potential_failure">Missing qty of spring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_101" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of Dowel pin</field>-->
+<!--            <field name="potential_failure">Missing of dowel pin</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button after installation</field>-->
+<!--            <field name="detection_desc">Visual</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_102" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Torquing of Vite registro freno 15.7-12.7 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_103" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Torquing of Vite registro freno 10.7-8.7 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_104" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of 2 O ring</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_105" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of service spring brake coil</field>-->
+<!--            <field name="potential_failure">missing of service spring brake coil</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_106" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Installation of 3 No.'s</field>-->
+<!--            <field name="potential_failure">missing of any</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_107" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Disc Pack Assembly</field>-->
+<!--            <field name="potential_failure">Incorrect quantity of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Fixture to make sure the thickness of Disc-friction pad</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_108" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Sequnce of disc-friction pads</field>-->
+<!--            <field name="potential_failure">Insequence of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Fixture to ensure correct sequence</field>-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_109" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Sequnce of disc-friction pads</field>-->
+<!--            <field name="potential_failure">Insequence of disc-friction pads</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Pick to light for sequence pick</field> &lt;!&ndash; all field was empty here&ndash;&gt;-->
+<!--            <field name="detection_desc">100 % E.O.L Test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_110" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Torquing of Breather Plug 15 Nm max</field>-->
+<!--            <field name="potential_failure">More torque then specification</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_111" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Torquing of Drain Plugs 20-25 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_112" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Bolt tightening over the cover 30.6-37.8- Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">battery operated tool to provide exact value torque</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_113" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Bolt tightening over the cover 30.6-37.8- Nm</field>-->
+<!--            <field name="potential_failure">Torque greater than the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Housing thread damage-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">battery operated tool to provide exact value torque</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_114" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Assembly of Shaft</field>-->
+<!--            <field name="potential_failure">Assembly Not possible</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next assembly not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Assembly</field>-->
+<!--            <field name="prevention">"MES system Displays to be followed "</field>-->
+<!--            <field name="detection_desc">100% EOL test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_115" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Correct qty of bolt tightened</field>-->
+<!--            <field name="potential_failure">missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                -&#45;&#45;-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_116" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no loctite applied</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                &#45;&#45;&#45;&#45;-->
+<!--                End User - -->
+<!--                Brake Fail"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after applying the loctite</field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_117" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">torqueing of stud to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leakage issue-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_118" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.3</field>-->
+<!--            <field name="requirement">torqueing of stud to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Thread damage-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_119" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.4</field>-->
+<!--            <field name="requirement">Air Leak test</field>-->
+<!--            <field name="potential_failure">Air test fails</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail ( oil Leakage)-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Machine Calibration Error</field>-->
+<!--            <field name="prevention">TPM Checksheet</field>-->
+<!--            <field name="detection_desc">100 % hydraulic test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_120" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.4</field>-->
+<!--            <field name="requirement">Hydraulic Test</field>-->
+<!--            <field name="potential_failure">Hydraulic test fail</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Brake Fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Due to surface finish issue in inner surface of arm-->
+<!--            </field>-->
+<!--            <field name="prevention">"- Cpk/ 100% inspection at supplier end - Parts to be inspected as per inspection-->
+<!--                plan at incoming. "-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100 % break test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_121" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100</field>-->
+<!--            <field name="requirement">torqueing of Nut to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leakage issue-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_122" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100</field>-->
+<!--            <field name="requirement">torqueing of Nut to torque 82-91 Nm</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Thread damage-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">ST wrench tool will not apply less torque, will raise alarm if more torque is tried-->
+<!--                to apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_123" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.6</field>-->
+<!--            <field name="requirement">Pressing Spacer into carrier</field>-->
+<!--            <field name="potential_failure">"Missing Spacer "</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                marriage of Wheel Hub Assly, &amp; Carrier Sub Assly not possible-->
+<!--                End User: "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine will press the spacer and confirm the availability</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_124" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.6</field>-->
+<!--            <field name="requirement">Needle Filling</field>-->
+<!--            <field name="potential_failure">Needle bearing not installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Nosiy Gear Box-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine will press the spacer and confirm the availability</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_125" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.6</field>-->
+<!--            <field name="requirement">Thrust washer installation</field>-->
+<!--            <field name="potential_failure">Thrust washer missed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Nosiy Gear Box-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_126" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.6</field>-->
+<!--            <field name="requirement">Installation of Planet Shaft</field>-->
+<!--            <field name="potential_failure">Planet Shaft not installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_127" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">100.6</field>-->
+<!--            <field name="requirement">installation of retainer ring</field>-->
+<!--            <field name="potential_failure">Missing Retainer Ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_128" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.1</field>-->
+<!--            <field name="requirement">100% seating of Cup in to the wheel</field>-->
+<!--            <field name="potential_failure">Bearing cup not seating on the pinon collar</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_129" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.1</field>-->
+<!--            <field name="requirement">Placing 1 Cone into the wheel hub</field>-->
+<!--            <field name="potential_failure">Missing Cone</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_130" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.1</field>-->
+<!--            <field name="requirement">Lip Seal into wheel hub</field>-->
+<!--            <field name="potential_failure">Seal not seated and installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_131" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.1</field>-->
+<!--            <field name="requirement">Lip Seal into wheel hub</field>-->
+<!--            <field name="potential_failure">Seal Missing</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine confirms to the MES the seal is pressed and its presence in fixture-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_132" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.1</field>-->
+<!--            <field name="requirement">Placing 1 Cone into the wheel hub</field>-->
+<!--            <field name="potential_failure">Missing Cone</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_133" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.2</field>-->
+<!--            <field name="requirement">Cassette seal 100% seating on wheel</field>-->
+<!--            <field name="potential_failure">Cassette seal not seating on the wheel</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine confirms to the MES the seal is pressed and its presence in fixture-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_134" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.3</field>-->
+<!--            <field name="requirement">Pressing of Ring Gear into spindle</field>-->
+<!--            <field name="potential_failure">Ring Gear not seated on Spindle Face</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure due to gear wear out"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_135" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.4</field>-->
+<!--            <field name="requirement">100% stud seating</field>-->
+<!--            <field name="potential_failure">Stud not properly seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- End User - Premature failure of-->
+<!--                assembly-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_136" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Install washer ring gear</field>-->
+<!--            <field name="potential_failure">Missing washer ring gear</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_137" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Tightening of Bolt (72-78Nm) into the spindle through washer ring gear</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_138" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Tightening of Bolt (72-78Nm) into the spindle through washer ring gear</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_139" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">apply loctite 243</field>-->
+<!--            <field name="potential_failure">no loctite appled</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of the bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after applying the loctite</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_140" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">All bolts tightened</field>-->
+<!--            <field name="potential_failure">Missing of bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of the bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will confirm if all bolts are tightened</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if bolt miss and raise alaram</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_141" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Installation of O rings</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leak test fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_142" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_143" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_144" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">Missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual instruction</field>-->
+<!--            <field name="prevention">MES provides alaram if the process is skipped</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_145" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no loctite appled</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User -Premature failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Sample inspection at incoming</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_146" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_147" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm-->
+<!--            </field> &lt;!&ndash; this field was empty from line number 172 &ndash;&gt;-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_148" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Presence of screw socket hex head M12</field>-->
+<!--            <field name="potential_failure">Missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual instruction</field>-->
+<!--            <field name="prevention">MES provides alaram if the process is skipped</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_149" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no loctite appled</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User -Premature failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Sample inspection at incoming</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_150" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Installation of O rings</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leak test fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_151" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">110.5</field>-->
+<!--            <field name="requirement">Torquing of Drain Plugs 16-20 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_152" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120</field>-->
+<!--            <field name="requirement">Torquing of bolts 183-202 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_153" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120</field>-->
+<!--            <field name="requirement">Presence of all bolts</field>-->
+<!--            <field name="potential_failure">Missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual instruction</field>-->
+<!--            <field name="prevention">MES provides alaram if the process is skipped</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_154" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.6</field>-->
+<!--            <field name="requirement">Pressing Spacer into carrier</field>-->
+<!--            <field name="potential_failure">"Missing Spacer "</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                marriage of Wheel Hub Assly, &amp; Carrier Sub Assly not possible-->
+<!--                End User: "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine will press the spacer and confirm the availability</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_155" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.6</field>-->
+<!--            <field name="requirement">Needle Filling</field>-->
+<!--            <field name="potential_failure">Needle bearing not installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Nosiy Gear Box-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine will press the spacer and confirm the availability</field>-->
+<!--            <field name="detection_desc">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_156" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.6</field>-->
+<!--            <field name="requirement">Thrust washer installation</field>-->
+<!--            <field name="potential_failure">Thrust washer missed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Nosiy Gear Box-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_157" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.6</field>-->
+<!--            <field name="requirement">Installation of Planet Shaft</field>-->
+<!--            <field name="potential_failure">Planet Shaft not installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                EOL failure-->
+<!--                End User:-->
+<!--                Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_158" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.6</field>-->
+<!--            <field name="requirement">installation of retainer ring</field>-->
+<!--            <field name="potential_failure">Missing Retainer Ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_159" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.1</field>-->
+<!--            <field name="requirement">100% seating of Cup in to the wheel</field>-->
+<!--            <field name="potential_failure">Bearing cup not seating on the pinon collar</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_160" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.1</field>-->
+<!--            <field name="requirement">Placing 1 Cone into the wheel hub</field>-->
+<!--            <field name="potential_failure">Missing Cone</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_161" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.1</field>-->
+<!--            <field name="requirement">Lip Seal into wheel hub</field>-->
+<!--            <field name="potential_failure">Seal not seated and installed</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_162" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.1</field>-->
+<!--            <field name="requirement">Lip Seal into wheel hub</field>-->
+<!--            <field name="potential_failure">Seal Missing</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine confirms to the MES the seal is pressed and its presence in fixture-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_163" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.1</field>-->
+<!--            <field name="requirement">Placing 1 Cone into the wheel hub</field>-->
+<!--            <field name="potential_failure">Missing Cone</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_164" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.2</field>-->
+<!--            <field name="requirement">Cassette seal 100% seating on wheel</field>-->
+<!--            <field name="potential_failure">Cassette seal not seating on the wheel</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Air leak failure-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Press machine confirms to the MES the seal is pressed and its presence in fixture-->
+<!--            </field>-->
+<!--            <field name="detection_desc">100% air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_165" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.3</field>-->
+<!--            <field name="requirement">Pressing of Ring Gear into spindle</field>-->
+<!--            <field name="potential_failure">Ring Gear not seated on Spindle Face</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature Failure due to gear wear out"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_166" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.4</field>-->
+<!--            <field name="requirement">100% stud seating</field>-->
+<!--            <field name="potential_failure">Stud not properly seated</field>-->
+<!--            <field name="potential_effect_of_failure">Manufacturing / Process:- End User - Premature failure of-->
+<!--                assembly-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Graphical representation of load vs distance to confirm 100% seating of the cone-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_167" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Install washer ring gear</field>-->
+<!--            <field name="potential_failure">Missing washer ring gear</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next Operation not possible-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual operation</field>-->
+<!--            <field name="prevention">Confirmation to be done by operator after assembly through MES system</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_168" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Tightening of Bolt (72-78Nm) into the spindle through washer ring gear</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_169" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Tightening of Bolt (72-78Nm) into the spindle through washer ring gear</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_170" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">apply loctite 243</field>-->
+<!--            <field name="potential_failure">no loctite appled</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after applying the loctite</field>-->
+<!--            <field name="detection_desc">Visual Check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_171" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">All bolts tightened</field>-->
+<!--            <field name="potential_failure">Missing of bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will confirm if all bolts are tightened</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if bolt miss and raise alaram</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_172" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Installation of O rings</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leak test fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_173" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_174" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_175" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">Missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual instruction</field>-->
+<!--            <field name="prevention">MES provides alaram if the process is skipped</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_176" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no loctite appled</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User -Premature failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Sample inspection at incoming</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_178" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm</field>-->
+<!--            <field name="potential_failure">less torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_179" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">tightening of screw socket hex head M12 116 - 128 Nm-->
+<!--            </field>    &lt;!&ndash;this value is empty from line number 206&ndash;&gt;-->
+<!--            <field name="potential_failure">More torque</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - Premature failure of bearing"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual torquing</field>-->
+<!--            <field name="prevention">DC tool will not apply less torque, will raise alarm if more torque is tried to-->
+<!--                apply-->
+<!--            </field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_180" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Presence of screw socket hex head M12</field>-->
+<!--            <field name="potential_failure">Missing bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">manual instruction</field>-->
+<!--            <field name="prevention">MES provides alarm if the process is skipped</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_181" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Bolt not loosen</field>-->
+<!--            <field name="potential_failure">no locative applied</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User -Premature failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual apply of loctite</field>-->
+<!--            <field name="prevention">Sample inspection at incoming</field>-->
+<!--            <field name="detection_desc">visual check</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_182" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Installation of O rings</field>-->
+<!--            <field name="potential_failure">Missing O ring</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air leak test fail-->
+<!--                End User - "-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Operation</field>-->
+<!--            <field name="prevention">Acknowledge button will be pressed after installation</field>-->
+<!--            <field name="detection_desc">100 % air leak test</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_183" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120.5</field>-->
+<!--            <field name="requirement">Torquing of Drain Plugs 16-20 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_184" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120</field>-->
+<!--            <field name="requirement">Torquing of bolts 183-202 Nm</field>-->
+<!--            <field name="potential_failure">Torque less then the required value</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Air Leak test Failure-->
+<!--                End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Torquing</field>-->
+<!--            <field name="prevention">DC tool to set the torque within the range provided</field>-->
+<!--            <field name="detection_desc">MES system will provide feedback if wrong torque applied, even if controller-->
+<!--                malfunction-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_185" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">120</field>-->
+<!--            <field name="requirement">Presence of all Bolts</field>-->
+<!--            <field name="potential_failure">Missing Bolt</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                Next operation not possible"-->
+<!--                End User - -->
+<!--                Wrong Assembly on Vehicle"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Instruction</field>-->
+<!--            <field name="prevention">MES provides alarm if the process is skipped</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_186" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">130</field>-->
+<!--            <field name="requirement">Checking the Flange to Flange Distance</field>-->
+<!--            <field name="potential_failure">Distance not OK</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Wrong Assembly on Vehicle"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Manual Inspection</field>-->
+<!--            <field name="prevention">System raises alram if the dimension is out of specification auto inspection-->
+<!--            </field>-->
+<!--            <field name="detection_desc">sample inspection</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_187" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">140</field>-->
+<!--            <field name="requirement">Air leak test within specification</field>-->
+<!--            <field name="potential_failure">leakages in assembly</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- -->
+<!--                End User - -->
+<!--                Oil leakage"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Machine not calibrated</field>-->
+<!--            <field name="prevention">Periodically calibration of machine &amp; record in TPM Check sheet.</field>-->
+<!--            <field name="detection_desc">Daily calibration of Machine with master.</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_188" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">150</field>-->
+<!--            <field name="requirement">Oil filling as per specification (Noise Testing).</field>-->
+<!--            <field name="potential_failure">Oil not filled as per specification.</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Noise testing Failure. End User -"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Sensor malfunctioning</field>-->
+<!--            <field name="prevention">TPM Check sheet</field>-->
+<!--            <field name="detection_desc">Flow Meter To be used</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_189" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">150</field>-->
+<!--            <field name="requirement">Oil filling as per specification (Noise Testing).</field>-->
+<!--            <field name="potential_failure">Oil Contamination</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Noisy Assembly.-->
+<!--                End User - -->
+<!--                Noisy assembly-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Tank not cleaned</field>-->
+<!--            <field name="prevention">Preventive maintenance schedule</field>-->
+<!--            <field name="detection_desc">Oil testing for contamination as per schedule</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_190" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">150</field>-->
+<!--            <field name="requirement">Oil filling as per specification (Noise Testing).</field>-->
+<!--            <field name="potential_failure">Oil Contamination</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- Noisy Assembly.-->
+<!--                End User - -->
+<!--                Noisy assembly-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Filter Choke</field>-->
+<!--            <field name="prevention">Sensor to alert filter clogging</field>-->
+<!--            <field name="detection_desc">Oil testing for contamination</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_191" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">160</field>-->
+<!--            <field name="requirement">No brake fail</field>-->
+<!--            <field name="potential_failure">Brake Fail</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- EOL Failure-->
+<!--                End User - -->
+<!--                Field failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Missing Part</field>-->
+<!--            <field name="prevention">High pressure Test</field>-->
+<!--            <field name="detection_desc">System raises alarm if Brake fails</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_192" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">160</field>-->
+<!--            <field name="requirement">Correct Ratio</field>-->
+<!--            <field name="potential_failure">incorrect ratio</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- EOL Failure-->
+<!--                End User - -->
+<!--                Field failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Wrong gears assembled</field>-->
+<!--            <field name="prevention">traceability through MES</field>-->
+<!--            <field name="detection_desc">System raises alarm if Brake fails</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_193" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">160</field>-->
+<!--            <field name="requirement">RPM</field>-->
+<!--            <field name="potential_failure">wrong rpm</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- EOL Failure-->
+<!--                End User - -->
+<!--                Field failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">input RPM Failure</field>-->
+<!--            <field name="prevention">TPM Check sheet</field>-->
+<!--            <field name="detection_desc">System raises alarm if Brake fails</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_194" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">160</field>-->
+<!--            <field name="requirement">Free Rotation</field>-->
+<!--            <field name="potential_failure">Choked assembly</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- EOL Failure-->
+<!--                End User - -->
+<!--                Field failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Missing Part</field>-->
+<!--            <field name="prevention">traceability through MES</field>-->
+<!--            <field name="detection_desc">System raises alarm if Brake fails</field>-->
+<!--        </record>-->
+<!--        <record id="pfmea_analysis_line_195" model="asd.pfmea.operations.line">-->
+<!--            <field name="process_step">160</field>-->
+<!--            <field name="requirement">Oil should be completely drainage</field>-->
+<!--            <field name="potential_failure">Oil not completely drain</field>-->
+<!--            <field name="potential_effect_of_failure">"Manufacturing / Process:- EOL Failure-->
+<!--                End User - -->
+<!--                Field failure"-->
+<!--            </field>-->
+<!--            <field name="potential_cause_mechanism_of_failure">Oil stay inside after first running</field>-->
+<!--            <field name="prevention">Oil completely drain</field>-->
+<!--            <field name="detection_desc">Visual check</field>-->
+<!--        </record>-->
+<!--    </data>-->
+
+<!--    <data>-->
+<!--        <record id="feasibility_consideration1" model="feasibility.consideration">-->
+<!--            <field name="name">Is product adequately defined (application requirements, etc.) to enable feasibility-->
+<!--                evaluation ?-->
+<!--            </field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration2" model="feasibility.consideration">-->
+<!--            <field name="name">Can Engineering Performance Specifications be met as written ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration3" model="feasibility.consideration">-->
+<!--            <field name="name">Can product be manufactured to tolerances specified on drawing ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration4" model="feasibility.consideration">-->
+<!--            <field name="name">Can product be manufactured with Cpk’s that meet requirements ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration5" model="feasibility.consideration">-->
+<!--            <field name="name">Is there adequate capacity to produce product ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration6" model="feasibility.consideration">-->
+<!--            <field name="name">Does the design allow the use of efficient material handling techniques ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration7" model="feasibility.consideration">-->
+<!--            <field name="name">Can the product be manufactured with exiting set up</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration8" model="feasibility.consideration">-->
+<!--            <field name="name">Capital equipment?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration9" model="feasibility.consideration">-->
+<!--            <field name="name">Tooling?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration10" model="feasibility.consideration">-->
+<!--            <field name="name">Alternative manufacturing methods?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration11" model="feasibility.consideration">-->
+<!--            <field name="name">Is statistical process control required on product ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration12" model="feasibility.consideration">-->
+<!--            <field name="name">Is statistical process control presently used on similar products ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration13" model="feasibility.consideration">-->
+<!--            <field name="name">Where statistical process control is used on similar products :</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration14" model="feasibility.consideration">-->
+<!--            <field name="name">Are the processes in control and stable ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="feasibility_consideration15" model="feasibility.consideration">-->
+<!--            <field name="name">Are Cpk’s greater than 1.67 ?</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+
+<!--    </data>-->
+    <!--    <data>-->
+    <!--        <record id="hr_dept_design101" model="hr.department">-->
+    <!--            <field name="name">Design</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_engineering101" model="hr.department">-->
+    <!--            <field name="name">Engineering</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_prod101" model="hr.department">-->
+    <!--            <field name="name">Production</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_qual101" model="hr.department">-->
+    <!--            <field name="name">Quality</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_hr101" model="hr.department">-->
+    <!--            <field name="name">HR</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_maint101" model="hr.department">-->
+    <!--            <field name="name">Maintenance</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_markt101" model="hr.department">-->
+    <!--            <field name="name">Marketing</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_prg_mgmt101" model="hr.department">-->
+    <!--            <field name="name">Program Management</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_top_mgmt101" model="hr.department">-->
+    <!--            <field name="name">Top Management</field>-->
+    <!--        </record>-->
+    <!--        <record id="hr_dept_sales101" model="hr.department">-->
+    <!--            <field name="name">Sales</field>-->
+    <!--        </record>-->
+    <!--    </data>-->
+    <data>
+        <record id="ProcessFlowClassSymbols1" model="process.flow.class">
+            <field name="name">Special Characteristics as per Drawing Given by Customer</field>
+            <field name="symbol">✪</field>
+        </record>
+        <record id="ProcessFlowClassSymbols2" model="process.flow.class">
+            <field name="name">Special characteristic defined internally</field>
+            <field name="symbol">★</field>
+        </record>
+        <record id="ProcessFlowClassSymbols3" model="process.flow.class">
+            <field name="name">Special Characteristics for Safe</field>
+            <field name="symbol">◙</field>
+        </record>
+    </data>
+<!--    <data>-->
+<!--        &lt;!&ndash;Equipment Categories&ndash;&gt;-->
+<!--        <record id="equipment_category_equipment" model="maintenance.equipment.category">-->
+<!--            <field name="name">Equipment</field>-->
+<!--        </record>-->
+
+<!--        <record id="equipment_category_fixture" model="maintenance.equipment.category">-->
+<!--            <field name="name">Fixture</field>-->
+<!--        </record>-->
+
+<!--        <record id="equipment_category_tool" model="maintenance.equipment.category">-->
+<!--            <field name="name">Tool</field>-->
+<!--        </record>-->
+
+<!--        <record id="equipment_category_gauge" model="maintenance.equipment.category">-->
+<!--            <field name="name">Gauge</field>-->
+<!--        </record>-->
+<!--    </data>-->
+
+<!--    <data>-->
+<!--        <record id="RiskAnalysisCriteria1" model="risk.analysis">-->
+<!--            <field name="name">Project Cost / Return on Investment (ROI)</field>-->
+<!--            <field name="criteria_l">No Tool/ Machines Cost involved</field>-->
+<!--            <field name="criteria_m">Tool/ Machines Cost return within 60 Months</field>-->
+<!--            <field name="criteria_h">Tool/ Machines Cost Return beyond 60 months</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria2" model="risk.analysis">-->
+<!--            <field name="name">Capacity</field>-->
+<!--            <field name="criteria_l">Current Capacity available</field>-->
+<!--            <field name="criteria_m">Capacity Enhanced required</field>-->
+<!--            <field name="criteria_h">New Line to be added</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria3" model="risk.analysis">-->
+<!--            <field name="name">Product Liability</field>-->
+<!--            <field name="criteria_l">Only For Product Supply</field>-->
+<!--            <field name="criteria_m">For Damage To Mating Parts</field>-->
+<!--            <field name="criteria_h">For Occupant Of Vehicle</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria4" model="risk.analysis">-->
+<!--            <field name="name">RM Development</field>-->
+<!--            <field name="criteria_l">Existing RM &amp; Source</field>-->
+<!--            <field name="criteria_m">Existing RM &amp; New Source</field>-->
+<!--            <field name="criteria_h">New RM- No Previous Experience</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria5" model="risk.analysis">-->
+<!--            <field name="name">Quality Risk - Internal</field>-->
+<!--            <field name="criteria_l">Rejection level within 300 PPM.</field>-->
+<!--            <field name="criteria_m">Rejection Level 500 PPM.</field>-->
+<!--            <field name="criteria_h">Rejection More than 800 PPM.</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria6" model="risk.analysis">-->
+<!--            <field name="name">Quality Risk - External</field>-->
+<!--            <field name="criteria_l">Customer Complaint - 1 / Yr.</field>-->
+<!--            <field name="criteria_m">Customer Complaint within 4 / Yr.</field>-->
+<!--            <field name="criteria_h">Customer complaint >4 /Yr.</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria7" model="risk.analysis">-->
+<!--            <field name="name">Delivery</field>-->
+<!--            <field name="criteria_l">DI changes within 30 days.</field>-->
+<!--            <field name="criteria_m">DI increases 15 days before.</field>-->
+<!--            <field name="criteria_h">DI suddenly increases.</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria8" model="risk.analysis">-->
+<!--            <field name="name">Transportation &amp; Unforeseen Activities</field>-->
+<!--            <field name="criteria_l">Smooth.</field>-->
+<!--            <field name="criteria_m">Road jam / vehicle breakdown.</field>-->
+<!--            <field name="criteria_h">Road block.</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--        <record id="RiskAnalysisCriteria9" model="risk.analysis">-->
+<!--            <field name="name">Environmental and Political</field>-->
+<!--            <field name="criteria_l">Not present</field>-->
+<!--            <field name="criteria_m">May trouble</field>-->
+<!--            <field name="criteria_h">Already in trouble</field>-->
+<!--            <field name="default">True</field>-->
+<!--        </record>-->
+<!--    </data>-->
+    <data>
+        <record id="ProcessFlowStageSymbols1" model="process.flow.stages">
+            <field name="name">RECEIPT/ARRIVAL</field>
+            <field name="symbol">⤓</field>
+        </record>
+        <record id="ProcessFlowStageSymbols2" model="process.flow.stages">
+            <field name="name">MANUFACTURING</field>
+            <field name="symbol">⚙</field>
+        </record>
+        <record id="ProcessFlowStageSymbols3" model="process.flow.stages">
+            <field name="name">HANDLING</field>
+            <field name="symbol">▣</field>
+        </record>
+        <record id="ProcessFlowStageSymbols4" model="process.flow.stages">
+            <field name="name">OUTSOURCED PROCESS</field>
+            <field name="symbol">➲</field>
+        </record>
+        <record id="ProcessFlowStageSymbols5" model="process.flow.stages">
+            <field name="name">STORE</field>
+            <field name="symbol">☗</field>
+        </record>
+        <record id="ProcessFlowStageSymbols6" model="process.flow.stages">
+            <field name="name">CONTROL/INSPECTION</field>
+            <field name="symbol">⊕</field>
+        </record>
+    </data>
+    <!--    <data>-->
+    <!--        <record id="ChangeRequestFormat1" model="format.document">-->
+    <!--            <field name="name">Process Flow Chart</field>-->
+    <!--        </record>-->
+    <!--        <record id="ChangeRequestFormat2" model="format.document">-->
+    <!--            <field name="name">FMEA</field>-->
+    <!--        </record>-->
+    <!--        <record id="ChangeRequestFormat3" model="format.document">-->
+    <!--            <field name="name">Control Plan</field>-->
+    <!--        </record>-->
+    <!--        <record id="ChangeRequestFormat4" model="format.document">-->
+    <!--            <field name="name">SCS</field>-->
+    <!--        </record>-->
+    <!--        <record id="ChangeRequestFormat5" model="format.document">-->
+    <!--            <field name="name">Work Instruction</field>-->
+    <!--        </record>-->
+    <!--        <record id="ChangeRequestFormat6" model="format.document">-->
+    <!--            <field name="name">Inspection Standard</field>-->
+    <!--        </record>-->
+    <!--    </data>-->
+    <!--    <data noupdate="1">-->
+    <!--        <record id="action_things_wrong_right_list_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Things Gone Right/Wrong (XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_things_wrong_right"/>-->
+    <!--            <field name="binding_model_id" ref="model_things_wrong_right"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_things_wrong_right_sheet()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_query_list_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Query List (XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_quary_list"/>-->
+    <!--            <field name="binding_model_id" ref="model_quary_list"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_query_list()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_development_cycle_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Development Evaluation Cycle (XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_development_cycle"/>-->
+    <!--            <field name="binding_model_id" ref="model_development_cycle"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_development_cycle()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_customer_specification_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Customer Specification Requirements(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_customer_specification"/>-->
+    <!--            <field name="binding_model_id" ref="model_customer_specification"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_customer_specification()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_ppap_checklist_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Customer Specification Requirements(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_ppap_checklist"/>-->
+    <!--            <field name="binding_model_id" ref="model_ppap_checklist"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_ppap_checklist()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_symbole_conversion_table_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Symbol Conversion Table(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_symbole_conversion_table"/>-->
+    <!--            <field name="binding_model_id" ref="model_symbole_conversion_table"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_symbol_conversion()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_material_handling_request_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Material Handling request(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_material_handling_request"/>-->
+    <!--            <field name="binding_model_id" ref="model_material_handling_request"/>-->
+    <!--            <field name="binding_view_types">form,tree</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.generate_excel_sheet()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_npd_review_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">NPD review - Minutes Of Meeting(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_npd_review"/>-->
+    <!--            <field name="binding_model_id" ref="model_npd_review"/>-->
+    <!--            <field name="binding_view_types">form</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_npd_review()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_responsibility_matrix_to_address_customer_requirement_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Responsibility Matrix to Address Customer Requirements(XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_responsibility_matrix_to_address_customer_requirement"/>-->
+    <!--            <field name="binding_model_id" ref="model_responsibility_matrix_to_address_customer_requirement"/>-->
+    <!--            <field name="binding_view_types">tree</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_responsible_matrix()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_list_of_poka_yoka_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">LIST OF POKA-YOKE (XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_poka_yoka"/>-->
+    <!--            <field name="binding_model_id" ref="model_poka_yoka"/>-->
+    <!--            <field name="binding_view_types">tree</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.action_poka_yoke()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--        <record id="action_generate_excel_report_xlsx_report" model="ir.actions.server">-->
+    <!--            <field name="name">Generate Excel Report (XLSX)</field>-->
+    <!--            <field name="model_id" ref="model_customer_part_creation"/>-->
+    <!--            <field name="binding_model_id" ref="model_customer_part_creation"/>-->
+    <!--            <field name="binding_view_types">tree</field>-->
+    <!--            <field name="state">code</field>-->
+    <!--            <field name="code">action = records.generate_excel_report()-->
+    <!--            </field>-->
+    <!--        </record>-->
+    <!--    </data>-->
+</odoo>

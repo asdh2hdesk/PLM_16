@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<!-- ============================================= -->
+		<!-- CONTROL PLAN MAIL TEMPLATES -->
+		<!-- ============================================= -->
+		<!-- Control Plan Approval Request -->
+		<record id="iatf_control_plan_approval_mail_template" model="mail.template">
+			<field name="name">IATF Control Plan Approval Request</field>
+			<field name="model_id" ref="iatf.model_control_plan"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Control Plan Approval Required: 
+				${ 'Control Plan'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>A 
+						<strong>Control Plan</strong> requires your approval.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document Type:</strong>
+							<t t-out="object.doc_type or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to review and approve:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Review Control Plan</a>
+					</p>
+					<p>Please review the document and take appropriate action.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- Control Plan Fully Approved -->
+		<record id="iatf_control_plan_fully_approved_mail_template" model="mail.template">
+			<field name="name">IATF Control Plan Fully Approved</field>
+			<field name="model_id" ref="iatf.model_control_plan"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Control Plan Approved: 
+				${ 'Control Plan'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>We are pleased to inform you that the 
+						<strong>Control Plan</strong> has been approved by all approvers.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document Type:</strong>
+							<t t-out="object.doc_type or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the approved document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View Approved Control Plan</a>
+					</p>
+					<p>The document is now finalized and ready for use.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- Control Plan Approved by User -->
+		<record id="iatf_control_plan_approved_by_user_mail_template" model="mail.template">
+			<field name="name">IATF Control Plan Approved by User</field>
+			<field name="model_id" ref="iatf.model_control_plan"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Control Plan Approved by User: 
+				${ 'Control Plan'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>Control Plan</strong> has been approved by a user.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document Type:</strong>
+							<t t-out="object.doc_type or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View Control Plan</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- ============================================= -->
+		<!-- PROCESS FLOW MAIL TEMPLATES -->
+		<!-- ============================================= -->
+		<!-- Process Flow Approval Request -->
+		<record id="iatf_process_flow_approval_mail_template" model="mail.template">
+			<field name="name">IATF Process Flow Approval Request</field>
+			<field name="model_id" ref="iatf.model_process_flow"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Process Flow Approval Required: 
+				${ 'Process Flow'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>A 
+						<strong>Process Flow Diagram</strong> requires your approval.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Drawing No:</strong>
+							<t t-out="object.drawing_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.document_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>CFT Team:</strong>
+							<t t-out="object.cft_team or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to review and approve:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Review Process Flow</a>
+					</p>
+					<p>Please review the document and take appropriate action.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- Process Flow Fully Approved -->
+		<record id="iatf_process_flow_fully_approved_mail_template" model="mail.template">
+			<field name="name">IATF Process Flow Fully Approved</field>
+			<field name="model_id" ref="iatf.model_process_flow"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Process Flow Approved: 
+				${ 'Process Flow'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>We are pleased to inform you that the 
+						<strong>Process Flow Diagram</strong> has been approved by all approvers.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Drawing No:</strong>
+							<t t-out="object.drawing_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.document_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>CFT Team:</strong>
+							<t t-out="object.cft_team or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the approved document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View Approved Process Flow</a>
+					</p>
+					<p>The document is now finalized and ready for use.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- Process Flow Approved by User -->
+		<record id="iatf_process_flow_approved_by_user_mail_template" model="mail.template">
+			<field name="name">IATF Process Flow Approved by User</field>
+			<field name="model_id" ref="iatf.model_process_flow"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Process Flow Approved by User: 
+				${ 'Process Flow'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>Process Flow Diagram</strong> has been approved by a user.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Drawing No:</strong>
+							<t t-out="object.drawing_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.document_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>CFT Team:</strong>
+							<t t-out="object.cft_team or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View Process Flow</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- ============================================= -->
+		<!-- PFMEA MAIL TEMPLATES -->
+		<!-- ============================================= -->
+		<!-- PFMEA Approval Request -->
+		<record id="iatf_pfmea_approval_mail_template" model="mail.template">
+			<field name="name">IATF PFMEA Approval Request</field>
+			<field name="model_id" ref="iatf.model_asd_pfmea"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">PFMEA Approval Required: 
+				${ 'PFMEA'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>A 
+						<strong>PFMEA (Process Failure Mode and Effects Analysis)</strong> requires your approval.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Model/Year/Platform:</strong>
+							<t t-out="object.myp or 'N/A'"/>
+						</li>
+						<li>
+							<strong>PFMEA AID Number:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Process Responsibility:</strong>
+							<t t-out="object.process_responsibility or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to review and approve:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Review PFMEA</a>
+					</p>
+					<p>Please review the document and take appropriate action.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- PFMEA Fully Approved -->
+		<record id="iatf_pfmea_fully_approved_mail_template" model="mail.template">
+			<field name="name">IATF PFMEA Fully Approved</field>
+			<field name="model_id" ref="iatf.model_asd_pfmea"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">PFMEA Approved: 
+				${ 'PFMEA'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>We are pleased to inform you that the 
+						<strong>PFMEA (Process Failure Mode and Effects Analysis)</strong> has been approved by all approvers.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Model/Year/Platform:</strong>
+							<t t-out="object.myp or 'N/A'"/>
+						</li>
+						<li>
+							<strong>PFMEA AID Number:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Process Responsibility:</strong>
+							<t t-out="object.process_responsibility or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the approved document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View Approved PFMEA</a>
+					</p>
+					<p>The document is now finalized and ready for use.</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- PFMEA Approved by User -->
+		<record id="iatf_pfmea_approved_by_user_mail_template" model="mail.template">
+			<field name="name">IATF PFMEA Approved by User</field>
+			<field name="model_id" ref="iatf.model_asd_pfmea"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">PFMEA Approved by User: 
+				${ 'PFMEA'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>PFMEA (Process Failure Mode and Effects Analysis)</strong> has been approved by a user.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Model/Year/Platform:</strong>
+							<t t-out="object.myp or 'N/A'"/>
+						</li>
+						<li>
+							<strong>PFMEA AID Number:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Process Responsibility:</strong>
+							<t t-out="object.process_responsibility or 'N/A'"/>
+						</li>
+					</ul>
+					<p>
+						<strong>Click on this link to view the document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">View PFMEA</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- ============================================= -->
+		<!-- REVISION REQUIRED MAIL TEMPLATES -->
+		<!-- ============================================= -->
+		<!-- Control Plan Revision Required -->
+		<record id="iatf_control_plan_revision_required_mail_template" model="mail.template">
+			<field name="name">IATF Control Plan Revision Required</field>
+			<field name="model_id" ref="iatf.model_control_plan"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Control Plan Revision Required: 
+				${ 'Control Plan'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>Control Plan</strong> has been sent back for revision by the approver.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document Type:</strong>
+							<t t-out="object.doc_type or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+					</ul>
+					<p>A new document with the same content has been generated for your convenience. Please make the necessary changes and resubmit it for approval.</p>
+					<p>
+						<strong>Click on this link to access the new document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Access Revised Control Plan</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- Process Flow Revision Required -->
+		<record id="iatf_process_flow_revision_required_mail_template" model="mail.template">
+			<field name="name">IATF Process Flow Revision Required</field>
+			<field name="model_id" ref="iatf.model_process_flow"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">Process Flow Revision Required: 
+				${ 'Process Flow'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>Process Flow Diagram</strong> has been sent back for revision by the approver.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Drawing No:</strong>
+							<t t-out="object.drawing_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Document No:</strong>
+							<t t-out="object.document_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>CFT Team:</strong>
+							<t t-out="object.cft_team or 'N/A'"/>
+						</li>
+					</ul>
+					<p>A new document with the same content has been generated for your convenience. Please make the necessary changes and resubmit it for approval.</p>
+					<p>
+						<strong>Click on this link to access the new document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Access Revised Process Flow</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+		<!-- PFMEA Revision Required -->
+		<record id="iatf_pfmea_revision_required_mail_template" model="mail.template">
+			<field name="name">IATF PFMEA Revision Required</field>
+			<field name="model_id" ref="iatf.model_asd_pfmea"/>
+			<field name="auto_delete" eval="False"/>
+			<field name="subject">PFMEA Revision Required: 
+				${'PFMEA'}
+			</field>
+			<field name="body_html" type="html">
+				<div style="margin: 0px; padding: 0px;">
+					<p>Dear Sir/Madam,</p>
+					<p>The 
+						<strong>PFMEA (Process Failure Mode and Effects Analysis)</strong> has been sent back for revision by the approver.
+					</p>
+					<p>
+						<strong>Document Details:</strong>
+					</p>
+					<ul>
+						<li>
+							<strong>Part Name:</strong>
+							<t t-out="object.part_name or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Part Number:</strong>
+							<t t-out="object.part_number or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Model/Year/Platform:</strong>
+							<t t-out="object.myp or 'N/A'"/>
+						</li>
+						<li>
+							<strong>PFMEA AID Number:</strong>
+							<t t-out="object.doc_no or 'N/A'"/>
+						</li>
+						<li>
+							<strong>Process Responsibility:</strong>
+							<t t-out="object.process_responsibility or 'N/A'"/>
+						</li>
+					</ul>
+					<p>A new document with the same content has been generated for your convenience. Please make the necessary changes and resubmit it for approval.</p>
+					<p>
+						<strong>Click on this link to access the new document:</strong>
+					</p>
+					<p>
+						<a t-att-href="object.link" style="background-color: #875A7B; padding: 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size: 13px;">Access Revised PFMEA</a>
+					</p>
+					<br/>
+					<p>Thanks &amp; Regards,
+						<br/>
+						<t t-out="object.company_id.name or 'System'"/>
+					</p>
+				</div>
+			</field>
+		</record>
+	</data>
+</odoo>

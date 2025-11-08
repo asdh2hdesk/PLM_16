@@ -1473,13 +1473,24 @@ class EngineeringChangeNoteLine(models.Model):
 
     @api.depends('change_required_id.change_required_ids')
     def _compute_sequence_number(self):
+        """Compute sequence number for ECN lines"""
         for line in self:
             if not line.change_required_id:
                 line.sl_no = 1
                 continue
 
-            lines = line.change_required_id.change_required_ids.sorted('id')
-            line.sl_no = next((i + 1 for i, l in enumerate(lines) if l.id == line.id), 1)
+            # Get all lines
+            all_lines = line.change_required_id.change_required_ids
+
+            # Use enumerate to get position without sorting by ID
+            # This works for both existing and new records
+            for idx, current_line in enumerate(all_lines, start=1):
+                if current_line.id == line.id:
+                    line.sl_no = idx
+                    break
+            else:
+                # Fallback if line not found
+                line.sl_no = 1
 
     def action_open_format(self):
         """Open BOM line or format"""

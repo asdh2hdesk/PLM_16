@@ -35,6 +35,7 @@
         "data/data.xml",
         # security
         "security/base_plm_security.xml",
+        'security/ir.model.access.csv',
         # views
         "views/product_product_first.xml",
         "views/ir_attachment_view.xml",

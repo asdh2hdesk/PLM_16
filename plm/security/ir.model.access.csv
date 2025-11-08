@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_technical_attribute_manager,product.technical.attribute.manager,model_product_technical_attribute,base.group_system,1,1,1,1
+access_product_technical_attribute_user,product.technical.attribute.user,model_product_technical_attribute,base.group_user,1,1,1,0
+access_product_technical_attribute_stock_user,product.technical.attribute.stock.user,model_product_technical_attribute,stock.group_stock_user,1,1,1,0

@@ -29,6 +29,7 @@
         'views/revision_views.xml',
         'views/document_approval_config_views.xml',
         'views/product_template_view.xml',
+        # 'views/a.xml',
     ],
     
     

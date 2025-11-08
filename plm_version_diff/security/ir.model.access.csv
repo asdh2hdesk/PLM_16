@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_part_version_diff_user,part.version.diff.user,model_part_version_diff,base.group_user,1,1,1,0
+access_part_version_diff_manager,part.version.diff.manager,model_part_version_diff,base.group_system,1,1,1,1

@@ -2,6 +2,7 @@
 {
     'name': 'Supplier Document Workflow',
     'version': '16.0.1.0.0',
+    'author': 'Megha',
     'category': 'Document Management',
     'depends': ['base', 'mail'],
     'data': [

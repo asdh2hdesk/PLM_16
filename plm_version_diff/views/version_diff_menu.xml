@@ -18,10 +18,7 @@
     </record>
 
     <!-- Menu Items -->
-    <menuitem id="menu_manufacturing_version_diff"
-              name="Part Comparison"
-              parent="customer_part_creation.menu_document_control_root"
-              sequence="100"/>
+    <menuitem id="menu_manufacturing_version_diff" name="Part Comparison" parent="customer_part_creation.menu_document_control_root" sequence="100"/>
 
     <menuitem id="menu_part_version_diff"
               name="Version Comparisons"

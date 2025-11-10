@@ -1,0 +1,318 @@
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="vendor_document_tree_view" model="ir.ui.view">
+            <field name="name">vendor.document.tree</field>
+            <field name="model">vendor.document</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="vendor_id"/>
+                    <field name="submission_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="vendor_document_form_view" model="ir.ui.view">
+            <field name="name">vendor.document.form</field>
+            <field name="model">vendor.document</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_quality_review" string="Move to Quality Review"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'submitted')]}"/>
+                        <button name="action_approval" string="Move to Approval"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'quality_review')]}"/>
+                        <button name="action_integrate" string="Integrate into Project"
+                                type="object" class="oe_highlight"
+                                attrs="{'invisible': [('state', '!=', 'approval')]}"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="vendor_id"/>
+                                <field name="vendor_code"/>
+                            </group>
+                            <group>
+                                <field name="submission_date"/>
+                                <field name="responsible_user_id"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Documents">
+                                <field name="document_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="sr_no_1"/>
+                                        <field name="attachment_filename" invisible="0"/>
+                                        <field name="attachment_file" filename="attachment_filename"/>
+                                        <field name="approver_ids" widget="many2many_tags"/>
+                                        <field name="approval_status"
+                                               decoration-success="approval_status == 'approved'"
+                                               decoration-danger="approval_status == 'rejected'"
+                                               decoration-warning="approval_status == 'in_progress'"
+                                               decoration-muted="approval_status == 'pending'"/>
+                                        <field name="approval_date"/>
+                                        <field name="remarks"/>
+                                        <button name="action_approve" string="Approve"
+                                                type="object"
+                                                icon="fa-check-circle"
+                                                class="btn-success"
+                                                attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                                        <button name="action_reject" string="Reject"
+                                                type="object"
+                                                icon="fa-times-circle"
+                                                class="btn-danger"
+                                                attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                                        <field name="can_current_user_approve" invisible="1"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <div class="oe_button_box" name="button_box">
+                                                <button name="action_approve" string="Approve"
+                                                        type="object"
+                                                        class="oe_stat_button btn-success"
+                                                        icon="fa-check-circle"
+                                                        attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                                                <button name="action_reject" string="Reject"
+                                                        type="object"
+                                                        class="oe_stat_button btn-danger"
+                                                        icon="fa-times-circle"
+                                                        attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                                            </div>
+                                            <group>
+                                                <group>
+                                                    <field name="sequence"/>
+                                                    <field name="sr_no_1"/>
+                                                    <field name="attachment_file" filename="attachment_filename"/>
+                                                    <field name="attachment_filename"/>
+                                                </group>
+                                                <group>
+                                                    <field name="approval_status"
+                                                           decoration-success="approval_status == 'approved'"
+                                                           decoration-danger="approval_status == 'rejected'"
+                                                           decoration-warning="approval_status == 'in_progress'"
+                                                           decoration-muted="approval_status == 'pending'"/>
+                                                    <field name="approval_date"/>
+                                                    <field name="can_current_user_approve" invisible="1"/>
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <field name="approver_ids" widget="many2many_tags"/>
+                                            </group>
+                                            <group>
+                                                <field name="remarks" placeholder="General remarks..."/>
+                                            </group>
+
+                                            <notebook>
+                                                <page string="Individual Approvals">
+                                                    <field name="individual_approval_ids" readonly="1">
+                                                        <tree decoration-success="status == 'approved'"
+                                                              decoration-danger="status == 'rejected'"
+                                                              decoration-muted="status == 'pending'">
+                                                            <field name="user_id"/>
+                                                            <field name="status"/>
+                                                            <field name="approval_date"/>
+                                                            <field name="remarks"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Document Line Tree View (optional standalone view) -->
+        <record id="vendor_document_line_tree_view" model="ir.ui.view">
+            <field name="name">vendor.document.line.tree</field>
+            <field name="model">vendor.document.line</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence"/>
+                    <field name="sr_no_1"/>
+                    <field name="document_id"/>
+                    <field name="approver_ids" widget="many2many_tags"/>
+                    <field name="approval_status"
+                           decoration-success="approval_status == 'approved'"
+                           decoration-danger="approval_status == 'rejected'"
+                           decoration-warning="approval_status == 'in_progress'"
+                           decoration-muted="approval_status == 'pending'"/>
+                    <field name="approval_date"/>
+                    <button name="action_approve" string="Approve"
+                            type="object"
+                            icon="fa-check-circle"
+                            class="btn-success"
+                            attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                    <button name="action_reject" string="Reject"
+                            type="object"
+                            icon="fa-times-circle"
+                            class="btn-danger"
+                            attrs="{'invisible': [('can_current_user_approve', '=', False)]}"/>
+                    <field name="can_current_user_approve" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Individual Approval Tree View -->
+        <record id="vendor_document_approval_tree_view" model="ir.ui.view">
+            <field name="name">vendor.document.approval.tree</field>
+            <field name="model">vendor.document.approval</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="status == 'approved'"
+                      decoration-danger="status == 'rejected'"
+                      decoration-muted="status == 'pending'">
+                    <field name="document_line_id"/>
+                    <field name="user_id"/>
+                    <field name="status"/>
+                    <field name="approval_date"/>
+                    <field name="remarks"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Individual Approval Form View -->
+        <record id="vendor_document_approval_form_view" model="ir.ui.view">
+            <field name="name">vendor.document.approval.form</field>
+            <field name="model">vendor.document.approval</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="document_line_id"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="status"/>
+                                <field name="approval_date"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="remarks" placeholder="Add approval remarks..."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Rejection Wizard Form View -->
+        <record id="vendor_document_rejection_wizard_form_view" model="ir.ui.view">
+            <field name="name">vendor.document.rejection.wizard.form</field>
+            <field name="model">vendor.document.rejection.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="document_line_id" readonly="1"/>
+                            <field name="remarks" placeholder="Please provide reason for rejection..." nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_confirm_reject" string="Confirm Rejection"
+                                type="object" class="btn-danger"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- My Pending Approvals Action (for users to see documents they need to approve) -->
+        <record id="vendor_document_line_my_approvals_action" model="ir.actions.act_window">
+            <field name="name">My Pending Approvals</field>
+            <field name="res_model">vendor.document.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('approver_ids', 'in', uid), ('approval_status', 'in', ['pending', 'in_progress'])]</field>
+            <field name="context">{'search_default_pending': 1}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No documents waiting for your approval
+                </p>
+                <p>
+                    Documents that require your approval will appear here.
+                </p>
+            </field>
+        </record>
+
+        <!-- All Approvals Action -->
+        <record id="vendor_document_approval_action" model="ir.actions.act_window">
+            <field name="name">All Approvals</field>
+            <field name="res_model">vendor.document.approval</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Action -->
+        <record id="vendor_document_action" model="ir.actions.act_window">
+            <field name="name">Vendor Documents</field>
+            <field name="res_model">vendor.document</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Search View for Document Lines -->
+        <record id="vendor_document_line_search_view" model="ir.ui.view">
+            <field name="name">vendor.document.line.search</field>
+            <field name="model">vendor.document.line</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="document_id"/>
+                    <field name="approver_ids"/>
+                    <filter string="Pending" name="pending"
+                            domain="[('approval_status', '=', 'pending')]"/>
+                    <filter string="In Progress" name="in_progress"
+                            domain="[('approval_status', '=', 'in_progress')]"/>
+                    <filter string="Approved" name="approved"
+                            domain="[('approval_status', '=', 'approved')]"/>
+                    <filter string="Rejected" name="rejected"
+                            domain="[('approval_status', '=', 'rejected')]"/>
+                    <separator/>
+                    <filter string="My Approvals" name="my_approvals"
+                            domain="[('approver_ids', 'in', uid)]"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Document" name="group_document"
+                                context="{'group_by': 'document_id'}"/>
+                        <filter string="Status" name="group_status"
+                                context="{'group_by': 'approval_status'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- Menu -->
+        <menuitem id="vendor_document_menu_root" name="Vendor Documents" sequence="10"/>
+
+        <menuitem id="vendor_document_menu"
+                  name="All Documents"
+                  parent="vendor_document_menu_root"
+                  action="vendor_document_action"
+                  sequence="10"/>
+
+        <menuitem id="vendor_document_my_approvals_menu"
+                  name="My Pending Approvals"
+                  parent="vendor_document_menu_root"
+                  action="vendor_document_line_my_approvals_action"
+                  sequence="20"/>
+
+        <menuitem id="vendor_document_approvals_menu"
+                  name="All Approvals"
+                  parent="vendor_document_menu_root"
+                  action="vendor_document_approval_action"
+                  sequence="30"/>
+    </data>
+</odoo>
